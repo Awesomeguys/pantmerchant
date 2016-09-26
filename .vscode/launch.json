@@ -1,0 +1,9 @@
+{
+    "configurations": [
+        {
+            "name": "Debug",
+            "type": "mono",
+            "program": "${workspaceRoot}/bin/Debug/PantMerchant.exe"
+        }
+    ]
+}

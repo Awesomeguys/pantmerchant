@@ -3,16 +3,30 @@ using SwinGameSDK;
 
 namespace PantMerchant
 {
-    public class GameMain
+    public class PantMerchant
     {
+        ///<summary>
+        /// Method which encapsulates requests to end the 
+        /// program in one place.
+        ///</summary>
+        ///<returns>Boolean indicating whether the user has requested to close the program.</returns>
+        static bool EndProgramRequested(){
+            bool endGame = false;
+            if  (    SwinGame.WindowCloseRequested()
+                ||  SwinGame.KeyTyped(KeyCode.EscapeKey)) {
+                endGame = true;
+            }
+            return endGame;
+        }
+
         public static void Main()
         {
             //Open the game window
-            SwinGame.OpenGraphicsWindow("GameMain", 800, 600);
+            SwinGame.OpenGraphicsWindow("PantMerchant", 800, 600);
             SwinGame.ShowSwinGameSplashScreen();
             
             //Run the game loop
-            while(false == SwinGame.WindowCloseRequested())
+            while(!EndProgramRequested())
             {
                 //Fetch the next batch of UI interaction
                 SwinGame.ProcessEvents();

@@ -5,9 +5,16 @@ using static SwinGameSDK.SwinGame;
 
 namespace PantMerchant 
 {
+    /// <summary>
+    /// This class is used to create dynamic menus, from the main menu, to in-game context menus.
+    /// </summary>
     class MenuElement : UIElement, IClickable
     {
         public Delegate ClickAction { get; }
+
+        /// <summary>
+        /// Text displayed on the menu button
+        /// </summary>
         public String Title { get; set; }
 
         public MenuElement (String Title, Delegate ClickAction, String Name, Point2D Pos, Point2D Size)

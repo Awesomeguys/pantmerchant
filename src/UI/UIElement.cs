@@ -51,6 +51,7 @@ namespace PantMerchant
             this.Container = Container;
 
             Registry.UIElementList.Add(this);
+            Registry.IDrawableList.Add(this);
             if (this is IClickable)
             {
                 Registry.IClickableList.Add(this as IClickable);

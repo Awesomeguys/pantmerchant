@@ -42,12 +42,6 @@ namespace PantMerchant
         /// </summary>
         public UIContainer Container { get; private set; }
 
-        static UIElement()
-        {
-            UIElementList = new List<UIElement>();
-            IClickableList = new List<IClickable>();
-        }
-
         public UIElement (String Name, Point2D Pos, Point2D Size) : this (Name, Pos, Size, UIContainer.GameWindow) {}
         public UIElement (String Name, Point2D Pos, Point2D Size, UIContainer Container)
         {

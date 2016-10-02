@@ -7,7 +7,16 @@ namespace PantMerchant
 {
     class UIContainer : UIElement
     {
+        /// <summary>
+        /// List containing the UI elements which 
+        /// are contained by this UI container.
+        /// </summary>
         public List<UIElement> ChildElements { get; private set; }
+        /// <summary>
+        /// Static UI container used for placing UI 
+        /// elements within the "root" container, 
+        /// the game window.
+        /// </summary>
 
         public static UIContainer GameWindow { get; private set; }
 

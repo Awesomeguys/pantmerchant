@@ -5,15 +5,42 @@ using static SwinGameSDK.SwinGame;
 
 namespace PantMerchant 
 {
-    abstract class UIElement
+    /// <summary>
+    /// Base class for any element of the UI. All buttons in 
+    /// all menus, HUD displays, etc. Anything from a "New 
+    /// Game" button on the main menu to an in-game minimap, 
+    /// to a dropdown context menu should inherit from this 
+    /// class. Can also act as a container for other UI 
+    /// Elements.
+    /// </summary>
+    abstract class UIElement : IDrawable
     {
+        /// <summary>
+        /// Internal name given to the UI element. 
+        /// </summary>
         public String Name { get; private set; }
+        public Point2D ScreenPos { get { return this.Pos; } }
+        /// <summary>
+        /// The position of the UI element. These coordinates 
+        /// are on screen. Where the UI element is a part of 
+        /// a UI container, the position is relative to the 
+        /// position of the container, otherwise is relative 
+        /// to the program window.
+        /// </summary>
         public Point2D Pos { get; private set; }
+        /// <summary>
+        /// The width and height of the UI element. Each 
+        /// component of the Point2D refers to the distance 
+        /// of that point from it's corresponding component 
+        /// in the Pos property.
+        /// </summary>
         public Point2D Size { get; private set; }
+        /// <summary>
+        /// The container of the UI element. For when UI 
+        /// elements need to exist within context menus, 
+        /// popup menus, etc.
+        /// </summary>
         public UIContainer Container { get; private set; }
-
-        public static List<UIElement> UIElementList { get; private set; }
-        public static List<IClickable> IClickableList { get; private set; }
 
         static UIElement()
         {
@@ -29,10 +56,10 @@ namespace PantMerchant
             this.Size = Size;
             this.Container = Container;
 
-            UIElement.UIElementList.Add(this);
+            Registry.UIElementList.Add(this);
             if (this is IClickable)
             {
-                UIElement.IClickableList.Add(this as IClickable);
+                Registry.IClickableList.Add(this as IClickable);
             }
         }
 

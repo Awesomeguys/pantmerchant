@@ -24,7 +24,11 @@ namespace PantMerchant
         {
             //Open the game window
             SwinGame.OpenGraphicsWindow("GameMain", 800, 600);
-            SwinGame.ShowSwinGameSplashScreen();
+            // SwinGame.ShowSwinGameSplashScreen();
+
+			PantsStand myPantsStand = new PantsStand(new GridPoint(10, 10));
+            myPantsStand.Position = new GridPoint(0, myPantsStand.Position.Y);
+			Console.WriteLine("grid position: ", myPantsStand.Position.X, myPantsStand.Position.Y);
             
             //Run the game loop
             while(!EndProgramRequested())

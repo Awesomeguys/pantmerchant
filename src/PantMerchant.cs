@@ -4,7 +4,7 @@ using static SwinGameSDK.SwinGame;
 
 namespace PantMerchant
 {
-    public class GameMain
+    public class PantMerchant
     {
         ///<summary>
         /// Method which encapsulates requests to end the 
@@ -23,7 +23,7 @@ namespace PantMerchant
         public static void Main()
         {
             //Open the game window
-            SwinGame.OpenGraphicsWindow("GameMain", 800, 600);
+            SwinGame.OpenGraphicsWindow("PantMerchant", 800, 600);
             SwinGame.ShowSwinGameSplashScreen();
             
             //Run the game loop

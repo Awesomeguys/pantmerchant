@@ -5,25 +5,26 @@ using static SwinGameSDK.SwinGame;
 
 namespace PantMerchant 
 {
-
-    class GridPoint
-    {
-        public int X { get; set; }
-        public int Y { get; set; }
-
-        public GridPoint(int x, int y)
-        {
-            this.X = x;
-            this.Y = y;
-        }
-    }
-
     /// <summary>
-    /// Base class used by all grid entities.
+    /// Base class to be used by all grid entities.
     /// </summary>
     abstract class BaseEntity
     {
-        public GridPoint Position { get; set; }
-        public List<GridPoint> FootprintList { get; set; }
+        /// <summary>
+        /// The position on the grid.
+        /// </summary>
+        public Point Position { get; set; }
+
+        /// <summary>
+        /// A list of grid points relative to the
+        /// position that the entity will take up.
+        /// </summary>
+        public List<Point> Footprint { get; set; }
+
+        public BaseEntity(Point Position, List<Point> Footprint)
+        {
+            this.Position = Position;
+            this.Footprint = Footprint;
+        }
     }
 }

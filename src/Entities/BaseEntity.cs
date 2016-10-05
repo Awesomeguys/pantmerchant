@@ -6,7 +6,7 @@ using static SwinGameSDK.SwinGame;
 namespace PantMerchant 
 {
     /// <summary>
-    /// Base class to be used by all grid entities.
+    /// Abstract base class to be used by all grid entities.
     /// </summary>
     abstract class BaseEntity
     {

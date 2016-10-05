@@ -1,8 +1,4 @@
-﻿using System;
-using SwinGameSDK;
-using static SwinGameSDK.SwinGame;
-
-namespace PantMerchant
+﻿namespace PantMerchant
 {
     class Point
     {

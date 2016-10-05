@@ -1,9 +1,6 @@
-using System;
 using System.Collections.Generic;
-using SwinGameSDK;
-using static SwinGameSDK.SwinGame;
 
-namespace PantMerchant 
+namespace PantMerchant
 {
     /// <summary>
     /// Abstract base class to be used by all grid entities.

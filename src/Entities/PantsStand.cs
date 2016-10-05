@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using SwinGameSDK;
-using static SwinGameSDK.SwinGame;
+﻿using System.Collections.Generic;
 
 namespace PantMerchant
 {

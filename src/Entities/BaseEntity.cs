@@ -10,15 +10,15 @@ namespace PantMerchant
         /// <summary>
         /// The position on the grid.
         /// </summary>
-        public Point Position { get; set; }
+        public Coordinate Position { get; set; }
 
         /// <summary>
         /// A list of grid points relative to the
         /// position that the entity will take up.
         /// </summary>
-        public List<Point> Footprint { get; set; }
+        public List<Coordinate> Footprint { get; set; }
 
-        public BaseEntity(Point Position, List<Point> Footprint)
+        public BaseEntity(Coordinate Position, List<Coordinate> Footprint)
         {
             this.Position = Position;
             this.Footprint = Footprint;

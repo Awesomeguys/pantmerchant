@@ -4,6 +4,6 @@ namespace PantMerchant
 {
     class PantsStand : BaseEntity
     {
-        public PantsStand(Point Position, List<Point> Footprint) : base(Position, Footprint) { }
+        public PantsStand(Coordinate Position, List<Coordinate> Footprint) : base(Position, Footprint) { }
     }
 }

@@ -27,14 +27,14 @@ namespace PantMerchant
             // SwinGame.ShowSwinGameSplashScreen();
 
             PantsStand myPantsStand = new PantsStand(
-                new Point(10, 10),
-                new List<Point>
+                new Coordinate(10, 10),
+                new List<Coordinate>
                 {
-                    new Point(0, 10),
-                    new Point(45, 6)
+                    new Coordinate(0, 10),
+                    new Coordinate(45, 6)
                 }
             );
-            myPantsStand.Position = new Point(0, myPantsStand.Position.Y);
+            myPantsStand.Position = new Coordinate(0, myPantsStand.Position.Y);
             Console.WriteLine("List: " + myPantsStand.Footprint[0]);
             
             //Run the game loop

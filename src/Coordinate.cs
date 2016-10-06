@@ -13,8 +13,8 @@
 
         public Coordinate(int x, int y)
         {
-            this.X = x;
-            this.Y = y;
+            X = x;
+            Y = y;
         }
 
         /// <summary>
@@ -23,7 +23,7 @@
         /// <returns>[X,Y]</returns>
         public override string ToString()
         {
-            return "[" + this.X + "," + this.Y + "]";
+            return "[" + X + "," + Y + "]";
         }
     }
 }

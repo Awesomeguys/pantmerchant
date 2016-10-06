@@ -20,8 +20,8 @@ namespace PantMerchant
 
         public BaseEntity(Coordinate position, List<Coordinate> footprint)
         {
-            this.Position = position;
-            this.Footprint = footprint;
+            Position = position;
+            Footprint = footprint;
         }
     }
 }

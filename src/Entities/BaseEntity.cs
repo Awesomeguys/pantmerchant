@@ -18,10 +18,10 @@ namespace PantMerchant
         /// </summary>
         public List<Coordinate> Footprint { get; set; }
 
-        public BaseEntity(Coordinate Position, List<Coordinate> Footprint)
+        public BaseEntity(Coordinate position, List<Coordinate> footprint)
         {
-            this.Position = Position;
-            this.Footprint = Footprint;
+            this.Position = position;
+            this.Footprint = footprint;
         }
     }
 }

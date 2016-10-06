@@ -1,6 +1,6 @@
 using System;
-using System.Collections.Generic;
 using SwinGameSDK;
+using static SwinGameSDK.SwinGame;
 
 namespace PantMerchant
 {
@@ -24,18 +24,7 @@ namespace PantMerchant
         {
             //Open the game window
             SwinGame.OpenGraphicsWindow("GameMain", 800, 600);
-            // SwinGame.ShowSwinGameSplashScreen();
-
-            PantsStand myPantsStand = new PantsStand(
-                new Coordinate(10, 10),
-                new List<Coordinate>
-                {
-                    new Coordinate(0, 10),
-                    new Coordinate(45, 6)
-                }
-            );
-            myPantsStand.Position = new Coordinate(0, myPantsStand.Position.Y);
-            Console.WriteLine("List: " + myPantsStand.Footprint[0]);
+            SwinGame.ShowSwinGameSplashScreen();
             
             //Run the game loop
             while(!EndProgramRequested())

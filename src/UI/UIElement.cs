@@ -19,7 +19,10 @@ namespace PantMerchant
         /// Internal name given to the UI element. 
         /// </summary>
         public String Name { get; private set; }
-        public Point2D ScreenPos { get { return this.Pos; } }
+        /// <summary>
+        /// The on-screen coordinates of the UI element
+        /// </summary>
+        public Point2D ScreenPos { get { return this.Pos + this.Container.Pos; } }
         /// <summary>
         /// The position of the UI element. These coordinates 
         /// are on screen. Where the UI element is a part of 

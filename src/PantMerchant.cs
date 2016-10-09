@@ -1,5 +1,6 @@
 using System;
 using SwinGameSDK;
+using static SwinGameSDK.SwinGame;
 
 namespace PantMerchant
 {

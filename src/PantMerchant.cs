@@ -21,11 +21,7 @@ namespace PantMerchant
         }
 
         public static void Main()
-        {
-            //Open the game window
-            SwinGame.OpenGraphicsWindow("PantMerchant", 800, 600);
-            SwinGame.ShowSwinGameSplashScreen();
-            
+        {            
             //Run the game loop
             while(!EndProgramRequested())
             {

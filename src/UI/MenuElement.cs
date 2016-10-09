@@ -28,7 +28,7 @@ namespace PantMerchant
 
         public override void Draw()
         {
-            // Draw method goes here.
+            DrawRectangle(Color.Black, new Rectangle() { X = this.ScreenPos.X, Y = this.ScreenPos.Y, Width = this.Size.X, Height = this.Size.Y });
         }
 
         public bool IsClicked()

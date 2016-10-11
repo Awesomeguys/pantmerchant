@@ -15,7 +15,7 @@ namespace PantMerchant
         {
             //Open the game window
             SwinGame.OpenGraphicsWindow("PantMerchant", 800, 600);
-            SwinGame.ShowSwinGameSplashScreen();
+            //SwinGame.ShowSwinGameSplashScreen();
         }
         /// <summary>
         /// Used to draw all IDrawable objects to the screen.

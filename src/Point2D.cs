@@ -16,9 +16,14 @@ namespace PantMerchant
 			this.Y = Y;
 		}
 
-		public override string ToString() {
-			return String.Format("{0}, {1}", X, Y);
-		}	
+        /// <summary>
+        /// Enables printing the class.
+        /// </summary>
+        /// <returns>[X,Y]</returns>
+        public override string ToString()
+        {
+            return "[" + X + "," + Y + "]";
+        }
 
         public Point2D GetRelativePosition(Point2D p){
             return p - this;

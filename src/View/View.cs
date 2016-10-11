@@ -11,8 +11,10 @@ namespace PantMerchant
     /// </summary>
     static class View
     {
+        public static Font Font { get; set; }
         static View()
         {
+            View.Font = new Font("Arial", 11);
             //Open the game window
             SwinGame.OpenGraphicsWindow("PantMerchant", 800, 600);
             //SwinGame.ShowSwinGameSplashScreen();
@@ -33,6 +35,11 @@ namespace PantMerchant
 
             //Draw onto the screen
             SwinGame.RefreshScreen(60);
+        }
+
+        public static void Initialise()
+        {
+            // Doesn't do anything. Used for calling the constructor.
         }
     }
 }

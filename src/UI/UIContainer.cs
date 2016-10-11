@@ -7,6 +7,7 @@ namespace PantMerchant
 {
     class UIContainer : UIElement
     {
+        public MenuType Type;
         /// <summary>
         /// List containing the UI elements which 
         /// are contained by this UI container.
@@ -30,9 +31,12 @@ namespace PantMerchant
             );
         }
 
-        public UIContainer (List<UIElement> ChildElements, String Name, Point2D Pos, Point2D Size)
-            : base (Name, Pos, Size) 
+        public UIContainer(List<UIElement> ChildElements, String Name, Point2D Pos, Point2D Size)
+            : this(ChildElements, Name, Pos, Size, MenuType.Manual) { }
+        public UIContainer(List<UIElement> ChildElements, String Name, Point2D Pos, Point2D Size, MenuType Type)
+            : base(Name, Pos, Size)
         {
+            this.Type = Type;
             this.ChildElements = ChildElements;
 
             foreach (UIElement u in ChildElements)
@@ -45,5 +49,10 @@ namespace PantMerchant
         {
             DrawRectangle(Color.Black, new Rectangle() { X = this.ScreenPos.X, Y = this.ScreenPos.Y, Width = this.Size.X, Height = this.Size.Y });
         }
+    }
+
+    public enum MenuType {
+        Auto,
+        Manual
     }
 }

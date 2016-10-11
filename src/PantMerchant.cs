@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace PantMerchant
 {
-    public class PantMerchant
+    public class PantMerchantMain
     {
         ///<summary>
         /// Method which encapsulates requests to end the 

@@ -4,6 +4,9 @@ using static SwinGameSDK.SwinGame;
 
 using System.Collections.Generic;
 
+// Pantmerchant Libraries
+using PantMerchant.Controllers;
+
 namespace PantMerchant
 {
     public class PantMerchantMain
@@ -41,17 +44,21 @@ namespace PantMerchant
             MenuList.Add(
                 new MenuElement(
                     "New Game",
-                    new Action(() => { Console.WriteLine("Test 1"); }),
+                    new Action(() => { Console.WriteLine("Starting new Game");  }),
                     "New Game",
                     Menu
                 )
             );
 
             //Run the game loop
+            Controller currentController = MainMenuController.Instance;
             while (!EndProgramRequested())
             {
                 //Fetch the next batch of UI interaction
                 SwinGame.ProcessEvents();
+
+                // Process and IClickables
+                currentController.DoClickActions();
 
                 // Draw stuff on the screen
                 View.Draw();

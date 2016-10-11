@@ -38,6 +38,7 @@ namespace PantMerchant
         /// in the Pos property.
         /// </summary>
         public Point2D Size { get; private set; }
+        public Point2D ScreenSize { get { return (this.Size != new Point2D()) ? this.Size : new Point2D(this.Container.Size.X, this.Container.Size.Y / this.Container.ChildElements.Count); } }
         /// <summary>
         /// The container of the UI element. For when UI 
         /// elements need to exist within context menus, 

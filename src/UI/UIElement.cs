@@ -46,21 +46,7 @@ namespace PantMerchant
         /// </summary>
         public UIContainer Container { get; internal set; }
 
-        /// <summary>
-        /// Initialises a new instance of the UIElement class with the given name, position and size.
-        /// </summary>
-        /// <param name="Name">The name given to the UIElement</param>
-        /// <param name="Pos">The position of the UIElement</param>
-        /// <param name="Size">The size of the UIElement</param>
         public UIElement (String Name, Point2D Pos, Point2D Size) : this (Name, Pos, Size, UIContainer.GameWindow) {}
-
-        /// <summary>
-        /// Initialises a new instance of the UIElement class with the given name, position, size and container.
-        /// </summary>
-        /// <param name="Name">The name given to the UIElement</param>
-        /// <param name="Pos">The position of the UIElement</param>
-        /// <param name="Size">The size of the UIElement</param>
-        /// <param name="Container">The UIContainer this element resides in</param>
         public UIElement (String Name, Point2D Pos, Point2D Size, UIContainer Container)
         {
             this.Name = Name;
@@ -75,9 +61,7 @@ namespace PantMerchant
                 Registry.IClickableList.Add(this as IClickable);
             }
         }
-        /// <summary>
-        /// Renders the UIElement to the screen.
-        /// </summary>
+
         public abstract void Draw();
     }
 }

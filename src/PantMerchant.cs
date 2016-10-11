@@ -24,31 +24,27 @@ namespace PantMerchant
 
         public static void Main()
         {
+            View.Initialise();
 
             // Create some UIs
+            UIContainer Menu = new UIContainer(
+                    "Main Menu", 
+                    new Point2D(
+                        ScreenWidth() / 2 - 100,    // TODO Remove Hardcode
+                        ScreenHeight() / 2 - 100    // TODO Remove Hardcode
+                    ), 
+                    new Point2D(200, 200), 
+                    MenuType.Auto
+            );
+
             List<UIElement> MenuList = new List<UIElement>();
             MenuList.Add(
                 new MenuElement(
-                    "Test 1",
-                    (Action)delegate { Console.WriteLine("Test 1"); },
-                    "Test 1",
-                    new Point2D() { X = 10, Y = 10 },
-                    new Point2D() { X = 50, Y = 10 }
+                    "New Game",
+                    new Action(() => { Console.WriteLine("Test 1"); }),
+                    "New Game",
+                    Menu
                 )
-            );
-
-            MenuList.Add(
-                new MenuElement(
-                    "Test 2",
-                    (Action)delegate { Console.WriteLine("Test 2"); },
-                    "Test 2",
-                    new Point2D() { X = 10, Y = 10 },
-                    new Point2D() { X = 50, Y = 10 }
-                )
-            );
-
-            UIContainer Menu = new UIContainer(
-                    MenuList, "Test Menu", new Point2D() { X = 200, Y = 200 }, new Point2D() { X = 200, Y = 200 }
             );
 
             //Run the game loop

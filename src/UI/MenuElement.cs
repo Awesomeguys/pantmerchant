@@ -15,12 +15,12 @@ namespace PantMerchant
         /// <summary>
         /// Text displayed on the menu button
         /// </summary>
-        public String Title { get; set; }
+        public String Text { get; set; }
 
         public MenuElement (String Title, Delegate ClickAction, String Name, UIContainer Container)
-            : this (Title, ClickAction, Name, new Point2D(), new Point2D())
+            : this (Title, ClickAction, Name, new Point2D(), new Point2D(), Container)
         {
-            if (this.Container.Type != MenuType.Auto)
+            if (Container.Type != MenuType.Auto)
             {
                 throw new InvalidMenuTypeException();
             }
@@ -30,7 +30,7 @@ namespace PantMerchant
         public MenuElement(String Title, Delegate ClickAction, String Name, Point2D Pos, Point2D Size, UIContainer Container)
             : base(Name, Pos, Size, Container)
         {
-            this.Title = Title;
+            this.Text = Title;
             this.ClickAction = ClickAction;
 
             if (! this.Container.ChildElements.Contains(this))
@@ -51,13 +51,21 @@ namespace PantMerchant
                         Color.Black, 
                         new Rectangle() {
                             X = this.Container.ScreenPos.X,
-                            Y = this.Container.ScreenPos.Y,
+                            Y = this.Container.ScreenPos.Y + ( (this.Container.Size.Y / this.Container.ChildElements.Count) * this.Container.ChildElements.FindIndex(x => x == this) ),
                             Width = this.Container.Size.X,
-                            Height = this.Container.Size.Y
+                            Height = this.Container.Size.Y / this.Container.ChildElements.Count
                         }
                     );
                     break;
             }
+
+            DrawText(
+                this.Text, 
+                Color.Black, 
+                View.Font,
+                this.ScreenPos.X + (this.Container.Size.X / 2) - (View.Font.TextWidth(this.Text) / 2),
+                this.Container.ScreenPos.Y + ((this.Container.Size.Y / this.Container.ChildElements.Count) * this.Container.ChildElements.FindIndex(x => x == this)) + ( this.Container.Size.Y / this.Container.ChildElements.Count / 2 ) - ( View.Font.TextHeight(this.Text) / 2) 
+            );
         }
 
         public bool IsClicked()

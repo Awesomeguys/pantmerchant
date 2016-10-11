@@ -34,6 +34,11 @@ namespace PantMerchant
             : base (Name, Pos, Size) 
         {
             this.ChildElements = ChildElements;
+
+            foreach (UIElement u in ChildElements)
+            {
+                u.Container = this;
+            }
         }
 
         public override void Draw()

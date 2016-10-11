@@ -22,7 +22,7 @@ namespace PantMerchant
         /// <summary>
         /// The on-screen coordinates of the UI element
         /// </summary>
-        public Point2D ScreenPos { get { return this.Pos + this.Container.Pos; } }
+        public Point2D ScreenPos { get { return this.Pos + ((this.Container != null) ? this.Container.Pos : new Point2D()); } }
         /// <summary>
         /// The position of the UI element. These coordinates 
         /// are on screen. Where the UI element is a part of 
@@ -43,7 +43,7 @@ namespace PantMerchant
         /// elements need to exist within context menus, 
         /// popup menus, etc.
         /// </summary>
-        public UIContainer Container { get; private set; }
+        public UIContainer Container { get; internal set; }
 
         public UIElement (String Name, Point2D Pos, Point2D Size) : this (Name, Pos, Size, UIContainer.GameWindow) {}
         public UIElement (String Name, Point2D Pos, Point2D Size, UIContainer Container)

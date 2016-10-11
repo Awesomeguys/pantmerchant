@@ -31,6 +31,10 @@ namespace PantMerchant
             );
         }
 
+        public UIContainer(String Name, Point2D Pos, Point2D Size)
+            : this(new List<UIElement>(), Name, Pos, Size) { }
+        public UIContainer(String Name, Point2D Pos, Point2D Size, MenuType Type)
+            : this(new List<UIElement>(), Name, Pos, Size, Type) { }
         public UIContainer(List<UIElement> ChildElements, String Name, Point2D Pos, Point2D Size)
             : this(ChildElements, Name, Pos, Size, MenuType.Manual) { }
         public UIContainer(List<UIElement> ChildElements, String Name, Point2D Pos, Point2D Size, MenuType Type)

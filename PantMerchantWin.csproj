@@ -30,7 +30,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <OutputType>WinExe</OutputType>
-    <DocumentationFile>bin\Debug\PantMerchant.xml</DocumentationFile>
+    <DocumentationFile>PantMerchant.xml</DocumentationFile>
   </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
@@ -40,7 +40,7 @@
     <Content Include=".gitignore" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="src\**\*.cs"/>
+    <Compile Include="src\**\*.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">

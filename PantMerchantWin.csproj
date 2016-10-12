@@ -30,14 +30,17 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <OutputType>WinExe</OutputType>
+    <DocumentationFile>bin\Debug\PantMerchant.xml</DocumentationFile>
   </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PrepareForRunDependsOn>$(PrepareForRunDependsOn);CopyLibsToOut</PrepareForRunDependsOn>
   </PropertyGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Compile Include="src\**\*.cs" />
+    <Content Include=".gitignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\**\*.cs"/>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">

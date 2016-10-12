@@ -1,11 +1,34 @@
 ﻿using System;
 using SwinGameSDK;
 using static SwinGameSDK.SwinGame;
+using System.Collections.Generic;
 
 namespace PantMerchant.Controllers
 {
     class StateController : Controller
     {
+        public static new List<UIElement> UIElementList
+        {
+            get
+            {
+                return StateController.CurrentController.UIElementList;
+            }
+        }
+        public static new List<IClickable> IClickableList
+        {
+            get
+            {
+                return StateController.CurrentController.IClickableList;
+            }
+        }
+        public static new List<IDrawable> IDrawableList
+        {
+            get
+            {
+                return StateController.CurrentController.IDrawableList;
+            }
+        }
+
         private static StateController _instance;
         public static new StateController Instance
         {
@@ -19,35 +42,70 @@ namespace PantMerchant.Controllers
             }
         }
 
-        public GameState CurrentState { get; set; }
-
-        private StateController()
+        public static GameState CurrentState { get; set; }
+        public static Controller CurrentController
         {
-            // State at the main menu
-            this.CurrentState = GameState.MainMenu;
-        }
-        public void StartGame()
-        {
-            this.CurrentState = GameState.InGame;
-        }
-
-        public void PauseGame()
-        {
-            if (this.CurrentState == GameState.InGame)
+            get
             {
-                // we only want to pause if we actually have a game to pause
-                this.CurrentState = GameState.GamePause;
+                switch (StateController.CurrentState)
+                {
+                    case GameState.MainMenu:
+                        return MainMenuController.Instance;
+                    case GameState.InGame:
+                    //return GameController.Instance;
+                    default:
+                        return MainMenuController.Instance;
+                }
             }
         }
 
-        public void QuitToMainMenu()
+        static StateController()
         {
-            this.CurrentState = GameState.MainMenu;
+            // State at the main menu
+            StateController.CurrentState = GameState.MainMenu;
+        }
+        public static void StartGame()
+        {
+            StateController.CurrentState = GameState.InGame;
         }
 
-        public void QuitToDesktop()
+        /// <summary>
+        /// Pauses the game if in game.
+        /// </summary>
+        public static void PauseGame()
         {
-            this.CurrentState = GameState.UserQuit;
+            if (StateController.CurrentState == GameState.InGame)
+            {
+                // we only want to pause if we actually have a game to pause
+                StateController.CurrentState = GameState.GamePause;
+            }
+        }
+
+        public static void QuitToMainMenu()
+        {
+            StateController.CurrentState = GameState.MainMenu;
+        }
+
+        public static void QuitToDesktop()
+        {
+            StateController.CurrentState = GameState.UserQuit;
+        }
+        
+        /// <summary>
+        /// Calls the DoControllerStuff method on the current controller
+        /// </summary>
+        public override void DoControllerStuff()
+        {
+            throw new InvalidOperationException("The instance method 'DoControllerStuff' should never be called on the StateController. Call the static method 'DoCurrentControllerStuff' instead.");
+        }
+
+        /// <summary>
+        /// Calls the DoControllerStuff method on the current controller
+        /// </summary>
+        public static void DoCurrentControllerStuff()
+        {
+            ProcessEvents();
+            StateController.CurrentController.DoControllerStuff();
         }
     }
 

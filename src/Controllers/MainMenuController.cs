@@ -7,7 +7,7 @@ namespace PantMerchant.Controllers
     class MainMenuController : Controller
     {
         private static MainMenuController _instance;
-        public static MainMenuController Instance {
+        public static new MainMenuController Instance {
             get
             {
                 if (_instance == null)
@@ -16,16 +16,6 @@ namespace PantMerchant.Controllers
                 }
                 return _instance;
             }
-        }        
-
-        private MainMenuController()
-        {
-
-        }
-
-        static MainMenuController()
-        {
-
         }
     }
 }

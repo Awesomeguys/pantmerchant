@@ -265,4 +265,4 @@ __pycache__/
 *.pyc
 
 # Swingame Library builds
-/lib/sgsdk_source
+#/lib/sgsdk_source

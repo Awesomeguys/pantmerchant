@@ -19,7 +19,9 @@ namespace PantMerchant
         static bool EndProgramRequested(){
             bool endGame = false;
             if  (   SwinGame.WindowCloseRequested()
-                ||  SwinGame.KeyTyped(KeyCode.EscapeKey)) {
+                ||  SwinGame.KeyTyped(KeyCode.EscapeKey)
+                ||  StateController.CurrentState == GameState.UserQuit
+                ) {
                 endGame = true;
             }
             return endGame;
@@ -29,39 +31,9 @@ namespace PantMerchant
         {
             View.Initialise();
 
-            // Create some UIs
-            UIContainer Menu = new UIContainer(
-                    "Main Menu", 
-                    new Point2D(
-                        ScreenWidth() / 2 - 100,    // TODO Remove Hardcode
-                        ScreenHeight() / 2 - 100    // TODO Remove Hardcode
-                    ), 
-                    new Point2D(200, 200), 
-                    MenuType.Auto
-            );
-
-            List<UIElement> MenuList = new List<UIElement>();
-            MenuList.Add(
-                new MenuElement(
-                    "New Game",
-                    new Action(() => { Console.WriteLine("Starting new Game");  }),
-                    "New Game",
-                    Menu
-                )
-            );
-
-            //Run the game loop
-            Controller currentController = MainMenuController.Instance;
             while (!EndProgramRequested())
             {
-                //Fetch the next batch of UI interaction
-                SwinGame.ProcessEvents();
-
-                // Process and IClickables
-                currentController.DoClickActions();
-
-                // Draw stuff on the screen
-                View.Draw();
+                StateController.DoCurrentControllerStuff();
             }
         }
     }

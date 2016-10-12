@@ -26,16 +26,48 @@ namespace PantMerchant
 
 		// Overloaded operators for vector arithmetic
 
+        /// <summary>
+        /// Determines if the coordinates are equal. Returns true if X and Y components are respectively equal.
+        /// </summary>
+        /// <param name="p1">First Point2D</param>
+        /// <param name="p2">Second Point2D</param>
+        /// <returns>True if Point2Ds refer to the same coordinate</returns>
 		public static bool operator ==(Point2D p1, Point2D p2) {
             return (p1.X == p2.X) && (p1.Y == p2.Y);
         }
 
+        /// <summary>
+        /// Determines if the coordinates are not equal. Returns true if X and Y components are respectively not equal.
+        /// </summary>
+        /// <param name="p1">First Point2D</param>
+        /// <param name="p2">Second Point2D</param>
+        /// <returns>False if Point2Ds refer to the same coordinate</returns>
 		public static bool operator !=(Point2D p1, Point2D p2) {
             return !((p1.X == p2.X) && (p1.Y == p2.Y));
-
         }
 
-		public static Point2D operator +(Point2D p1, Point2D p2) {
+        /// <summary>
+        /// Determines if the object is equal to the current Point2D. Returns true if obj is a Point2D and X and Y components are respectively equal.
+        /// </summary>
+        /// <param name="obj">Object to compare</param>
+        /// <returns>True if obj is a Point2D and refers to the same coordinate as current Point2D</returns>
+        public override bool Equals(object obj)
+        {
+            var p2 = obj as Point2D;
+            return (p2 != null) ? this == p2 : false;
+        }
+
+        /// <summary>
+        /// Gets hash code based on the sum of the X and Y coordinates.
+        /// </summary>
+        /// <returns>Hash code based on sum of components</returns>
+        public override int GetHashCode()
+        {
+            float sum = this.X + this.Y;
+            return sum.GetHashCode();
+        }
+
+        public static Point2D operator +(Point2D p1, Point2D p2) {
 			return new Point2D(p1.X + p2.X, p1.Y + p2.Y);
 		}
 

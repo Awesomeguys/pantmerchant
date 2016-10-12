@@ -51,6 +51,10 @@ namespace PantMerchant
         /// in the Pos property.
         /// </summary>
         public Point2D Size { get; private set; }
+        /// <summary>
+        /// The on-screen size of the UI element. Used when
+        /// the container type is auto.
+        /// </summary>
         public Point2D ScreenSize { get { return (this.Size != new Point2D()) ? this.Size : new Point2D(this.Container.Size.X, this.Container.Size.Y / this.Container.ChildElements.Count); } }
         /// <summary>
         /// The container of the UI element. For when UI 
@@ -58,7 +62,12 @@ namespace PantMerchant
         /// popup menus, etc.
         /// </summary>
         public UIContainer Container { get; internal set; }
-
+        /// <summary>
+        /// Initialises a new instance of the UIElement class.
+        /// </summary>
+        /// <param name="Name"></param>
+        /// <param name="Pos"></param>
+        /// <param name="Size"></param>
         public UIElement (String Name, Point2D Pos, Point2D Size) : this (Name, Pos, Size, UIContainer.GameWindow) {}
         public UIElement (String Name, Point2D Pos, Point2D Size, UIContainer Container)
         {

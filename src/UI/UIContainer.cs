@@ -27,7 +27,8 @@ namespace PantMerchant
                 new List<UIElement>(), 
                 "GameWindow", 
                 new Point2D (), 
-                new Point2D ( ScreenWidth(), ScreenHeight())
+                new Point2D ( ScreenWidth(), ScreenHeight()),
+                MenuType.Manual
             );
         }
 

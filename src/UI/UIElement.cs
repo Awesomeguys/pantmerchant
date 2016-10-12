@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using SwinGameSDK;
 using static SwinGameSDK.SwinGame;
 
+// Pantmerchant Libraries
+using PantMerchant.Controllers;
+
 namespace PantMerchant 
 {
     /// <summary>
@@ -22,7 +25,17 @@ namespace PantMerchant
         /// <summary>
         /// The on-screen coordinates of the UI element
         /// </summary>
-        public Point2D ScreenPos { get { return this.Pos + ((this.Container != null) ? this.Container.Pos : new Point2D()); } }
+        public Point2D ScreenPos
+        {
+            get {
+                return 
+                    this.Pos + (
+                        (this.Container == null) 
+                        ? new Point2D()
+                        : new Point2D(this.Container.Pos.X, this.Container.Pos.Y + this.Pos.Y +  this.ScreenSize.Y * this.Container.ChildElements.FindIndex(x => x == this))
+                    );
+            }
+        }
         /// <summary>
         /// The position of the UI element. These coordinates 
         /// are on screen. Where the UI element is a part of 
@@ -54,11 +67,11 @@ namespace PantMerchant
             this.Size = Size;
             this.Container = Container;
 
-            Registry.UIElementList.Add(this);
-            Registry.IDrawableList.Add(this);
+            StateController.UIElementList.Add(this);
+            StateController.IDrawableList.Add(this);
             if (this is IClickable)
             {
-                Registry.IClickableList.Add(this as IClickable);
+                StateController.IClickableList.Add(this as IClickable);
             }
         }
 

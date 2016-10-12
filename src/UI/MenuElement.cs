@@ -70,10 +70,6 @@ namespace PantMerchant
 
         public bool IsClicked()
         {
-            if (MouseClicked(MouseButton.LeftButton))
-            {
-                // hello
-            }
             return ( 
                 MouseClicked(MouseButton.LeftButton) && 
                 MouseX() > this.ScreenPos.X &&

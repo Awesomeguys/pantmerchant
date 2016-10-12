@@ -1,0 +1,246 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PantMerchant</name>
+    </assembly>
+    <members>
+        <member name="M:PantMerchant.Controllers.Controller.DoControllerStuff">
+            <summary>
+            Overridden by child class. Allows controller actions to be 
+            performed regardless of which controller is currently in 
+            control.
+            </summary>
+        </member>
+        <member name="M:PantMerchant.Controllers.StateController.PauseGame">
+            <summary>
+            Pauses the game if in game.
+            </summary>
+        </member>
+        <member name="M:PantMerchant.Controllers.StateController.DoControllerStuff">
+            <summary>
+            Calls the DoControllerStuff method on the current controller
+            </summary>
+        </member>
+        <member name="M:PantMerchant.Controllers.StateController.DoCurrentControllerStuff">
+            <summary>
+            Calls the DoControllerStuff method on the current controller
+            </summary>
+        </member>
+        <member name="T:PantMerchant.Controllers.GameState">
+            <summary>
+            Enumeration defining different program states
+            </summary>
+        </member>
+        <member name="F:PantMerchant.Controllers.GameState.MainMenu">
+            <summary>
+            Main Menu
+            </summary>
+        </member>
+        <member name="F:PantMerchant.Controllers.GameState.InGame">
+            <summary>
+            In Game
+            </summary>
+        </member>
+        <member name="F:PantMerchant.Controllers.GameState.GamePause">
+            <summary>
+            Paused Game - show the pause menu
+            </summary>
+        </member>
+        <member name="F:PantMerchant.Controllers.GameState.UserQuit">
+            <summary>
+            User has quit the game
+            </summary>
+        </member>
+        <member name="T:PantMerchant.Coordinate">
+            <summary>
+            A 2D coordinate class.
+            </summary>
+        </member>
+        <member name="P:PantMerchant.Coordinate.X">
+            <summary>
+            The coordinates.
+            </summary>
+        </member>
+        <member name="M:PantMerchant.Coordinate.ToString">
+            <summary>
+            Enables printing the class.
+            </summary>
+            <returns>[X,Y]</returns>
+        </member>
+        <member name="T:PantMerchant.BaseEntity">
+            <summary>
+            Abstract base class to be used by all grid entities.
+            </summary>
+        </member>
+        <member name="P:PantMerchant.BaseEntity.Position">
+            <summary>
+            The position on the grid.
+            </summary>
+        </member>
+        <member name="P:PantMerchant.BaseEntity.Footprint">
+            <summary>
+            A list of grid points relative to the
+            position that the entity will take up.
+            </summary>
+        </member>
+        <member name="M:PantMerchant.PantMerchantMain.EndProgramRequested">
+            <summary>
+             Method which encapsulates requests to end the 
+             program in one place.
+            </summary>
+            <returns>Boolean indicating whether the user has requested to close the program.</returns>
+        </member>
+        <member name="T:PantMerchant.IClickable">
+            <summary>
+            Interface used by clickable objects.
+            </summary>
+        </member>
+        <member name="P:PantMerchant.IClickable.ClickAction">
+            <summary>
+            Action performed when the implementing object has been "clicked" on.
+            </summary>
+        </member>
+        <member name="M:PantMerchant.IClickable.IsClicked">
+            <summary>
+            Method to determine whether the object has been clicked on or not.
+            </summary>
+            <returns>True if object has been clicked, false if object has not been clicked.</returns>
+        </member>
+        <member name="T:PantMerchant.MenuElement">
+            <summary>
+            This class is used to create dynamic menus, from the main menu, to in-game context menus.
+            </summary>
+        </member>
+        <member name="P:PantMerchant.MenuElement.Text">
+            <summary>
+            Text displayed on the menu button
+            </summary>
+        </member>
+        <member name="P:PantMerchant.UIContainer.ChildElements">
+            <summary>
+            List containing the UI elements which 
+            are contained by this UI container.
+            </summary>
+        </member>
+        <member name="P:PantMerchant.UIContainer.GameWindow">
+            <summary>
+            Static UI container used for placing UI 
+            elements within the "root" container, 
+            the game window.
+            </summary>
+        </member>
+        <member name="T:PantMerchant.MenuType">
+            <summary>
+            Enum defining whether the menu elements are placed manually or automatically within the UI container
+            </summary>
+        </member>
+        <member name="F:PantMerchant.MenuType.Auto">
+            <summary>
+            Menu elements are placed automatically, filling the container.
+            </summary>
+        </member>
+        <member name="F:PantMerchant.MenuType.Manual">
+            <summary>
+            Menu elements are placed manually, allowing the position and size within the UI container to be specified.
+            </summary>
+        </member>
+        <member name="T:PantMerchant.UIElement">
+            <summary>
+            Base class for any element of the UI. All buttons in 
+            all menus, HUD displays, etc. Anything from a "New 
+            Game" button on the main menu to an in-game minimap, 
+            to a dropdown context menu should inherit from this 
+            class. Can also act as a container for other UI 
+            Elements.
+            </summary>
+        </member>
+        <member name="P:PantMerchant.UIElement.Name">
+            <summary>
+            Internal name given to the UI element. 
+            </summary>
+        </member>
+        <member name="P:PantMerchant.UIElement.ScreenPos">
+            <summary>
+            The on-screen coordinates of the UI element
+            </summary>
+        </member>
+        <member name="P:PantMerchant.UIElement.Pos">
+            <summary>
+            The position of the UI element. These coordinates 
+            are on screen. Where the UI element is a part of 
+            a UI container, the position is relative to the 
+            position of the container, otherwise is relative 
+            to the program window.
+            </summary>
+        </member>
+        <member name="P:PantMerchant.UIElement.Size">
+            <summary>
+            The width and height of the UI element. Each 
+            component of the Point2D refers to the distance 
+            of that point from it's corresponding component 
+            in the Pos property.
+            </summary>
+        </member>
+        <member name="P:PantMerchant.UIElement.ScreenSize">
+            <summary>
+            The on-screen size of the UI element. Used when
+            the container type is auto.
+            </summary>
+        </member>
+        <member name="P:PantMerchant.UIElement.Container">
+            <summary>
+            The container of the UI element. For when UI 
+            elements need to exist within context menus, 
+            popup menus, etc.
+            </summary>
+        </member>
+        <member name="M:PantMerchant.UIElement.#ctor(System.String,PantMerchant.Point2D,PantMerchant.Point2D)">
+            <summary>
+            Initialises a new instance of the UIElement class.
+            </summary>
+            <param name="Name"></param>
+            <param name="Pos"></param>
+            <param name="Size"></param>
+        </member>
+        <member name="M:PantMerchant.Point2D.op_Equality(PantMerchant.Point2D,PantMerchant.Point2D)">
+            <summary>
+            Determines if the coordinates are equal. Returns true if X and Y components are respectively equal.
+            </summary>
+            <param name="p1">First Point2D</param>
+            <param name="p2">Second Point2D</param>
+            <returns>True if Point2Ds refer to the same coordinate</returns>
+        </member>
+        <member name="M:PantMerchant.Point2D.op_Inequality(PantMerchant.Point2D,PantMerchant.Point2D)">
+            <summary>
+            Determines if the coordinates are not equal. Returns true if X and Y components are respectively not equal.
+            </summary>
+            <param name="p1">First Point2D</param>
+            <param name="p2">Second Point2D</param>
+            <returns>False if Point2Ds refer to the same coordinate</returns>
+        </member>
+        <member name="M:PantMerchant.Point2D.Equals(System.Object)">
+            <summary>
+            Determines if the object is equal to the current Point2D. Returns true if obj is a Point2D and X and Y components are respectively equal.
+            </summary>
+            <param name="obj">Object to compare</param>
+            <returns>True if obj is a Point2D and refers to the same coordinate as current Point2D</returns>
+        </member>
+        <member name="M:PantMerchant.Point2D.GetHashCode">
+            <summary>
+            Gets hash code based on the sum of the X and Y coordinates.
+            </summary>
+            <returns>Hash code based on sum of components</returns>
+        </member>
+        <member name="T:PantMerchant.View">
+            <summary>
+            Global class used to manage drawing to 
+            the screen.
+            </summary>
+        </member>
+        <member name="M:PantMerchant.View.Draw">
+            <summary>
+            Used to draw all IDrawable objects to the screen.
+            </summary>
+        </member>
+    </members>
+</doc>

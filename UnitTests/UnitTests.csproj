@@ -90,6 +90,8 @@
     <Compile Include="src\Controllers\GameController.cs" />
     <Compile Include="src\Entities\BaseEntity.cs" />
     <Compile Include="src\Entities\GridCell.cs" />
+    <Compile Include="src\Commerce\StockTests.cs" />
+    <Compile Include="src\Commerce\FinanceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\Entities\IMovable.cs" />
   </ItemGroup>

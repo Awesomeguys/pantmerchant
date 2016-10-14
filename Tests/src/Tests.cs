@@ -1,12 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using NUnit.Framework;
 
-namespace Tests
+namespace NUnit.Tests
 {
+    [TestFixture]
     public class Tests
     {
+        [Test]
+        public void t1()
+        {
+            Assert.Pass();
+        }
+
+        [Test]
+        public void t2()
+        {
+            Assert.Pass();
+        }
     }
 }

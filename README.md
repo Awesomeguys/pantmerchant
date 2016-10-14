@@ -1,8 +1,4 @@
 # Pant Merchant
-
-**Build**  
-[![CircleCI](https://circleci.com/gh/Awesomeguys/pantmerchant.svg?style=svg)](https://circleci.com/gh/Awesomeguys/pantmerchant)
+[![Build Status](https://travis-ci.org/Awesomeguys/pantmerchant.svg?branch=master)](https://travis-ci.org/Awesomeguys/pantmerchant)
 
 Become the Greatest Merchant of Pants in the Known Universe
-
-

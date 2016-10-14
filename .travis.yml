@@ -2,7 +2,7 @@ language: csharp
 solution: PantMerchantWin.sln
 script:
   - xbuild PantMerchantWin.sln
-  # - mono packages/NUnit.ConsoleRunner.3.5.0/tools/nunit3-console.exe Tests/Tests.csproj
+  - mono packages/NUnit.ConsoleRunner.3.5.0/tools/nunit3-console.exe UnitTests/UnitTests.csproj
 
 notifications:
   email: false

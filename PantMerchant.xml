@@ -191,6 +191,34 @@
             </summary>
             <returns>Boolean indicating whether the user has requested to close the program.</returns>
         </member>
+        <member name="T:PantMerchant.Point2D">
+            <summary>
+            Basic vector class. Based on SwinGame's Point2D 
+            class, but with some helpful overloads
+            </summary>
+        </member>
+        <member name="F:PantMerchant.Point2D.X">
+            <summary>
+            Vector components
+            </summary>
+        </member>
+        <member name="F:PantMerchant.Point2D.Y">
+            <summary>
+            Vector components
+            </summary>
+        </member>
+        <member name="M:PantMerchant.Point2D.#ctor">
+            <summary>
+            Initialises a new Point2D instance with X and Y set to zero.
+            </summary>
+        </member>
+        <member name="M:PantMerchant.Point2D.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initialises a new Poin2D instance with X and Y set.
+            </summary>
+            <param name="X">Value to set X component to</param>
+            <param name="Y">Value to set Y component to</param>
+        </member>
         <member name="M:PantMerchant.Point2D.ToString">
             <summary>
             Enables printing the class.

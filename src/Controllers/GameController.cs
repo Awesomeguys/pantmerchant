@@ -58,6 +58,7 @@ namespace PantMerchant
 
         public GridCell GetGrid(Point2D p)
         {
+            // TODO remove hard code
             if (this._grid[50 + p.X, 50 + p.Y] == null)
             {
                 this._grid[50 + p.X, 50 + p.Y] = new GridCell(p);

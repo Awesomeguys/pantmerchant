@@ -7,11 +7,11 @@ namespace PantMerchant
 {
 	public class Point2D {
 
-		public float X, Y;
+		public int X, Y;
 
 		public Point2D() : this(0, 0) {}
 
-		public Point2D(float X, float Y) {
+		public Point2D(int X, int Y) {
 			this.X = X;
 			this.Y = Y;
 		}
@@ -81,7 +81,7 @@ namespace PantMerchant
 		}
 
 		public static Point2D operator *(Point2D p, float i) {
-			return new Point2D(p.X *i, p.Y*i);
+			return new Point2D(Point2D.Round(p.X *i), Point2D.Round(p.Y*i));
 		}
 
 		public static Point2D operator /(Point2D p, int i) {
@@ -89,7 +89,7 @@ namespace PantMerchant
 		}
 
 		public static Point2D operator /(Point2D p, double d) {
-			return new Point2D((float)((double)p.X / d), (float)((double)p.Y / d));
+			return new Point2D((Point2D.Round(p.X / d)), (Point2D.Round(p.Y / d)));
 		}
 
 		public static implicit operator SwinGameSDK.Point2D(PantMerchant.Point2D p){
@@ -103,10 +103,24 @@ namespace PantMerchant
 		public static implicit operator PantMerchant.Point2D(SwinGameSDK.Point2D p){
             // Automatically convert between my Point2D and SwinGame's Point2D
             PantMerchant.Point2D result = new PantMerchant.Point2D ();
-			result.X = p.X;
-			result.Y = p.Y;
+			result.X = Point2D.Round(p.X);
+			result.Y = Point2D.Round(p.Y);
 			return result;
 		}
+
+        /// <summary>
+        /// Rounds a double to the nearest int
+        /// </summary>
+        /// <param name="d"></param>
+        /// <returns></returns>
+        private static int Round(double d)
+        {
+            if (d < 0)
+            {
+                return (int)(d - 0.5);
+            }
+            return (int)(d + 0.5);
+        }
 	}
 }
 

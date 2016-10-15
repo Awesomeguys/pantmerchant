@@ -33,6 +33,10 @@ namespace PantMerchant.Controllers
 
         public override void DoControllerStuff()
         {
+            if (SwinGame.KeyTyped(KeyCode.EscapeKey))
+            {
+                StateController.QuitToDesktop();
+            }
             this.DoClickActions();
             View.Draw();
         }

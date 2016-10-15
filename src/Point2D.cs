@@ -5,12 +5,27 @@ using static SwinGameSDK.SwinGame;
 
 namespace PantMerchant
 {
+    /// <summary>
+    /// Basic vector class. Based on SwinGame's Point2D 
+    /// class, but with some helpful overloads
+    /// </summary>
 	public class Point2D {
 
+        /// <summary>
+        /// Vector components
+        /// </summary>
 		public int X, Y;
 
+        /// <summary>
+        /// Initialises a new Point2D instance with X and Y set to zero.
+        /// </summary>
 		public Point2D() : this(0, 0) {}
 
+        /// <summary>
+        /// Initialises a new Poin2D instance with X and Y set.
+        /// </summary>
+        /// <param name="X">Value to set X component to</param>
+        /// <param name="Y">Value to set Y component to</param>
 		public Point2D(int X, int Y) {
 			this.X = X;
 			this.Y = Y;

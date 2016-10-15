@@ -65,9 +65,9 @@ namespace PantMerchant
         /// <summary>
         /// Initialises a new instance of the UIElement class.
         /// </summary>
-        /// <param name="Name"></param>
-        /// <param name="Pos"></param>
-        /// <param name="Size"></param>
+        /// <param name="Name">Name given to the UI element</param>
+        /// <param name="Pos">Position of the UI element</param>
+        /// <param name="Size">Size of the UI element</param>
         public UIElement (String Name, Point2D Pos, Point2D Size) : this (Name, Pos, Size, UIContainer.GameWindow) {}
         public UIElement (String Name, Point2D Pos, Point2D Size, UIContainer Container)
         {
@@ -84,6 +84,9 @@ namespace PantMerchant
             }
         }
 
+        /// <summary>
+        /// Used by the View class to draw IDrawable objects to the screen.
+        /// </summary>
         public abstract void Draw();
     }
 }

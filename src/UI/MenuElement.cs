@@ -18,7 +18,7 @@ namespace PantMerchant
         public String Text { get; set; }
 
         public MenuElement (String Title, Action ClickAction, String Name, UIContainer Container)
-            : this (Title, ClickAction, Name, new Point2D(), new Point2D(), Container)
+            : this (Title, ClickAction, Name, Point2D.Zero, Point2D.Zero, Container)
         {
             if (Container.Type != MenuType.Auto)
             {

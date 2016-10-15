@@ -19,7 +19,6 @@ namespace PantMerchant
         static bool EndProgramRequested(){
             bool endGame = false;
             if  (   SwinGame.WindowCloseRequested()
-                ||  SwinGame.KeyTyped(KeyCode.EscapeKey)
                 ||  StateController.CurrentState == GameState.UserQuit
                 ) {
                 endGame = true;

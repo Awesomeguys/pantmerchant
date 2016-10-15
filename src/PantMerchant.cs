@@ -4,6 +4,9 @@ using static SwinGameSDK.SwinGame;
 
 using System.Collections.Generic;
 
+// Pantmerchant Libraries
+using PantMerchant.Controllers;
+
 namespace PantMerchant
 {
     public class PantMerchantMain
@@ -16,7 +19,8 @@ namespace PantMerchant
         static bool EndProgramRequested(){
             bool endGame = false;
             if  (   SwinGame.WindowCloseRequested()
-                ||  SwinGame.KeyTyped(KeyCode.EscapeKey)) {
+                ||  StateController.CurrentState == GameState.UserQuit
+                ) {
                 endGame = true;
             }
             return endGame;
@@ -26,35 +30,9 @@ namespace PantMerchant
         {
             View.Initialise();
 
-            // Create some UIs
-            UIContainer Menu = new UIContainer(
-                    "Main Menu", 
-                    new Point2D(
-                        ScreenWidth() / 2 - 100,    // TODO Remove Hardcode
-                        ScreenHeight() / 2 - 100    // TODO Remove Hardcode
-                    ), 
-                    new Point2D(200, 200), 
-                    MenuType.Auto
-            );
-
-            List<UIElement> MenuList = new List<UIElement>();
-            MenuList.Add(
-                new MenuElement(
-                    "New Game",
-                    new Action(() => { Console.WriteLine("Test 1"); }),
-                    "New Game",
-                    Menu
-                )
-            );
-
-            //Run the game loop
             while (!EndProgramRequested())
             {
-                //Fetch the next batch of UI interaction
-                SwinGame.ProcessEvents();
-
-                // Draw stuff on the screen
-                View.Draw();
+                StateController.DoCurrentControllerStuff();
             }
         }
     }

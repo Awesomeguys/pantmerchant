@@ -10,14 +10,14 @@ namespace PantMerchant
     /// </summary>
     class MenuElement : UIElement, IClickable
     {
-        public Delegate ClickAction { get; }
+        public Action ClickAction { get; }
 
         /// <summary>
         /// Text displayed on the menu button
         /// </summary>
         public String Text { get; set; }
 
-        public MenuElement (String Title, Delegate ClickAction, String Name, UIContainer Container)
+        public MenuElement (String Title, Action ClickAction, String Name, UIContainer Container)
             : this (Title, ClickAction, Name, new Point2D(), new Point2D(), Container)
         {
             if (Container.Type != MenuType.Auto)
@@ -25,9 +25,9 @@ namespace PantMerchant
                 throw new InvalidMenuTypeException();
             }
         }
-        public MenuElement (String Title, Delegate ClickAction, String Name, Point2D Pos, Point2D Size)
+        public MenuElement (String Title, Action ClickAction, String Name, Point2D Pos, Point2D Size)
             : this (Title, ClickAction, Name, Pos, Size, UIContainer.GameWindow) {}
-        public MenuElement(String Title, Delegate ClickAction, String Name, Point2D Pos, Point2D Size, UIContainer Container)
+        public MenuElement(String Title, Action ClickAction, String Name, Point2D Pos, Point2D Size, UIContainer Container)
             : base(Name, Pos, Size, Container)
         {
             this.Text = Title;
@@ -72,10 +72,10 @@ namespace PantMerchant
         {
             return ( 
                 MouseClicked(MouseButton.LeftButton) && 
-                MouseX() > this.Pos.X &&
-                MouseX() < this.Pos.X + this.Size.X &&
-                MouseY() > this.Pos.Y &&
-                MouseY() < this.Pos.Y + this.Size.Y
+                MouseX() > this.ScreenPos.X &&
+                MouseX() < this.ScreenPos.X + this.ScreenSize.X &&
+                MouseY() > this.ScreenPos.Y &&
+                MouseY() < this.ScreenPos.Y + this.ScreenSize.Y
             );
         }
     }

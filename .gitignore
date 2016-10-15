@@ -263,4 +263,6 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+
+# Swingame Library builds
 /lib/sgsdk_source

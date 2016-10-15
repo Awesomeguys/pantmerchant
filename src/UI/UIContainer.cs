@@ -27,7 +27,8 @@ namespace PantMerchant
                 new List<UIElement>(), 
                 "GameWindow", 
                 new Point2D (), 
-                new Point2D ( ScreenWidth(), ScreenHeight())
+                new Point2D ( ScreenWidth(), ScreenHeight()),
+                MenuType.Manual
             );
         }
 
@@ -55,8 +56,17 @@ namespace PantMerchant
         }
     }
 
+    /// <summary>
+    /// Enum defining whether the menu elements are placed manually or automatically within the UI container
+    /// </summary>
     public enum MenuType {
+        /// <summary>
+        /// Menu elements are placed automatically, filling the container.
+        /// </summary>
         Auto,
+        /// <summary>
+        /// Menu elements are placed manually, allowing the position and size within the UI container to be specified.
+        /// </summary>
         Manual
     }
 }

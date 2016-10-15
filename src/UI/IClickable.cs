@@ -12,7 +12,7 @@ namespace PantMerchant
         /// <summary>
         /// Action performed when the implementing object has been "clicked" on.
         /// </summary>
-        Delegate ClickAction { get; }
+        Action ClickAction { get; }
 
         /// <summary>
         /// Method to determine whether the object has been clicked on or not.

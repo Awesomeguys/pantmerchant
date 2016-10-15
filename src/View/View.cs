@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using SwinGameSDK;
 using static SwinGameSDK.SwinGame;
 
+// Pantmerchant Libraries
+using PantMerchant.Controllers;
+
 namespace PantMerchant 
 {
     /// <summary>
@@ -28,7 +31,7 @@ namespace PantMerchant
             SwinGame.ClearScreen(Color.White);
             SwinGame.DrawFramerate(0, 0);
 
-            foreach (IDrawable d in Registry.IDrawableList)
+            foreach (IDrawable d in StateController.IDrawableList)
             {
                 d.Draw();
             }

@@ -3,7 +3,7 @@ using SwinGameSDK;
 using static SwinGameSDK.SwinGame;
 using System.Collections.Generic;
 
-namespace PantMerchant.Controllers
+namespace PantMerchant
 {
     /// <summary>
     /// This class can be thought of as the Controller controller.

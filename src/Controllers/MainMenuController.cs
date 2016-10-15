@@ -3,9 +3,9 @@ using SwinGameSDK;
 using static SwinGameSDK.SwinGame;
 using System.Collections.Generic;
 
-namespace PantMerchant.Controllers
+namespace PantMerchant
 {
-    class MainMenuController : Controller
+    public class MainMenuController : Controller
     {
         private static MainMenuController _instance;
 

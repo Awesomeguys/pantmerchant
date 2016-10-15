@@ -3,12 +3,9 @@ using SwinGameSDK;
 using System.Collections.Generic;
 using static SwinGameSDK.SwinGame;
 
-// Pantmerchant namespaces
-using PantMerchant.Controllers;
-
-namespace PantMerchant.Entities
+namespace PantMerchant
 {
-    class GridCell
+    public class GridCell
     {
         public BaseEntity Entity { get; private set; }
 
@@ -44,18 +41,11 @@ namespace PantMerchant.Entities
         internal GridCell() : this(Point2D.Origin) { }
         internal GridCell(Point2D p)
         {
-            if (p == Point2D.Origin || GameController.Instance.GetGrid(p) != null)
-            {
-                this.Pos = p;
-            }
-            else
-            {
-                throw new GridPositionTakenExcepion();
-            }
+            this.Pos = p;
         }
-        private class GridPositionTakenExcepion : Exception
-        {
-            public GridPositionTakenExcepion() : base("There is already a grid with this position.") { }
-        }
+        //private class GridPositionTakenExcepion : Exception
+        //{
+        //    public GridPositionTakenExcepion() : base("There is already a grid with this position.") { }
+        //}
     }
 }

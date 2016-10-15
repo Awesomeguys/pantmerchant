@@ -3,12 +3,12 @@ using SwinGameSDK;
 using static SwinGameSDK.SwinGame;
 using System.Collections.Generic;
 
-// Pantmerchant namespaces
-using PantMerchant.Entities;
+// Pantmerchant namespace
+using PantMerchant;
 
-namespace PantMerchant.Controllers
+namespace PantMerchant
 {
-    class GameController : Controller
+    public class GameController : Controller
     {
         private static GameController _instance;
 
@@ -58,7 +58,13 @@ namespace PantMerchant.Controllers
 
         public GridCell GetGrid(Point2D p)
         {
-            return this._grid[50 + p.X, 50 + p.Y] ?? new GridCell(p);
+            if (this._grid[50 + p.X, 50 + p.Y] == null)
+            {
+                this._grid[50 + p.X, 50 + p.Y] = new GridCell(p);
+                
+            }
+
+            return this._grid[50 + p.X, 50 + p.Y];
         }
     }
 }

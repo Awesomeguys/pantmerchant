@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using SwinGameSDK;
 using static SwinGameSDK.SwinGame;
 
-// Pantmerchant Libraries
-using PantMerchant.Controllers;
-
 namespace PantMerchant 
 {
     /// <summary>
@@ -16,7 +13,7 @@ namespace PantMerchant
     /// class. Can also act as a container for other UI 
     /// Elements.
     /// </summary>
-    abstract class UIElement : IDrawable
+    public abstract class UIElement : IDrawable
     {
         /// <summary>
         /// Internal name given to the UI element. 

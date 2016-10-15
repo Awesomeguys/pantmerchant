@@ -47,7 +47,7 @@
     <Compile Include="src\Controllers\StateController.cs" />
     <Compile Include="src\Entities\BaseEntity.cs" />
     <Compile Include="src\PantMerchant.cs" />
-    <Compile Include="src\Point2D.cs" />
+    <Compile Include="src\Entities\Point2D.cs" />
     <Compile Include="src\UI\IClickable.cs" />
     <Compile Include="src\UI\MenuElement.cs" />
     <Compile Include="src\UI\UIContainer.cs" />

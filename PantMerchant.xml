@@ -191,7 +191,7 @@
             </summary>
             <returns>Boolean indicating whether the user has requested to close the program.</returns>
         </member>
-        <member name="P:PantMerchant.Point2D.Zero">
+        <member name="P:PantMerchant.Point2D.Origin">
             <summary>
             A Point2D with coordinates (0, 0)
             </summary>

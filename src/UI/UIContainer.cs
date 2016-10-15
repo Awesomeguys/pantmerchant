@@ -5,7 +5,7 @@ using static SwinGameSDK.SwinGame;
 
 namespace PantMerchant 
 {
-    class UIContainer : UIElement
+    public class UIContainer : UIElement
     {
         public MenuType Type;
         /// <summary>

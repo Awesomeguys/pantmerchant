@@ -4,7 +4,7 @@ using static SwinGameSDK.SwinGame;
 
 namespace PantMerchant
 {
-    interface IDrawable
+    public interface IDrawable
     {
         void Draw();
     }

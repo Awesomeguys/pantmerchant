@@ -5,7 +5,7 @@ namespace PantMerchant
     /// <summary>
     /// Abstract base class to be used by all grid entities.
     /// </summary>
-    abstract class BaseEntity
+    public abstract class BaseEntity
     {
         /// <summary>
         /// The position on the grid.

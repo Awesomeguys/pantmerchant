@@ -198,9 +198,14 @@
             <summary>
             Initialises a new instance of the UIElement class.
             </summary>
-            <param name="Name"></param>
-            <param name="Pos"></param>
-            <param name="Size"></param>
+            <param name="Name">Name given to the UI element</param>
+            <param name="Pos">Position of the UI element</param>
+            <param name="Size">Size of the UI element</param>
+        </member>
+        <member name="M:PantMerchant.UIElement.Draw">
+            <summary>
+            Used by the View class to draw IDrawable objects to the screen.
+            </summary>
         </member>
         <member name="M:PantMerchant.Point2D.op_Equality(PantMerchant.Point2D,PantMerchant.Point2D)">
             <summary>

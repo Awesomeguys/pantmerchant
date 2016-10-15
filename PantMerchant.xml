@@ -4,9 +4,38 @@
         <name>PantMerchant</name>
     </assembly>
     <members>
+        <member name="P:PantMerchant.Controllers.Controller.UIElementList">
+            <summary>
+            List of all UI elements instantiated. Added to whichever 
+            controller is currently in charge
+            </summary>
+        </member>
+        <member name="P:PantMerchant.Controllers.Controller.IClickableList">
+            <summary>
+            List of all IClickables instantiated. Added to whichever 
+            controller is currently in charge
+            </summary>
+        </member>
+        <member name="P:PantMerchant.Controllers.Controller.IDrawableList">
+            <summary>
+            List of all IDrawables instantiated. Added to whichever 
+            controller is currently in charge
+            </summary>
+        </member>
+        <member name="P:PantMerchant.Controllers.Controller.Instance">
+            <summary>
+            The singleton instance of the current controller.
+            </summary>
+        </member>
+        <member name="M:PantMerchant.Controllers.Controller.#ctor">
+            <summary>
+            Initialises the base Controller class.
+            </summary>
+        </member>
         <member name="M:PantMerchant.Controllers.Controller.DoClickActions">
             <summary>
-            
+            Handles click actions for all IClickables being 
+            managed by the current controller
             </summary>
         </member>
         <member name="M:PantMerchant.Controllers.Controller.DoControllerStuff">
@@ -14,6 +43,26 @@
             Overridden by child class. Allows controller actions to be 
             performed regardless of which controller is currently in 
             control.
+            </summary>
+        </member>
+        <member name="P:PantMerchant.Controllers.GameController.Instance">
+            <summary>
+            The singleton instance of the current controller.
+            </summary>
+        </member>
+        <member name="M:PantMerchant.Controllers.GameController.#cctor">
+            <summary>
+            Static constructor for the current controller
+            </summary>
+        </member>
+        <member name="P:PantMerchant.Controllers.MainMenuController.Instance">
+            <summary>
+            The singleton instance of the current controller.
+            </summary>
+        </member>
+        <member name="M:PantMerchant.Controllers.MainMenuController.#cctor">
+            <summary>
+            Static constructor for the current controller
             </summary>
         </member>
         <member name="T:PantMerchant.Controllers.StateController">
@@ -60,7 +109,7 @@
         </member>
         <member name="M:PantMerchant.Controllers.StateController.#cctor">
             <summary>
-            Static constructor for the StateController
+            Static constructor for the current controller
             </summary>
         </member>
         <member name="M:PantMerchant.Controllers.StateController.StartGame">

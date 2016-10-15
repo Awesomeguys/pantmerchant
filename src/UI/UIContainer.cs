@@ -26,7 +26,7 @@ namespace PantMerchant
             UIContainer.GameWindow = new UIContainer( 
                 new List<UIElement>(), 
                 "GameWindow", 
-                Point2D.Zero, 
+                Point2D.Origin, 
                 new Point2D ( ScreenWidth(), ScreenHeight()),
                 MenuType.Manual
             );

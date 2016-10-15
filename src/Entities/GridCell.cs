@@ -41,10 +41,10 @@ namespace PantMerchant.Entities
             }
         }
 
-        internal GridCell() : this(Point2D.Zero) { }
+        internal GridCell() : this(Point2D.Origin) { }
         internal GridCell(Point2D p)
         {
-            if (p == Point2D.Zero || GameController.Instance.GetGrid(p) != null)
+            if (p == Point2D.Origin || GameController.Instance.GetGrid(p) != null)
             {
                 this.Pos = p;
             }

@@ -12,7 +12,7 @@ namespace PantMerchant
         /// <summary>
         /// A Point2D with coordinates (0, 0)
         /// </summary>
-        public static Point2D Zero { get; }
+        public static Point2D Origin { get; }
 
 		private Point2D() : this(0, 0) {}
 
@@ -23,7 +23,7 @@ namespace PantMerchant
 
         static Point2D()
         {
-            Point2D.Zero = new Point2D();
+            Point2D.Origin = new Point2D();
         }
 
         /// <summary>

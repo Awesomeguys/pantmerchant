@@ -31,7 +31,7 @@ namespace PantMerchant
                 return 
                     this.Pos + (
                         (this.Container == null) 
-                        ? Point2D.Zero
+                        ? Point2D.Origin
                         : new Point2D(this.Container.Pos.X, this.Container.Pos.Y + this.Pos.Y +  this.ScreenSize.Y * this.Container.ChildElements.FindIndex(x => x == this))
                     );
             }
@@ -55,7 +55,7 @@ namespace PantMerchant
         /// The on-screen size of the UI element. Used when
         /// the container type is auto.
         /// </summary>
-        public Point2D ScreenSize { get { return (this.Size != Point2D.Zero) ? this.Size : new Point2D(this.Container.Size.X, this.Container.Size.Y / this.Container.ChildElements.Count); } }
+        public Point2D ScreenSize { get { return (this.Size != Point2D.Origin) ? this.Size : new Point2D(this.Container.Size.X, this.Container.Size.Y / this.Container.ChildElements.Count); } }
         /// <summary>
         /// The container of the UI element. For when UI 
         /// elements need to exist within context menus, 

@@ -86,6 +86,7 @@ namespace PantMerchant.Controllers
                     case GameState.InGame:
                         return GameController.Instance;
                     default:
+                        // Return to the main menu if we go to an unimplemented state
                         return MainMenuController.Instance;
                 }
             }

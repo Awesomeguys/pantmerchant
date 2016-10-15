@@ -84,7 +84,7 @@ namespace PantMerchant.Controllers
                     case GameState.MainMenu:
                         return MainMenuController.Instance;
                     case GameState.InGame:
-                    //return GameController.Instance;
+                        return GameController.Instance;
                     default:
                         return MainMenuController.Instance;
                 }
@@ -92,7 +92,7 @@ namespace PantMerchant.Controllers
         }
 
         /// <summary>
-        /// Static constructor for the StateController
+        /// Static constructor for the current controller
         /// </summary>
         static StateController()
         {

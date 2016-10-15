@@ -5,47 +5,60 @@ using static SwinGameSDK.SwinGame;
 
 namespace PantMerchant
 {
-    public class GridCell
+    public class GridCell : IDrawable
     {
         public BaseEntity Entity { get; private set; }
 
-        public Point2D Pos { get; }
+        public Point2D Coordinate { get; }
         public GridCell NeighbourTop {
             get
             {
-                return GameController.Instance.GetGrid(new Point2D(this.Pos.X, this.Pos.Y + 1));
+                return GameController.Instance.GetGrid(new Point2D(this.Coordinate.X, this.Coordinate.Y + 1));
             }
         }
         public GridCell NeighbourRight
         {
             get
             {
-                return GameController.Instance.GetGrid(new Point2D(this.Pos.X + 1, this.Pos.Y));
+                return GameController.Instance.GetGrid(new Point2D(this.Coordinate.X + 1, this.Coordinate.Y));
             }
         }
         public GridCell NeighbourBottom
         {
             get
             {
-                return GameController.Instance.GetGrid(new Point2D(this.Pos.X, this.Pos.Y - 1));
+                return GameController.Instance.GetGrid(new Point2D(this.Coordinate.X, this.Coordinate.Y - 1));
             }
         }
         public GridCell NeighbourLeft
         {
             get
             {
-                return GameController.Instance.GetGrid(new Point2D(this.Pos.X - 1, this.Pos.Y));
+                return GameController.Instance.GetGrid(new Point2D(this.Coordinate.X - 1, this.Coordinate.Y));
             }
         }
 
         internal GridCell() : this(Point2D.Origin) { }
         internal GridCell(Point2D p)
         {
-            this.Pos = p;
+            this.Coordinate = p;
         }
         //private class GridPositionTakenExcepion : Exception
         //{
         //    public GridPositionTakenExcepion() : base("There is already a grid with this position.") { }
         //}
+
+        public void Draw()
+        {
+            // TODO Remove Hardcode
+            Point2D topCoord = new Point2D(this.Coordinate.X, this.Coordinate.Y-5);
+            Point2D rightCoord = new Point2D(this.Coordinate.X+7, this.Coordinate.Y);
+            Point2D bottomCoord = new Point2D(this.Coordinate.X, this.Coordinate.Y+5);
+            Point2D leftCoord = new Point2D(this.Coordinate.X-7, this.Coordinate.Y);
+            SwinGame.DrawLine(Color.Black, topCoord, rightCoord);
+            SwinGame.DrawLine(Color.Black, rightCoord, bottomCoord);
+            SwinGame.DrawLine(Color.Black, bottomCoord, leftCoord);
+            SwinGame.DrawLine(Color.Black, leftCoord, topCoord);
+        }
     }
 }

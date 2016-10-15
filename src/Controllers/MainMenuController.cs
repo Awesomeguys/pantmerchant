@@ -8,6 +8,10 @@ namespace PantMerchant.Controllers
     class MainMenuController : Controller
     {
         private static MainMenuController _instance;
+
+        /// <summary>
+        /// The singleton instance of the current controller.
+        /// </summary>
         public static new MainMenuController Instance {
             get
             {
@@ -19,11 +23,9 @@ namespace PantMerchant.Controllers
             }
         }
 
-        private MainMenuController()
-        {
-            
-        }
-
+        /// <summary>
+        /// Static constructor for the current controller
+        /// </summary>
         static MainMenuController()
         {
             MainMenuController.BuildMainMenu();

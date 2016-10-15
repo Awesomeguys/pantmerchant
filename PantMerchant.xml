@@ -168,22 +168,6 @@
             User has quit the game
             </summary>
         </member>
-        <member name="T:PantMerchant.Coordinate">
-            <summary>
-            A 2D coordinate class.
-            </summary>
-        </member>
-        <member name="P:PantMerchant.Coordinate.X">
-            <summary>
-            The coordinates.
-            </summary>
-        </member>
-        <member name="M:PantMerchant.Coordinate.ToString">
-            <summary>
-            Enables printing the class.
-            </summary>
-            <returns>[X,Y]</returns>
-        </member>
         <member name="T:PantMerchant.BaseEntity">
             <summary>
             Abstract base class to be used by all grid entities.
@@ -206,6 +190,41 @@
              program in one place.
             </summary>
             <returns>Boolean indicating whether the user has requested to close the program.</returns>
+        </member>
+        <member name="M:PantMerchant.Point2D.ToString">
+            <summary>
+            Enables printing the class.
+            </summary>
+            <returns>[X,Y]</returns>
+        </member>
+        <member name="M:PantMerchant.Point2D.op_Equality(PantMerchant.Point2D,PantMerchant.Point2D)">
+            <summary>
+            Determines if the coordinates are equal. Returns true if X and Y components are respectively equal.
+            </summary>
+            <param name="p1">First Point2D</param>
+            <param name="p2">Second Point2D</param>
+            <returns>True if Point2Ds refer to the same coordinate</returns>
+        </member>
+        <member name="M:PantMerchant.Point2D.op_Inequality(PantMerchant.Point2D,PantMerchant.Point2D)">
+            <summary>
+            Determines if the coordinates are not equal. Returns true if X and Y components are respectively not equal.
+            </summary>
+            <param name="p1">First Point2D</param>
+            <param name="p2">Second Point2D</param>
+            <returns>False if Point2Ds refer to the same coordinate</returns>
+        </member>
+        <member name="M:PantMerchant.Point2D.Equals(System.Object)">
+            <summary>
+            Determines if the object is equal to the current Point2D. Returns true if obj is a Point2D and X and Y components are respectively equal.
+            </summary>
+            <param name="obj">Object to compare</param>
+            <returns>True if obj is a Point2D and refers to the same coordinate as current Point2D</returns>
+        </member>
+        <member name="M:PantMerchant.Point2D.GetHashCode">
+            <summary>
+            Gets hash code based on the sum of the X and Y coordinates.
+            </summary>
+            <returns>Hash code based on sum of components</returns>
         </member>
         <member name="T:PantMerchant.IClickable">
             <summary>
@@ -323,35 +342,6 @@
             <summary>
             Used by the View class to draw IDrawable objects to the screen.
             </summary>
-        </member>
-        <member name="M:PantMerchant.Point2D.op_Equality(PantMerchant.Point2D,PantMerchant.Point2D)">
-            <summary>
-            Determines if the coordinates are equal. Returns true if X and Y components are respectively equal.
-            </summary>
-            <param name="p1">First Point2D</param>
-            <param name="p2">Second Point2D</param>
-            <returns>True if Point2Ds refer to the same coordinate</returns>
-        </member>
-        <member name="M:PantMerchant.Point2D.op_Inequality(PantMerchant.Point2D,PantMerchant.Point2D)">
-            <summary>
-            Determines if the coordinates are not equal. Returns true if X and Y components are respectively not equal.
-            </summary>
-            <param name="p1">First Point2D</param>
-            <param name="p2">Second Point2D</param>
-            <returns>False if Point2Ds refer to the same coordinate</returns>
-        </member>
-        <member name="M:PantMerchant.Point2D.Equals(System.Object)">
-            <summary>
-            Determines if the object is equal to the current Point2D. Returns true if obj is a Point2D and X and Y components are respectively equal.
-            </summary>
-            <param name="obj">Object to compare</param>
-            <returns>True if obj is a Point2D and refers to the same coordinate as current Point2D</returns>
-        </member>
-        <member name="M:PantMerchant.Point2D.GetHashCode">
-            <summary>
-            Gets hash code based on the sum of the X and Y coordinates.
-            </summary>
-            <returns>Hash code based on sum of components</returns>
         </member>
         <member name="T:PantMerchant.View">
             <summary>

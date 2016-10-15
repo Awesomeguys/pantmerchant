@@ -197,6 +197,15 @@
             </summary>
             <returns>[X,Y]</returns>
         </member>
+        <member name="M:PantMerchant.Point2D.GetRelativePosition(PantMerchant.Point2D)">
+            <summary>
+            Returns the displacement of the provided Point2D from the 
+            current one. How many X units and how many Y units to travel 
+            to go from this one to the provided one.
+            </summary>
+            <param name="p">Point2D to compare with this one.</param>
+            <returns>Point2D representing the displacement between the provided one and the current one.</returns>
+        </member>
         <member name="M:PantMerchant.Point2D.op_Equality(PantMerchant.Point2D,PantMerchant.Point2D)">
             <summary>
             Determines if the coordinates are equal. Returns true if X and Y components are respectively equal.
@@ -225,6 +234,63 @@
             Gets hash code based on the sum of the X and Y coordinates.
             </summary>
             <returns>Hash code based on sum of components</returns>
+        </member>
+        <member name="M:PantMerchant.Point2D.op_Addition(PantMerchant.Point2D,PantMerchant.Point2D)">
+            <summary>
+            Performs vector addition on two Point2Ds
+            </summary>
+            <param name="p1">Point2D to sum</param>
+            <param name="p2">Point2D to sum</param>
+            <returns>Returns the vector sum of p1 and p2</returns>
+        </member>
+        <member name="M:PantMerchant.Point2D.op_Subtraction(PantMerchant.Point2D,PantMerchant.Point2D)">
+            <summary>
+            Performs vector subtraction on two Point2Ds
+            </summary>
+            <param name="p1">Point2D to perform subtraction on</param>
+            <param name="p2">Point2D to subtract from p1</param>
+            <returns>Returns the vector sum of p1 and -(p2)</returns>
+        </member>
+        <member name="M:PantMerchant.Point2D.op_Multiply(PantMerchant.Point2D,System.Double)">
+            <summary>
+            Performs scalar multiplication on a vector p with d
+            </summary>
+            <param name="p">The vector to multiply</param>
+            <param name="d">The scalar to multiply the p by</param>
+            <returns>The product of p and d</returns>
+        </member>
+        <member name="M:PantMerchant.Point2D.op_Division(PantMerchant.Point2D,System.Double)">
+            <summary>
+            Performs scalar division on a vector p with i, 
+            rounding the components of p to the nearest integer.
+            Equivalent to multiplying p by the reciprocal of i
+            </summary>
+            <param name="p">The vector to perform the division on</param>
+            <param name="d">The scalar to divide p by</param>
+            <returns>The quotient of p by d</returns>
+        </member>
+        <member name="M:PantMerchant.Point2D.op_Implicit(PantMerchant.Point2D)~SwinGameSDK.Point2D">
+            <summary>
+            Performs implicit conversion between PantMerchant's Point2D and 
+            SwinGame's in-built Point2D class.
+            </summary>
+            <param name="p">PantMerchant Point2D to convert</param>
+            <returns>SwinGame Point2D</returns>
+        </member>
+        <member name="M:PantMerchant.Point2D.op_Implicit(SwinGameSDK.Point2D)~PantMerchant.Point2D">
+            <summary>
+            Performs implicit conversion between PantMerchant's Point2D and 
+            SwinGame's in-built Point2D class.
+            </summary>
+            <param name="p">SwinGame Point2D to convert</param>
+            <returns>PantMerchant Point2D</returns>
+        </member>
+        <member name="M:PantMerchant.Point2D.Round(System.Double)">
+            <summary>
+            Rounds a double to the nearest int
+            </summary>
+            <param name="d"></param>
+            <returns></returns>
         </member>
         <member name="T:PantMerchant.IClickable">
             <summary>

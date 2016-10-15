@@ -4,68 +4,68 @@
         <name>PantMerchant</name>
     </assembly>
     <members>
-        <member name="P:PantMerchant.Controllers.Controller.UIElementList">
+        <member name="P:PantMerchant.Controller.UIElementList">
             <summary>
             List of all UI elements instantiated. Added to whichever 
             controller is currently in charge
             </summary>
         </member>
-        <member name="P:PantMerchant.Controllers.Controller.IClickableList">
+        <member name="P:PantMerchant.Controller.IClickableList">
             <summary>
             List of all IClickables instantiated. Added to whichever 
             controller is currently in charge
             </summary>
         </member>
-        <member name="P:PantMerchant.Controllers.Controller.IDrawableList">
+        <member name="P:PantMerchant.Controller.IDrawableList">
             <summary>
             List of all IDrawables instantiated. Added to whichever 
             controller is currently in charge
             </summary>
         </member>
-        <member name="P:PantMerchant.Controllers.Controller.Instance">
+        <member name="P:PantMerchant.Controller.Instance">
             <summary>
             The singleton instance of the current controller.
             </summary>
         </member>
-        <member name="M:PantMerchant.Controllers.Controller.#ctor">
+        <member name="M:PantMerchant.Controller.#ctor">
             <summary>
             Initialises the base Controller class.
             </summary>
         </member>
-        <member name="M:PantMerchant.Controllers.Controller.DoClickActions">
+        <member name="M:PantMerchant.Controller.DoClickActions">
             <summary>
             Handles click actions for all IClickables being 
             managed by the current controller
             </summary>
         </member>
-        <member name="M:PantMerchant.Controllers.Controller.DoControllerStuff">
+        <member name="M:PantMerchant.Controller.DoControllerStuff">
             <summary>
             Overridden by child class. Allows controller actions to be 
             performed regardless of which controller is currently in 
             control.
             </summary>
         </member>
-        <member name="P:PantMerchant.Controllers.GameController.Instance">
+        <member name="P:PantMerchant.GameController.Instance">
             <summary>
             The singleton instance of the current controller.
             </summary>
         </member>
-        <member name="M:PantMerchant.Controllers.GameController.#cctor">
+        <member name="M:PantMerchant.GameController.#cctor">
             <summary>
             Static constructor for the current controller
             </summary>
         </member>
-        <member name="P:PantMerchant.Controllers.MainMenuController.Instance">
+        <member name="P:PantMerchant.MainMenuController.Instance">
             <summary>
             The singleton instance of the current controller.
             </summary>
         </member>
-        <member name="M:PantMerchant.Controllers.MainMenuController.#cctor">
+        <member name="M:PantMerchant.MainMenuController.#cctor">
             <summary>
             Static constructor for the current controller
             </summary>
         </member>
-        <member name="T:PantMerchant.Controllers.StateController">
+        <member name="T:PantMerchant.StateController">
             <summary>
             This class can be thought of as the Controller controller.
             The game's "state" determines which controller is in control
@@ -74,96 +74,96 @@
             the game, or about to quit.
             </summary>
         </member>
-        <member name="P:PantMerchant.Controllers.StateController.UIElementList">
+        <member name="P:PantMerchant.StateController.UIElementList">
             <summary>
             List of all UI elements instantiated. Added to whichever 
             controller is currently in charge
             </summary>
         </member>
-        <member name="P:PantMerchant.Controllers.StateController.IClickableList">
+        <member name="P:PantMerchant.StateController.IClickableList">
             <summary>
             List of all IClickables instantiated. Added to whichever 
             controller is currently in charge
             </summary>
         </member>
-        <member name="P:PantMerchant.Controllers.StateController.IDrawableList">
+        <member name="P:PantMerchant.StateController.IDrawableList">
             <summary>
             List of all IDrawables instantiated. Added to whichever 
             controller is currently in charge
             </summary>
         </member>
-        <member name="P:PantMerchant.Controllers.StateController.Instance">
+        <member name="P:PantMerchant.StateController.Instance">
             <summary>
             The singleton instance of the current controller.
             </summary>
         </member>
-        <member name="P:PantMerchant.Controllers.StateController.CurrentState">
+        <member name="P:PantMerchant.StateController.CurrentState">
             <summary>
             The state the game is currently in
             </summary>
         </member>
-        <member name="P:PantMerchant.Controllers.StateController.CurrentController">
+        <member name="P:PantMerchant.StateController.CurrentController">
             <summary>
             The controller which is currently in charge.
             </summary>
         </member>
-        <member name="M:PantMerchant.Controllers.StateController.#cctor">
+        <member name="M:PantMerchant.StateController.#cctor">
             <summary>
             Static constructor for the current controller
             </summary>
         </member>
-        <member name="M:PantMerchant.Controllers.StateController.StartGame">
+        <member name="M:PantMerchant.StateController.StartGame">
             <summary>
             Changes the game state to InGame, and putting the 
             GameController in charge
             </summary>
         </member>
-        <member name="M:PantMerchant.Controllers.StateController.PauseGame">
+        <member name="M:PantMerchant.StateController.PauseGame">
             <summary>
             Pauses the game if in game.
             </summary>
         </member>
-        <member name="M:PantMerchant.Controllers.StateController.QuitToMainMenu">
+        <member name="M:PantMerchant.StateController.QuitToMainMenu">
             <summary>
             Changes the game state to MainMenu, switching out to the main menu.
             </summary>
         </member>
-        <member name="M:PantMerchant.Controllers.StateController.QuitToDesktop">
+        <member name="M:PantMerchant.StateController.QuitToDesktop">
             <summary>
             Changes the game state to UserQuit, quitting the program.
             </summary>
         </member>
-        <member name="M:PantMerchant.Controllers.StateController.DoControllerStuff">
+        <member name="M:PantMerchant.StateController.DoControllerStuff">
             <summary>
             Calls the DoControllerStuff method on the current controller
             </summary>
         </member>
-        <member name="M:PantMerchant.Controllers.StateController.DoCurrentControllerStuff">
+        <member name="M:PantMerchant.StateController.DoCurrentControllerStuff">
             <summary>
             Calls the DoControllerStuff method on the current controller
             </summary>
         </member>
-        <member name="T:PantMerchant.Controllers.GameState">
+        <member name="T:PantMerchant.GameState">
             <summary>
             Enumeration defining different program states
             </summary>
         </member>
-        <member name="F:PantMerchant.Controllers.GameState.MainMenu">
+        <member name="F:PantMerchant.GameState.MainMenu">
             <summary>
             Main Menu
             </summary>
         </member>
-        <member name="F:PantMerchant.Controllers.GameState.InGame">
+        <member name="F:PantMerchant.GameState.InGame">
             <summary>
             In Game
             </summary>
         </member>
-        <member name="F:PantMerchant.Controllers.GameState.GamePause">
+        <member name="F:PantMerchant.GameState.GamePause">
             <summary>
             Paused Game - show the pause menu
             </summary>
         </member>
-        <member name="F:PantMerchant.Controllers.GameState.UserQuit">
+        <member name="F:PantMerchant.GameState.UserQuit">
             <summary>
             User has quit the game
             </summary>
@@ -184,12 +184,22 @@
             position that the entity will take up.
             </summary>
         </member>
+        <member name="T:PantMerchant.PantMerchantMain">
+            <summary>
+            Main class
+            </summary>
+        </member>
         <member name="M:PantMerchant.PantMerchantMain.EndProgramRequested">
             <summary>
              Method which encapsulates requests to end the 
              program in one place.
             </summary>
             <returns>Boolean indicating whether the user has requested to close the program.</returns>
+        </member>
+        <member name="M:PantMerchant.PantMerchantMain.Main">
+            <summary>
+            Program entry point
+            </summary>
         </member>
         <member name="P:PantMerchant.Point2D.Origin">
             <summary>

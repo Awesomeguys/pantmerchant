@@ -9,12 +9,22 @@ namespace PantMerchant
 
 		public int X, Y;
 
-		public Point2D() : this(0, 0) {}
+        /// <summary>
+        /// A Point2D with coordinates (0, 0)
+        /// </summary>
+        public static Point2D Zero { get; }
+
+		private Point2D() : this(0, 0) {}
 
 		public Point2D(int X, int Y) {
 			this.X = X;
 			this.Y = Y;
 		}
+
+        static Point2D()
+        {
+            Point2D.Zero = new Point2D();
+        }
 
         /// <summary>
         /// Enables printing the class.

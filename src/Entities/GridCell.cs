@@ -90,13 +90,20 @@ namespace PantMerchant
             this.Coordinate = p;
         }
 
+        /// <summary>
+        /// Static constructor for GridCell type
+        /// </summary>
         static GridCell()
         {
-
             _grid = new GridCell[100, 100];    // TODO Remove hardcode
             _grid[50, 50] = GridCell.Origin;
         }
 
+        /// <summary>
+        /// Retrieves the GridCell with the specified position
+        /// </summary>
+        /// <param name="p">The position of the GridCell you'd like</param>
+        /// <returns>A GridCell with the specified position</returns>
         public static GridCell GetGrid(Point2D p)
         {
             // TODO remove hard code

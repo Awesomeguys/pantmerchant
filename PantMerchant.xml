@@ -5,435 +5,484 @@
     </assembly>
     <members>
         <member name="P:PantMerchant.Controller.UIElementList">
-             <summary>
-             List of all UI elements instantiated. Added to whichever 
-             controller is currently in charge
-             </summary>
-            </member>
+            <summary>
+            List of all UI elements instantiated. Added to whichever 
+            controller is currently in charge
+            </summary>
+        </member>
         <member name="P:PantMerchant.Controller.IClickableList">
-             <summary>
-             List of all IClickables instantiated. Added to whichever 
-             controller is currently in charge
-             </summary>
-            </member>
+            <summary>
+            List of all IClickables instantiated. Added to whichever 
+            controller is currently in charge
+            </summary>
+        </member>
         <member name="P:PantMerchant.Controller.IDrawableList">
-             <summary>
-             List of all IDrawables instantiated. Added to whichever 
-             controller is currently in charge
-             </summary>
-            </member>
+            <summary>
+            List of all IDrawables instantiated. Added to whichever 
+            controller is currently in charge
+            </summary>
+        </member>
         <member name="P:PantMerchant.Controller.Instance">
-             <summary>
-             The singleton instance of the current controller.
-             </summary>
-            </member>
+            <summary>
+            The singleton instance of the current controller.
+            </summary>
+        </member>
         <member name="M:PantMerchant.Controller.#ctor">
-             <summary>
-             Initialises the base Controller class.
-             </summary>
-            </member>
+            <summary>
+            Initialises the base Controller class.
+            </summary>
+        </member>
         <member name="M:PantMerchant.Controller.DoClickActions">
-             <summary>
-             Handles click actions for all IClickables being 
-             managed by the current controller
-             </summary>
-            </member>
+            <summary>
+            Handles click actions for all IClickables being 
+            managed by the current controller
+            </summary>
+        </member>
         <member name="M:PantMerchant.Controller.DoControllerStuff">
-             <summary>
-             Overridden by child class. Allows controller actions to be 
-             performed regardless of which controller is currently in 
-             control.
-             </summary>
-            </member>
+            <summary>
+            Overridden by child class. Allows controller actions to be 
+            performed regardless of which controller is currently in 
+            control.
+            </summary>
+        </member>
         <member name="P:PantMerchant.GameController.Instance">
-             <summary>
-             The singleton instance of the current controller.
-             </summary>
-            </member>
-        <member name="M:PantMerchant.GameController.#ctor">
-             <summary>
-             Static constructor for the current controller
-             </summary>
-            </member>
+            <summary>
+            The singleton instance of the current controller.
+            </summary>
+        </member>
+        <member name="M:PantMerchant.GameController.#cctor">
+            <summary>
+            Static constructor for the current controller
+            </summary>
+        </member>
         <member name="P:PantMerchant.MainMenuController.Instance">
-             <summary>
-             The singleton instance of the current controller.
-             </summary>
-            </member>
-        <member name="M:PantMerchant.MainMenuController.#ctor">
-             <summary>
-             Static constructor for the current controller
-             </summary>
-            </member>
+            <summary>
+            The singleton instance of the current controller.
+            </summary>
+        </member>
+        <member name="M:PantMerchant.MainMenuController.#cctor">
+            <summary>
+            Static constructor for the current controller
+            </summary>
+        </member>
         <member name="T:PantMerchant.StateController">
-             <summary>
-             This class can be thought of as the Controller controller.
-             The game's "state" determines which controller is in control
-             of the input at a given time. The state controller keeps 
-             track of whether you are on the main menu, in the middle of 
-             the game, or about to quit.
-             </summary>
-            </member>
+            <summary>
+            This class can be thought of as the Controller controller.
+            The game's "state" determines which controller is in control
+            of the input at a given time. The state controller keeps 
+            track of whether you are on the main menu, in the middle of 
+            the game, or about to quit.
+            </summary>
+        </member>
         <member name="P:PantMerchant.StateController.UIElementList">
-             <summary>
-             List of all UI elements instantiated. Added to whichever 
-             controller is currently in charge
-             </summary>
-            </member>
+            <summary>
+            List of all UI elements instantiated. Added to whichever 
+            controller is currently in charge
+            </summary>
+        </member>
         <member name="P:PantMerchant.StateController.IClickableList">
-             <summary>
-             List of all IClickables instantiated. Added to whichever 
-             controller is currently in charge
-             </summary>
-            </member>
+            <summary>
+            List of all IClickables instantiated. Added to whichever 
+            controller is currently in charge
+            </summary>
+        </member>
         <member name="P:PantMerchant.StateController.IDrawableList">
-             <summary>
-             List of all IDrawables instantiated. Added to whichever 
-             controller is currently in charge
-             </summary>
-            </member>
+            <summary>
+            List of all IDrawables instantiated. Added to whichever 
+            controller is currently in charge
+            </summary>
+        </member>
         <member name="P:PantMerchant.StateController.Instance">
-             <summary>
-             The singleton instance of the current controller.
-             </summary>
-            </member>
+            <summary>
+            The singleton instance of the current controller.
+            </summary>
+        </member>
         <member name="P:PantMerchant.StateController.CurrentState">
-             <summary>
-             The state the game is currently in
-             </summary>
-            </member>
+            <summary>
+            The state the game is currently in
+            </summary>
+        </member>
         <member name="P:PantMerchant.StateController.CurrentController">
-             <summary>
-             The controller which is currently in charge.
-             </summary>
-            </member>
-        <member name="M:PantMerchant.StateController.#ctor">
-             <summary>
-             Static constructor for the current controller
-             </summary>
-            </member>
+            <summary>
+            The controller which is currently in charge.
+            </summary>
+        </member>
+        <member name="M:PantMerchant.StateController.#cctor">
+            <summary>
+            Static constructor for the current controller
+            </summary>
+        </member>
         <member name="M:PantMerchant.StateController.StartGame">
-             <summary>
-             Changes the game state to InGame, and putting the 
-             GameController in charge
-             </summary>
-            </member>
+            <summary>
+            Changes the game state to InGame, and putting the 
+            GameController in charge
+            </summary>
+        </member>
         <member name="M:PantMerchant.StateController.PauseGame">
-             <summary>
-             Pauses the game if in game.
-             </summary>
-            </member>
+            <summary>
+            Pauses the game if in game.
+            </summary>
+        </member>
         <member name="M:PantMerchant.StateController.QuitToMainMenu">
-             <summary>
-             Changes the game state to MainMenu, switching out to the main menu.
-             </summary>
-            </member>
+            <summary>
+            Changes the game state to MainMenu, switching out to the main menu.
+            </summary>
+        </member>
         <member name="M:PantMerchant.StateController.QuitToDesktop">
-             <summary>
-             Changes the game state to UserQuit, quitting the program.
-             </summary>
-            </member>
+            <summary>
+            Changes the game state to UserQuit, quitting the program.
+            </summary>
+        </member>
         <member name="M:PantMerchant.StateController.DoControllerStuff">
-             <summary>
-             Calls the DoControllerStuff method on the current controller
-             </summary>
-            </member>
+            <summary>
+            Calls the DoControllerStuff method on the current controller
+            </summary>
+        </member>
         <member name="M:PantMerchant.StateController.DoCurrentControllerStuff">
-             <summary>
-             Calls the DoControllerStuff method on the current controller
-             </summary>
-            </member>
+            <summary>
+            Calls the DoControllerStuff method on the current controller
+            </summary>
+        </member>
         <member name="T:PantMerchant.GameState">
-             <summary>
-             Enumeration defining different program states
-             </summary>
-            </member>
+            <summary>
+            Enumeration defining different program states
+            </summary>
+        </member>
         <member name="F:PantMerchant.GameState.MainMenu">
-             <summary>
-             Main Menu
-             </summary>
-            </member>
+            <summary>
+            Main Menu
+            </summary>
+        </member>
         <member name="F:PantMerchant.GameState.InGame">
-             <summary>
-             In Game
-             </summary>
-            </member>
+            <summary>
+            In Game
+            </summary>
+        </member>
         <member name="F:PantMerchant.GameState.GamePause">
-             <summary>
-             Paused Game - show the pause menu
-             </summary>
-            </member>
+            <summary>
+            Paused Game - show the pause menu
+            </summary>
+        </member>
         <member name="F:PantMerchant.GameState.UserQuit">
-             <summary>
-             User has quit the game
-             </summary>
-            </member>
+            <summary>
+            User has quit the game
+            </summary>
+        </member>
         <member name="T:PantMerchant.BaseEntity">
-             <summary>
-             Abstract base class to be used by all grid entities.
-             </summary>
-            </member>
+            <summary>
+            Abstract base class to be used by all grid entities.
+            </summary>
+        </member>
         <member name="P:PantMerchant.BaseEntity.Position">
-             <summary>
-             The position on the grid.
-             </summary>
-            </member>
+            <summary>
+            The position on the grid.
+            </summary>
+        </member>
         <member name="P:PantMerchant.BaseEntity.Footprint">
-             <summary>
-             A list of grid points relative to the
-             position that the entity will take up.
-             </summary>
-            </member>
+            <summary>
+            A list of grid points relative to the
+            position that the entity will take up.
+            </summary>
+        </member>
         <member name="T:PantMerchant.PantMerchantMain">
-             <summary>
-             Main class
-             </summary>
-            </member>
+            <summary>
+            Main class
+            </summary>
+        </member>
         <member name="M:PantMerchant.PantMerchantMain.EndProgramRequested">
             <summary>
              Method which encapsulates requests to end the 
              program in one place.
             </summary>
             <returns>Boolean indicating whether the user has requested to close the program.</returns>
-            </member>
+        </member>
         <member name="M:PantMerchant.PantMerchantMain.Main">
-             <summary>
-             Program entry point
-             </summary>
-            </member>
+            <summary>
+            Program entry point
+            </summary>
+        </member>
         <member name="P:PantMerchant.Point2D.Origin">
-             <summary>
-             A Point2D with coordinates (0, 0)
-             </summary>
-            </member>
+            <summary>
+            A Point2D with coordinates (0, 0)
+            </summary>
+        </member>
         <member name="M:PantMerchant.Point2D.ToString">
-             <summary>
-             Enables printing the class.
-             </summary>
-             <returns>[X,Y]</returns>
-            </member>
+            <summary>
+            Enables printing the class.
+            </summary>
+            <returns>[X,Y]</returns>
+        </member>
         <member name="M:PantMerchant.Point2D.GetRelativePosition(PantMerchant.Point2D)">
-             <summary>
-             Returns the displacement of the provided Point2D from the 
-             current one. How many X units and how many Y units to travel 
-             to go from this one to the provided one.
-             </summary>
-             <param name="p">Point2D to compare with this one.</param>
-             <returns>Point2D representing the displacement between the provided one and the current one.</returns>
-            </member>
+            <summary>
+            Returns the displacement of the provided Point2D from the 
+            current one. How many X units and how many Y units to travel 
+            to go from this one to the provided one.
+            </summary>
+            <param name="p">Point2D to compare with this one.</param>
+            <returns>Point2D representing the displacement between the provided one and the current one.</returns>
+        </member>
         <member name="M:PantMerchant.Point2D.op_Equality(PantMerchant.Point2D,PantMerchant.Point2D)">
-             <summary>
-             Determines if the coordinates are equal. Returns true if X and Y components are respectively equal.
-             </summary>
-             <param name="p1">First Point2D</param>
-             <param name="p2">Second Point2D</param>
-             <returns>True if Point2Ds refer to the same coordinate</returns>
-            </member>
+            <summary>
+            Determines if the coordinates are equal. Returns true if X and Y components are respectively equal.
+            </summary>
+            <param name="p1">First Point2D</param>
+            <param name="p2">Second Point2D</param>
+            <returns>True if Point2Ds refer to the same coordinate</returns>
+        </member>
         <member name="M:PantMerchant.Point2D.op_Inequality(PantMerchant.Point2D,PantMerchant.Point2D)">
-             <summary>
-             Determines if the coordinates are not equal. Returns true if X and Y components are respectively not equal.
-             </summary>
-             <param name="p1">First Point2D</param>
-             <param name="p2">Second Point2D</param>
-             <returns>False if Point2Ds refer to the same coordinate</returns>
-            </member>
+            <summary>
+            Determines if the coordinates are not equal. Returns true if X and Y components are respectively not equal.
+            </summary>
+            <param name="p1">First Point2D</param>
+            <param name="p2">Second Point2D</param>
+            <returns>False if Point2Ds refer to the same coordinate</returns>
+        </member>
         <member name="M:PantMerchant.Point2D.Equals(System.Object)">
-             <summary>
-             Determines if the object is equal to the current Point2D. Returns true if obj is a Point2D and X and Y components are respectively equal.
-             </summary>
-             <param name="obj">Object to compare</param>
-             <returns>True if obj is a Point2D and refers to the same coordinate as current Point2D</returns>
-            </member>
+            <summary>
+            Determines if the object is equal to the current Point2D. Returns true if obj is a Point2D and X and Y components are respectively equal.
+            </summary>
+            <param name="obj">Object to compare</param>
+            <returns>True if obj is a Point2D and refers to the same coordinate as current Point2D</returns>
+        </member>
         <member name="M:PantMerchant.Point2D.GetHashCode">
-             <summary>
-             Gets hash code based on the sum of the X and Y coordinates.
-             </summary>
-             <returns>Hash code based on sum of components</returns>
-            </member>
+            <summary>
+            Gets hash code based on the sum of the X and Y coordinates.
+            </summary>
+            <returns>Hash code based on sum of components</returns>
+        </member>
         <member name="M:PantMerchant.Point2D.op_Addition(PantMerchant.Point2D,PantMerchant.Point2D)">
-             <summary>
-             Performs vector addition on two Point2Ds
-             </summary>
-             <param name="p1">Point2D to sum</param>
-             <param name="p2">Point2D to sum</param>
-             <returns>Returns the vector sum of p1 and p2</returns>
-            </member>
+            <summary>
+            Performs vector addition on two Point2Ds
+            </summary>
+            <param name="p1">Point2D to sum</param>
+            <param name="p2">Point2D to sum</param>
+            <returns>Returns the vector sum of p1 and p2</returns>
+        </member>
         <member name="M:PantMerchant.Point2D.op_Subtraction(PantMerchant.Point2D,PantMerchant.Point2D)">
-             <summary>
-             Performs vector subtraction on two Point2Ds
-             </summary>
-             <param name="p1">Point2D to perform subtraction on</param>
-             <param name="p2">Point2D to subtract from p1</param>
-             <returns>Returns the vector sum of p1 and -(p2)</returns>
-            </member>
+            <summary>
+            Performs vector subtraction on two Point2Ds
+            </summary>
+            <param name="p1">Point2D to perform subtraction on</param>
+            <param name="p2">Point2D to subtract from p1</param>
+            <returns>Returns the vector sum of p1 and -(p2)</returns>
+        </member>
         <member name="M:PantMerchant.Point2D.op_Multiply(PantMerchant.Point2D,System.Double)">
-             <summary>
-             Performs scalar multiplication on a vector p with d
-             </summary>
-             <param name="p">The vector to multiply</param>
-             <param name="d">The scalar to multiply the p by</param>
-             <returns>The product of p and d</returns>
-            </member>
+            <summary>
+            Performs scalar multiplication on a vector p with d
+            </summary>
+            <param name="p">The vector to multiply</param>
+            <param name="d">The scalar to multiply the p by</param>
+            <returns>The product of p and d</returns>
+        </member>
         <member name="M:PantMerchant.Point2D.op_Division(PantMerchant.Point2D,System.Double)">
-             <summary>
-             Performs scalar division on a vector p with i, 
-             rounding the components of p to the nearest integer.
-             Equivalent to multiplying p by the reciprocal of i
-             </summary>
-             <param name="p">The vector to perform the division on</param>
-             <param name="d">The scalar to divide p by</param>
-             <returns>The quotient of p by d</returns>
-            </member>
+            <summary>
+            Performs scalar division on a vector p with i, 
+            rounding the components of p to the nearest integer.
+            Equivalent to multiplying p by the reciprocal of i
+            </summary>
+            <param name="p">The vector to perform the division on</param>
+            <param name="d">The scalar to divide p by</param>
+            <returns>The quotient of p by d</returns>
+        </member>
         <member name="M:PantMerchant.Point2D.op_Implicit(PantMerchant.Point2D)~SwinGameSDK.Point2D">
-             <summary>
-             Performs implicit conversion between PantMerchant's Point2D and 
-             SwinGame's in-built Point2D class.
-             </summary>
-             <param name="p">PantMerchant Point2D to convert</param>
-             <returns>SwinGame Point2D</returns>
-            </member>
+            <summary>
+            Performs implicit conversion between PantMerchant's Point2D and 
+            SwinGame's in-built Point2D class.
+            </summary>
+            <param name="p">PantMerchant Point2D to convert</param>
+            <returns>SwinGame Point2D</returns>
+        </member>
         <member name="M:PantMerchant.Point2D.op_Implicit(SwinGameSDK.Point2D)~PantMerchant.Point2D">
-             <summary>
-             Performs implicit conversion between PantMerchant's Point2D and 
-             SwinGame's in-built Point2D class.
-             </summary>
-             <param name="p">SwinGame Point2D to convert</param>
-             <returns>PantMerchant Point2D</returns>
-            </member>
+            <summary>
+            Performs implicit conversion between PantMerchant's Point2D and 
+            SwinGame's in-built Point2D class.
+            </summary>
+            <param name="p">SwinGame Point2D to convert</param>
+            <returns>PantMerchant Point2D</returns>
+        </member>
         <member name="M:PantMerchant.Point2D.Round(System.Double)">
-             <summary>
-             Rounds a double to the nearest int
-             </summary>
-             <param name="d"></param>
-             <returns></returns>
-            </member>
+            <summary>
+            Rounds a double to the nearest int
+            </summary>
+            <param name="d"></param>
+            <returns></returns>
+        </member>
         <member name="T:PantMerchant.IClickable">
-             <summary>
-             Interface used by clickable objects.
-             </summary>
-            </member>
+            <summary>
+            Interface used by clickable objects.
+            </summary>
+        </member>
         <member name="P:PantMerchant.IClickable.ClickAction">
-             <summary>
-             Action performed when the implementing object has been "clicked" on.
-             </summary>
-            </member>
+            <summary>
+            Action performed when the implementing object has been "clicked" on.
+            </summary>
+        </member>
         <member name="M:PantMerchant.IClickable.IsClicked">
-             <summary>
-             Method to determine whether the object has been clicked on or not.
-             </summary>
-             <returns>True if object has been clicked, false if object has not been clicked.</returns>
-            </member>
+            <summary>
+            Method to determine whether the object has been clicked on or not.
+            </summary>
+            <returns>True if object has been clicked, false if object has not been clicked.</returns>
+        </member>
         <member name="T:PantMerchant.MenuElement">
-             <summary>
-             This class is used to create dynamic menus, from the main menu, to in-game context menus.
-             </summary>
-            </member>
+            <summary>
+            This class is used to create dynamic menus, from the main menu, to in-game context menus.
+            </summary>
+        </member>
         <member name="P:PantMerchant.MenuElement.Text">
-             <summary>
-             Text displayed on the menu button
-             </summary>
-            </member>
+            <summary>
+            Text displayed on the menu button
+            </summary>
+        </member>
         <member name="P:PantMerchant.UIContainer.ChildElements">
-             <summary>
-             List containing the UI elements which 
-             are contained by this UI container.
-             </summary>
-            </member>
+            <summary>
+            List containing the UI elements which 
+            are contained by this UI container.
+            </summary>
+        </member>
         <member name="P:PantMerchant.UIContainer.GameWindow">
-             <summary>
-             Static UI container used for placing UI 
-             elements within the "root" container, 
-             the game window.
-             </summary>
-            </member>
+            <summary>
+            Static UI container used for placing UI 
+            elements within the "root" container, 
+            the game window.
+            </summary>
+        </member>
         <member name="T:PantMerchant.MenuType">
-             <summary>
-             Enum defining whether the menu elements are placed manually or automatically within the UI container
-             </summary>
-            </member>
+            <summary>
+            Enum defining whether the menu elements are placed manually or automatically within the UI container
+            </summary>
+        </member>
         <member name="F:PantMerchant.MenuType.Auto">
-             <summary>
-             Menu elements are placed automatically, filling the container.
-             </summary>
-            </member>
+            <summary>
+            Menu elements are placed automatically, filling the container.
+            </summary>
+        </member>
         <member name="F:PantMerchant.MenuType.Manual">
-             <summary>
-             Menu elements are placed manually, allowing the position and size within the UI container to be specified.
-             </summary>
-            </member>
+            <summary>
+            Menu elements are placed manually, allowing the position and size within the UI container to be specified.
+            </summary>
+        </member>
         <member name="T:PantMerchant.UIElement">
-             <summary>
-             Base class for any element of the UI. All buttons in 
-             all menus, HUD displays, etc. Anything from a "New 
-             Game" button on the main menu to an in-game minimap, 
-             to a dropdown context menu should inherit from this 
-             class. Can also act as a container for other UI 
-             Elements.
-             </summary>
-            </member>
+            <summary>
+            Base class for any element of the UI. All buttons in 
+            all menus, HUD displays, etc. Anything from a "New 
+            Game" button on the main menu to an in-game minimap, 
+            to a dropdown context menu should inherit from this 
+            class. Can also act as a container for other UI 
+            Elements.
+            </summary>
+        </member>
         <member name="P:PantMerchant.UIElement.Name">
-             <summary>
-             Internal name given to the UI element. 
-             </summary>
-            </member>
+            <summary>
+            Internal name given to the UI element. 
+            </summary>
+        </member>
         <member name="P:PantMerchant.UIElement.ScreenPos">
-             <summary>
-             The on-screen coordinates of the UI element
-             </summary>
-            </member>
+            <summary>
+            The on-screen coordinates of the UI element
+            </summary>
+        </member>
         <member name="P:PantMerchant.UIElement.Pos">
-             <summary>
-             The position of the UI element. These coordinates 
-             are on screen. Where the UI element is a part of 
-             a UI container, the position is relative to the 
-             position of the container, otherwise is relative 
-             to the program window.
-             </summary>
-            </member>
+            <summary>
+            The position of the UI element. These coordinates 
+            are on screen. Where the UI element is a part of 
+            a UI container, the position is relative to the 
+            position of the container, otherwise is relative 
+            to the program window.
+            </summary>
+        </member>
         <member name="P:PantMerchant.UIElement.Size">
-             <summary>
-             The width and height of the UI element. Each 
-             component of the Point2D refers to the distance 
-             of that point from it's corresponding component 
-             in the Pos property.
-             </summary>
-            </member>
+            <summary>
+            The width and height of the UI element. Each 
+            component of the Point2D refers to the distance 
+            of that point from it's corresponding component 
+            in the Pos property.
+            </summary>
+        </member>
         <member name="P:PantMerchant.UIElement.ScreenSize">
-             <summary>
-             The on-screen size of the UI element. Used when
-             the container type is auto.
-             </summary>
-            </member>
+            <summary>
+            The on-screen size of the UI element. Used when
+            the container type is auto.
+            </summary>
+        </member>
         <member name="P:PantMerchant.UIElement.Container">
-             <summary>
-             The container of the UI element. For when UI 
-             elements need to exist within context menus, 
-             popup menus, etc.
-             </summary>
-            </member>
+            <summary>
+            The container of the UI element. For when UI 
+            elements need to exist within context menus, 
+            popup menus, etc.
+            </summary>
+        </member>
         <member name="M:PantMerchant.UIElement.#ctor(System.String,PantMerchant.Point2D,PantMerchant.Point2D)">
-             <summary>
-             Initialises a new instance of the UIElement class.
-             </summary>
-             <param name="Name">Name given to the UI element</param>
-             <param name="Pos">Position of the UI element</param>
-             <param name="Size">Size of the UI element</param>
-            </member>
+            <summary>
+            Initialises a new instance of the UIElement class.
+            </summary>
+            <param name="Name">Name given to the UI element</param>
+            <param name="Pos">Position of the UI element</param>
+            <param name="Size">Size of the UI element</param>
+        </member>
         <member name="M:PantMerchant.UIElement.Draw">
-             <summary>
-             Used by the View class to draw IDrawable objects to the screen.
-             </summary>
-            </member>
+            <summary>
+            Used by the View class to draw IDrawable objects to the screen.
+            </summary>
+        </member>
         <member name="T:PantMerchant.View">
-             <summary>
-             Global class used to manage drawing to 
-             the screen.
-             </summary>
-            </member>
+            <summary>
+            Global class used to manage drawing to 
+            the screen.
+            </summary>
+        </member>
         <member name="M:PantMerchant.View.Draw">
-             <summary>
-             Used to draw all IDrawable objects to the screen.
-             </summary>
-            </member>
+            <summary>
+            Used to draw all IDrawable objects to the screen.
+            </summary>
+        </member>
+        <member name="T:PantMerchant.GridCell">
+            <summary>
+            Basic in-game positional unit. Manages the entity 
+            which in contains, as well as references to it's
+            neighbours.
+            </summary>
+        </member>
+        <member name="P:PantMerchant.GridCell.Entity">
+            <summary>
+            The entity which occupies this GridCell
+            </summary>
+        </member>
+        <member name="P:PantMerchant.GridCell.Coordinate">
+            <summary>
+            Position of the GridCell
+            </summary>
+        </member>
+        <member name="P:PantMerchant.GridCell.NeighbourTop">
+            <summary>
+            The GridCell to the top (top-right) of this one.
+            </summary>
+        </member>
+        <member name="P:PantMerchant.GridCell.NeighbourRight">
+            <summary>
+            The GridCell to the right (bottom-right) of this one.
+            </summary>
+        </member>
+        <member name="P:PantMerchant.GridCell.NeighbourBottom">
+            <summary>
+            The GridCell to the bottom (bottom-left) of this one.
+            </summary>
+        </member>
+        <member name="P:PantMerchant.GridCell.NeighbourLeft">
+            <summary>
+            The GridCell to the left (top-left) of this one.
+            </summary>
+        </member>
+        <member name="M:PantMerchant.GridCell.#ctor(PantMerchant.Point2D)">
+            <summary>
+            Initialises a new GridCell instance
+            with the position set to p
+            </summary>
+            <param name="p">The position of the Gridcell</param>
+        </member>
+        <member name="M:PantMerchant.GridCell.Draw">
+            <summary>
+            Highlights the GridCell by drawing a black line around the edges.
+            </summary>
+        </member>
     </members>
 </doc>

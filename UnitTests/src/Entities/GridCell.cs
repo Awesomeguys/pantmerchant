@@ -44,6 +44,7 @@ namespace PantMerchantTests
         [Test]
         public void NeighbourBottom()
         {
+            // Position is correct
             Assert.IsTrue(GameController.Instance.OriginGridCell.NeighbourBottom.Coordinate == GameController.Instance.OriginGridCell.Coordinate + new PantMerchant.Point2D(0, -1));
 
             // Grid reference is correct
@@ -53,6 +54,7 @@ namespace PantMerchantTests
         [Test]
         public void NeighbourLeft()
         {
+            // Position is correct
             Assert.IsTrue(GameController.Instance.OriginGridCell.NeighbourLeft.Coordinate == GameController.Instance.OriginGridCell.Coordinate + new PantMerchant.Point2D(-1, 0));
 
             // Grid reference is correct

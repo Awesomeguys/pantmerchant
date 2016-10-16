@@ -467,7 +467,7 @@
             The entity which occupies this GridCell
             </summary>
         </member>
-        <member name="P:PantMerchant.GridCell.Coordinate">
+        <member name="P:PantMerchant.GridCell.Pos">
             <summary>
             Position of the GridCell
             </summary>

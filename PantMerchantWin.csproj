@@ -46,6 +46,7 @@
     <Compile Include="src\Controllers\MainMenuController.cs" />
     <Compile Include="src\Controllers\StateController.cs" />
     <Compile Include="src\Entities\BaseEntity.cs" />
+    <Compile Include="src\Entities\IMovable.cs" />
     <Compile Include="src\Entities\TestEntity.cs" />
     <Compile Include="src\PantMerchant.cs" />
     <Compile Include="src\Entities\Point2D.cs" />

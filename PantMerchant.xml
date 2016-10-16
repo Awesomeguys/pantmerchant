@@ -226,6 +226,11 @@
             A Point2D with coordinates (0, 0)
             </summary>
         </member>
+        <member name="P:PantMerchant.Point2D.ScreenMiddle">
+            <summary>
+            A Point2D which represents the middle of the game window (in pixels).
+            </summary>
+        </member>
         <member name="M:PantMerchant.Point2D.ToString">
             <summary>
             Enables printing the class.

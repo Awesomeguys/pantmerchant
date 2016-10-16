@@ -9,7 +9,7 @@ using PantMerchant;
 // Unit tests
 using NUnit.Framework;
 
-namespace PantMerchantTests
+namespace PantMerchant
 {
     [TestFixture]
     class GridCellTests
@@ -61,6 +61,20 @@ namespace PantMerchantTests
 
             // Grid reference is correct
             Assert.IsTrue(GridCell.Origin.NeighbourLeft == GridCell.GetGrid(PantMerchant.Point2D.Origin + new PantMerchant.Point2D(-1, 0)), ReferenceIncorrectMessage);
+        }
+
+        [Test]
+        public void ScreenPos()
+        {
+            Assert.IsTrue(
+                GridCell.Origin.ScreenPos == Point2D.ScreenMiddle,
+                "On-screen location of the origin GridCell is not correct"    
+            );
+
+            Assert.IsTrue(
+                GridCell.Origin.NeighbourRight.ScreenPos == Point2D.ScreenMiddle + GridCell.GridSize/2,
+                "On-screen location of the top neighbour is not correct"
+            );
         }
     }
 }

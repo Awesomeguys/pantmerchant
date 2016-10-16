@@ -173,6 +173,11 @@
             Abstract base class to be used by all grid entities.
             </summary>
         </member>
+        <member name="P:PantMerchant.BaseEntity.ScreenPos">
+            <summary>
+            The on-screen coordinates of the entity
+            </summary>
+        </member>
         <member name="P:PantMerchant.BaseEntity.Position">
             <summary>
             The position on the grid.
@@ -185,6 +190,16 @@
             </summary>
         </member>
         <member name="M:PantMerchant.BaseEntity.Draw">
+            <summary>
+            Used by the View class to draw IDrawable objects to the screen.
+            </summary>
+        </member>
+        <member name="T:PantMerchant.TestEntity">
+            <summary>
+            Abstract base class to be used by all grid entities.
+            </summary>
+        </member>
+        <member name="M:PantMerchant.TestEntity.Draw">
             <summary>
             Used by the View class to draw IDrawable objects to the screen.
             </summary>

@@ -35,6 +35,14 @@ namespace PantMerchant
             }
         }
 
+        public Point2D ScreenPos
+        {
+            get
+            {
+                return this.Coordinate + new Point2D(ScreenWidth() / 2, ScreenHeight() / 2);
+            }
+        }
+
         /// <summary>
         /// Position of the GridCell
         /// </summary>

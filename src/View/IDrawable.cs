@@ -6,6 +6,7 @@ namespace PantMerchant
 {
     public interface IDrawable
     {
+        Point2D ScreenPos { get; }
         void Draw();
     }
 }

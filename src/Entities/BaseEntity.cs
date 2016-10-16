@@ -1,4 +1,7 @@
+using System;
+using SwinGameSDK;
 using System.Collections.Generic;
+using static SwinGameSDK.SwinGame;
 
 namespace PantMerchant
 {
@@ -7,6 +10,18 @@ namespace PantMerchant
     /// </summary>
     public abstract class BaseEntity : IDrawable
     {
+        /// <summary>
+        /// The on-screen coordinates of the entity
+        /// </summary>
+        public Point2D ScreenPos
+        {
+            get
+            {
+                return
+                    this.Position + new Point2D(ScreenWidth() / 2, ScreenHeight() / 2);
+            }
+        }
+
         /// <summary>
         /// The position on the grid.
         /// </summary>

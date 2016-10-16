@@ -12,10 +12,28 @@ namespace PantMerchant
     /// </summary>
     public class GridCell : IDrawable
     {
+        private BaseEntity _entity;
         /// <summary>
         /// The entity which occupies this GridCell
         /// </summary>
-        public BaseEntity Entity { get; private set; }
+        public BaseEntity Entity
+        {
+            get
+            {
+                return _entity;
+            }
+            set
+            {
+                if (_entity == null)
+                {
+                    _entity = value;
+                }
+                else
+                {
+                    throw new GridOccupiedExcepion();
+                }
+            }
+        }
 
         /// <summary>
         /// Position of the GridCell
@@ -133,10 +151,9 @@ namespace PantMerchant
         }
     }
 
-    // Cant decide if we need this
-    //public class GridPositionTakenExcepion : Exception
-    //{
-    //    public GridPositionTakenExcepion() : this("There is already a grid with this position.") { }
-    //    public GridPositionTakenExcepion(String message) : base(message) { }
-    //}
+    public class GridOccupiedExcepion : Exception
+    {
+        public GridOccupiedExcepion() : this("There is already an entity occuping this grid.") { }
+        public GridOccupiedExcepion(String message) : base(message) { }
+    }
 }

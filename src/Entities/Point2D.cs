@@ -134,7 +134,7 @@ namespace PantMerchant
         /// <param name="d">The scalar to multiply the p by</param>
         /// <returns>The product of p and d</returns>
 		public static Point2D operator *(Point2D p, double d) {
-			return new Point2D(Point2D.Round(p.X *d), Point2D.Round(p.Y*d));
+			return new Point2D(Point2D.Round(p.X * d), Point2D.Round(p.Y * d));
 		}
 
         /// <summary>

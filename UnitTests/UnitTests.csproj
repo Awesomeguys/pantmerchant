@@ -89,7 +89,6 @@
   <ItemGroup>
     <Compile Include="src\Controllers\GameController.cs" />
     <Compile Include="src\Entities\GridCell.cs" />
-    <Compile Include="src\UnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

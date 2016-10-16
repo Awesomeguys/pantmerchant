@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-// Pantmerchant namespace
-using PantMerchant;
-
 // Unit tests
 using NUnit.Framework;
 
-namespace UnitTests
+namespace PantMerchant
 {
     [TestFixture]
     class IMovableTests

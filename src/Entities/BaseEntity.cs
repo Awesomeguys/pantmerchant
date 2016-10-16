@@ -5,7 +5,7 @@ namespace PantMerchant
     /// <summary>
     /// Abstract base class to be used by all grid entities.
     /// </summary>
-    public abstract class BaseEntity
+    public abstract class BaseEntity : IDrawable
     {
         /// <summary>
         /// The position on the grid.
@@ -23,5 +23,10 @@ namespace PantMerchant
             Position = position;
             Footprint = footprint;
         }
+
+        /// <summary>
+        /// Used by the View class to draw IDrawable objects to the screen.
+        /// </summary>
+        public abstract void Draw();
     }
 }

@@ -184,6 +184,11 @@
             position that the entity will take up.
             </summary>
         </member>
+        <member name="M:PantMerchant.BaseEntity.Draw">
+            <summary>
+            Used by the View class to draw IDrawable objects to the screen.
+            </summary>
+        </member>
         <member name="T:PantMerchant.PantMerchantMain">
             <summary>
             Main class
@@ -478,6 +483,18 @@
             with the position set to p
             </summary>
             <param name="p">The position of the Gridcell</param>
+        </member>
+        <member name="M:PantMerchant.GridCell.#cctor">
+            <summary>
+            Static constructor for GridCell type
+            </summary>
+        </member>
+        <member name="M:PantMerchant.GridCell.GetGrid(PantMerchant.Point2D)">
+            <summary>
+            Retrieves the GridCell with the specified position
+            </summary>
+            <param name="p">The position of the GridCell you'd like</param>
+            <returns>A GridCell with the specified position</returns>
         </member>
         <member name="M:PantMerchant.GridCell.Draw">
             <summary>

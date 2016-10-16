@@ -14,7 +14,25 @@ namespace PantMerchant
         /// </summary>
         public static Point2D Origin { get; }
 
-		private Point2D() : this(0, 0) {}
+        /// <summary>
+        /// A Point2D which represents the middle of the game window (in pixels).
+        /// </summary>
+        public static Point2D ScreenMiddle
+        {
+            get
+            {
+                try
+                {
+                    return new Point2D(Round(ScreenWidth() / 2), Round(ScreenHeight() / 2));
+                }
+                catch (TypeInitializationException e)
+                {
+                    return new Point2D(400, 300);
+                }
+            }
+        }
+
+        private Point2D() : this(0, 0) {}
 
 		public Point2D(int X, int Y) {
 			this.X = X;
@@ -23,7 +41,7 @@ namespace PantMerchant
 
         static Point2D()
         {
-            Point2D.Origin = new Point2D();
+            Point2D.Origin = new Point2D();            
         }
 
         /// <summary>

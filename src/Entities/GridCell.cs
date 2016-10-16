@@ -24,14 +24,18 @@ namespace PantMerchant
             }
             set
             {
-                if (_entity == null)
-                {
-                    _entity = value;
-                }
-                else
+                if (_entity != null && value != null)
                 {
                     throw new GridOccupiedExcepion();
                 }
+
+                _entity = value;
+
+                if (value != null)
+                {
+                    _entity.Position = this.Pos;
+                }
+                
             }
         }
 
@@ -39,14 +43,22 @@ namespace PantMerchant
         {
             get
             {
-                return this.Coordinate + new Point2D(ScreenWidth() / 2, ScreenHeight() / 2);
+                return new Point2D(this.Pos.X * this.GridSize.X, this.Pos.Y * this.GridSize.Y) + new Point2D(ScreenWidth() / 2, ScreenHeight() / 2);
             }
         }
 
         /// <summary>
         /// Position of the GridCell
         /// </summary>
-        public Point2D Coordinate { get; }
+        public Point2D Pos { get; }
+
+        private Point2D GridSize
+        {
+            get
+            {
+                return new Point2D(20, 10);
+            }
+        }
 
         /// <summary>
         /// The GridCell to the top (top-right) of this one.
@@ -54,7 +66,7 @@ namespace PantMerchant
         public GridCell NeighbourTop {
             get
             {
-                return GridCell.GetGrid(new Point2D(this.Coordinate.X, this.Coordinate.Y + 1));
+                return GridCell.GetGrid(new Point2D(this.Pos.X, this.Pos.Y + 1));
             }
         }
 
@@ -65,7 +77,7 @@ namespace PantMerchant
         {
             get
             {
-                return GridCell.GetGrid(new Point2D(this.Coordinate.X + 1, this.Coordinate.Y));
+                return GridCell.GetGrid(new Point2D(this.Pos.X + 1, this.Pos.Y));
             }
         }
 
@@ -76,7 +88,7 @@ namespace PantMerchant
         {
             get
             {
-                return GridCell.GetGrid(new Point2D(this.Coordinate.X, this.Coordinate.Y - 1));
+                return GridCell.GetGrid(new Point2D(this.Pos.X, this.Pos.Y - 1));
             }
         }
 
@@ -87,7 +99,7 @@ namespace PantMerchant
         {
             get
             {
-                return GridCell.GetGrid(new Point2D(this.Coordinate.X - 1, this.Coordinate.Y));
+                return GridCell.GetGrid(new Point2D(this.Pos.X - 1, this.Pos.Y));
             }
         }
 
@@ -113,7 +125,7 @@ namespace PantMerchant
         /// <param name="p">The position of the Gridcell</param>
         private GridCell(Point2D p)
         {
-            this.Coordinate = p;
+            this.Pos = p;
         }
 
         /// <summary>
@@ -132,6 +144,10 @@ namespace PantMerchant
         /// <returns>A GridCell with the specified position</returns>
         public static GridCell GetGrid(Point2D p)
         {
+            if (p == Point2D.Origin)
+            {
+                return GridCell.Origin;
+            }
             // TODO remove hard code
             if (_grid[50 + p.X, 50 + p.Y] == null)
             {
@@ -148,10 +164,10 @@ namespace PantMerchant
         {
             Point2D screenMiddle = new Point2D(ScreenWidth()/2, ScreenHeight()/2);
             // TODO Remove Hardcode
-            Point2D topCoord = new Point2D(screenMiddle.X + this.Coordinate.X, screenMiddle.Y + this.Coordinate.Y-5);
-            Point2D rightCoord = new Point2D(screenMiddle.X + this.Coordinate.X+10, screenMiddle.Y + this.Coordinate.Y);
-            Point2D bottomCoord = new Point2D(screenMiddle.X + this.Coordinate.X, screenMiddle.Y + this.Coordinate.Y+5);
-            Point2D leftCoord = new Point2D(screenMiddle.X + this.Coordinate.X-10, screenMiddle.Y + this.Coordinate.Y);
+            Point2D topCoord = new Point2D(this.ScreenPos.X, this.ScreenPos.Y-(this.GridSize.Y/2));
+            Point2D rightCoord = new Point2D(this.ScreenPos.X+(this.GridSize.X/2), this.ScreenPos.Y);
+            Point2D bottomCoord = new Point2D(this.ScreenPos.X, this.ScreenPos.Y+(this.GridSize.Y/2));
+            Point2D leftCoord = new Point2D(this.ScreenPos.X-(this.GridSize.X/2), this.ScreenPos.Y);
             SwinGame.DrawLine(Color.Black, topCoord, rightCoord);
             SwinGame.DrawLine(Color.Black, rightCoord, bottomCoord);
             SwinGame.DrawLine(Color.Black, bottomCoord, leftCoord);

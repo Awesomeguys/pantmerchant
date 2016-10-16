@@ -12,7 +12,7 @@ namespace PantMerchant
     /// track of whether you are on the main menu, in the middle of 
     /// the game, or about to quit.
     /// </summary>
-    class StateController : Controller
+    public class StateController : Controller
     {
         /// <summary>
         /// List of all UI elements instantiated. Added to whichever 

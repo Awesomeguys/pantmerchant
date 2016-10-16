@@ -50,11 +50,12 @@ namespace PantMerchant
 
         public void Draw()
         {
+            Point2D screenMiddle = new Point2D(ScreenWidth()/2, ScreenHeight()/2);
             // TODO Remove Hardcode
-            Point2D topCoord = new Point2D(this.Coordinate.X, this.Coordinate.Y-5);
-            Point2D rightCoord = new Point2D(this.Coordinate.X+7, this.Coordinate.Y);
-            Point2D bottomCoord = new Point2D(this.Coordinate.X, this.Coordinate.Y+5);
-            Point2D leftCoord = new Point2D(this.Coordinate.X-7, this.Coordinate.Y);
+            Point2D topCoord = new Point2D(screenMiddle.X + this.Coordinate.X, screenMiddle.Y + this.Coordinate.Y-5);
+            Point2D rightCoord = new Point2D(screenMiddle.X + this.Coordinate.X+10, screenMiddle.Y + this.Coordinate.Y);
+            Point2D bottomCoord = new Point2D(screenMiddle.X + this.Coordinate.X, screenMiddle.Y + this.Coordinate.Y+5);
+            Point2D leftCoord = new Point2D(screenMiddle.X + this.Coordinate.X-10, screenMiddle.Y + this.Coordinate.Y);
             SwinGame.DrawLine(Color.Black, topCoord, rightCoord);
             SwinGame.DrawLine(Color.Black, rightCoord, bottomCoord);
             SwinGame.DrawLine(Color.Black, bottomCoord, leftCoord);

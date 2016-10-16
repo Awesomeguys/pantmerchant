@@ -66,14 +66,39 @@ namespace PantMerchant
         [Test]
         public void ScreenPos()
         {
+            // Test Origin
             Assert.IsTrue(
                 GridCell.Origin.ScreenPos == Point2D.ScreenMiddle,
-                "On-screen location of the origin GridCell is not correct"    
+                "On-screen location of the origin GridCell is not correct. Expected position was (400, 300), but actual position was ({0}, {1})",
+                GridCell.Origin.ScreenPos.X,
+                GridCell.Origin.ScreenPos.Y
             );
 
             Assert.IsTrue(
-                GridCell.Origin.NeighbourRight.ScreenPos == Point2D.ScreenMiddle + GridCell.GridSize/2,
-                "On-screen location of the top neighbour is not correct"
+                GridCell.Origin.NeighbourRight.ScreenPos == Point2D.ScreenMiddle + (GridCell.GridSize/2),
+                "On-screen location of the top neighbour is not correct. Expected position was ({0}, {1}), but actual position was ({2}, {3})",
+                (Point2D.ScreenMiddle + (GridCell.GridSize / 2)).X,
+                (Point2D.ScreenMiddle + (GridCell.GridSize / 2)).Y,
+                GridCell.Origin.NeighbourRight.ScreenPos.X,
+                GridCell.Origin.NeighbourRight.ScreenPos.Y
+            );
+
+            Assert.IsTrue(
+                GridCell.Origin.NeighbourRight.NeighbourBottom.ScreenPos == Point2D.ScreenMiddle + new Point2D(0, GridCell.GridSize.Y),
+                "On-screen location of the top neighbour is not correct. Expected position was ({0}, {1}), but actual position was ({2}, {3})",
+                (Point2D.ScreenMiddle + new Point2D(0, GridCell.GridSize.Y)).X,
+                (Point2D.ScreenMiddle + new Point2D(0, GridCell.GridSize.Y)).Y,
+                GridCell.Origin.NeighbourRight.NeighbourBottom.ScreenPos.X,
+                GridCell.Origin.NeighbourRight.NeighbourBottom.ScreenPos.Y
+            );
+
+            Assert.IsTrue(
+                GridCell.Origin.NeighbourLeft.NeighbourBottom.ScreenPos == Point2D.ScreenMiddle + new Point2D(-GridCell.GridSize.X, 0),
+                "On-screen location of the top neighbour is not correct. Expected position was ({0}, {1}), but actual position was ({2}, {3})",
+                (Point2D.ScreenMiddle + new Point2D(GridCell.GridSize.X, 0)).X,
+                (Point2D.ScreenMiddle + new Point2D(GridCell.GridSize.X, 0)).Y,
+                GridCell.Origin.NeighbourLeft.NeighbourBottom.ScreenPos.X,
+                GridCell.Origin.NeighbourLeft.NeighbourBottom.ScreenPos.Y
             );
         }
     }

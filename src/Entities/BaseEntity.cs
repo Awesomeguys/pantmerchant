@@ -23,6 +23,8 @@ namespace PantMerchant
             Position = position;
             Footprint = footprint;
 
+            GridCell.GetGrid(position).Entity = this;
+
             StateController.CurrentController.IDrawableList.Add(this);
         }
 

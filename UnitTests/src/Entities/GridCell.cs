@@ -62,12 +62,5 @@ namespace PantMerchantTests
             // Grid reference is correct
             Assert.IsTrue(GridCell.Origin.NeighbourLeft == GridCell.GetGrid(PantMerchant.Point2D.Origin + new PantMerchant.Point2D(-1, 0)), ReferenceIncorrectMessage);
         }
-
-        [Test]
-        public void Origin()
-        {
-            // Position is correct.
-            Assert.IsTrue(GridCell.Origin.Coordinate == PantMerchant.Point2D.Origin, PositionIncorrectMessage);
-        }
     }
 }

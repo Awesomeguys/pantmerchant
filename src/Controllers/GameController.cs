@@ -40,28 +40,29 @@ namespace PantMerchant
 
         public override void DoControllerStuff()
         {
-            if (SwinGame.KeyTyped(KeyCode.EscapeKey))
-            {
-                StateController.PauseGame();
-            }
-            Direction moveDir = Direction.None;
-            if (KeyTyped(KeyCode.UpKey))
-            {
-                moveDir = Direction.Up;
-            }
-            else if (KeyTyped(KeyCode.RightKey))
-            {
-                moveDir = Direction.Right;
-            }
-            else if (KeyTyped(KeyCode.DownKey))
-            {
-                moveDir = Direction.Down;
-            }
-            else if (KeyTyped(KeyCode.LeftKey))
-            {
-                moveDir = Direction.Left;
-            }
-            //test.Move(moveDir);
+            // Code to test entities moving around
+            //if (SwinGame.KeyTyped(KeyCode.EscapeKey))
+            //{
+            //    StateController.PauseGame();
+            //}
+            //Direction moveDir = Direction.None;
+            //if (KeyTyped(KeyCode.UpKey))
+            //{
+            //    moveDir = Direction.Up;
+            //}
+            //else if (KeyTyped(KeyCode.RightKey))
+            //{
+            //    moveDir = Direction.Right;
+            //}
+            //else if (KeyTyped(KeyCode.DownKey))
+            //{
+            //    moveDir = Direction.Down;
+            //}
+            //else if (KeyTyped(KeyCode.LeftKey))
+            //{
+            //    moveDir = Direction.Left;
+            //}
+            ////test.Move(moveDir);
 
             this.DoClickActions();
             View.Draw();

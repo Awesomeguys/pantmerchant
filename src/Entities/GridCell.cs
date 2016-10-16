@@ -28,7 +28,7 @@ namespace PantMerchant
         public GridCell NeighbourTop {
             get
             {
-                return GameController.Instance.GetGrid(new Point2D(this.Coordinate.X, this.Coordinate.Y + 1));
+                return GridCell.GetGrid(new Point2D(this.Coordinate.X, this.Coordinate.Y + 1));
             }
         }
 
@@ -39,7 +39,7 @@ namespace PantMerchant
         {
             get
             {
-                return GameController.Instance.GetGrid(new Point2D(this.Coordinate.X + 1, this.Coordinate.Y));
+                return GridCell.GetGrid(new Point2D(this.Coordinate.X + 1, this.Coordinate.Y));
             }
         }
 
@@ -50,7 +50,7 @@ namespace PantMerchant
         {
             get
             {
-                return GameController.Instance.GetGrid(new Point2D(this.Coordinate.X, this.Coordinate.Y - 1));
+                return GridCell.GetGrid(new Point2D(this.Coordinate.X, this.Coordinate.Y - 1));
             }
         }
 
@@ -61,29 +61,52 @@ namespace PantMerchant
         {
             get
             {
-                return GameController.Instance.GetGrid(new Point2D(this.Coordinate.X - 1, this.Coordinate.Y));
+                return GridCell.GetGrid(new Point2D(this.Coordinate.X - 1, this.Coordinate.Y));
             }
         }
 
-        /// <summary>
-        /// Initialises a new GridCell instance 
-        /// with the position set to the origin.
-        /// </summary>
-        internal GridCell() : this(Point2D.Origin) { }
+        private static GridCell _origin;
+        public static GridCell Origin
+        {
+            get
+            {
+                if (GridCell._origin == null)
+                {
+                    _origin = new GridCell(Point2D.Origin);
+                }
+                return _origin;
+            }
+        }
+
+        private static GridCell[,] _grid { get; }
 
         /// <summary>
         /// Initialises a new GridCell instance
         /// with the position set to p
         /// </summary>
         /// <param name="p">The position of the Gridcell</param>
-        internal GridCell(Point2D p)
+        private GridCell(Point2D p)
         {
             this.Coordinate = p;
         }
-        //private class GridPositionTakenExcepion : Exception
-        //{
-        //    public GridPositionTakenExcepion() : base("There is already a grid with this position.") { }
-        //}
+
+        static GridCell()
+        {
+
+            _grid = new GridCell[100, 100];    // TODO Remove hardcode
+            _grid[50, 50] = GridCell.Origin;
+        }
+
+        public static GridCell GetGrid(Point2D p)
+        {
+            // TODO remove hard code
+            if (_grid[50 + p.X, 50 + p.Y] == null)
+            {
+                _grid[50 + p.X, 50 + p.Y] = new GridCell(p);
+            }
+
+            return _grid[50 + p.X, 50 + p.Y];
+        }
 
         /// <summary>
         /// Highlights the GridCell by drawing a black line around the edges.
@@ -102,4 +125,11 @@ namespace PantMerchant
             SwinGame.DrawLine(Color.Black, leftCoord, topCoord);
         }
     }
+
+    // Cant decide if we need this
+    //public class GridPositionTakenExcepion : Exception
+    //{
+    //    public GridPositionTakenExcepion() : this("There is already a grid with this position.") { }
+    //    public GridPositionTakenExcepion(String message) : base(message) { }
+    //}
 }

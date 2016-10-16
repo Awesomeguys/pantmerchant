@@ -14,51 +14,60 @@ namespace PantMerchantTests
     [TestFixture]
     class GridCellTests
     {
+        string PositionIncorrectMessage { get { return "The position is incorrect";  } }
+        string ReferenceIncorrectMessage { get { return "The grid reference is incorrect"; } }
         [Test]
         public void GetOriginCell()
         {
             // Position is correct
-            Assert.IsTrue(GameController.Instance.OriginGridCell.Coordinate == PantMerchant.Point2D.Origin);
+            Assert.IsTrue(GridCell.Origin.Coordinate == PantMerchant.Point2D.Origin, PositionIncorrectMessage);
             // Grid reference is correct
-            Assert.IsTrue(GameController.Instance.OriginGridCell == GameController.Instance.GetGrid(PantMerchant.Point2D.Origin));
+            Assert.IsTrue(GridCell.Origin == GridCell.GetGrid(PantMerchant.Point2D.Origin), ReferenceIncorrectMessage);
         }
         [Test]
         public void NeighbourTop() {
             // Position is correct
-            Assert.IsTrue(GameController.Instance.OriginGridCell.NeighbourTop.Coordinate == GameController.Instance.OriginGridCell.Coordinate + new PantMerchant.Point2D(0, 1));
+            Assert.IsTrue(GridCell.Origin.NeighbourTop.Coordinate == GridCell.Origin.Coordinate + new PantMerchant.Point2D(0, 1), PositionIncorrectMessage);
 
             // Grid reference is correct
-            Assert.IsTrue(GameController.Instance.OriginGridCell.NeighbourTop == GameController.Instance.GetGrid(PantMerchant.Point2D.Origin + new PantMerchant.Point2D(0, 1)));
+            Assert.IsTrue(GridCell.Origin.NeighbourTop == GridCell.GetGrid(PantMerchant.Point2D.Origin + new PantMerchant.Point2D(0, 1)), ReferenceIncorrectMessage);
         }
 
         [Test]
         public void NeighbourRight()
         {
             // Position is correct
-            Assert.IsTrue(GameController.Instance.OriginGridCell.NeighbourRight.Coordinate == GameController.Instance.OriginGridCell.Coordinate + new PantMerchant.Point2D(1, 0));
+            Assert.IsTrue(GridCell.Origin.NeighbourRight.Coordinate == GridCell.Origin.Coordinate + new PantMerchant.Point2D(1, 0), PositionIncorrectMessage);
 
             // Grid reference is correct
-            Assert.IsTrue(GameController.Instance.OriginGridCell.NeighbourRight == GameController.Instance.GetGrid(PantMerchant.Point2D.Origin + new PantMerchant.Point2D(1, 0)));
+            Assert.IsTrue(GridCell.Origin.NeighbourRight == GridCell.GetGrid(PantMerchant.Point2D.Origin + new PantMerchant.Point2D(1, 0)), ReferenceIncorrectMessage);
         }
 
         [Test]
         public void NeighbourBottom()
         {
             // Position is correct
-            Assert.IsTrue(GameController.Instance.OriginGridCell.NeighbourBottom.Coordinate == GameController.Instance.OriginGridCell.Coordinate + new PantMerchant.Point2D(0, -1));
+            Assert.IsTrue(GridCell.Origin.NeighbourBottom.Coordinate == GridCell.Origin.Coordinate + new PantMerchant.Point2D(0, -1), PositionIncorrectMessage);
 
             // Grid reference is correct
-            Assert.IsTrue(GameController.Instance.OriginGridCell.NeighbourBottom == GameController.Instance.GetGrid(PantMerchant.Point2D.Origin + new PantMerchant.Point2D(0, -1)));
+            Assert.IsTrue(GridCell.Origin.NeighbourBottom == GridCell.GetGrid(PantMerchant.Point2D.Origin + new PantMerchant.Point2D(0, -1)), ReferenceIncorrectMessage);
         }
 
         [Test]
         public void NeighbourLeft()
         {
             // Position is correct
-            Assert.IsTrue(GameController.Instance.OriginGridCell.NeighbourLeft.Coordinate == GameController.Instance.OriginGridCell.Coordinate + new PantMerchant.Point2D(-1, 0));
+            Assert.IsTrue(GridCell.Origin.NeighbourLeft.Coordinate == GridCell.Origin.Coordinate + new PantMerchant.Point2D(-1, 0), PositionIncorrectMessage);
 
             // Grid reference is correct
-            Assert.IsTrue(GameController.Instance.OriginGridCell.NeighbourLeft == GameController.Instance.GetGrid(PantMerchant.Point2D.Origin + new PantMerchant.Point2D(-1, 0)));
+            Assert.IsTrue(GridCell.Origin.NeighbourLeft == GridCell.GetGrid(PantMerchant.Point2D.Origin + new PantMerchant.Point2D(-1, 0)), ReferenceIncorrectMessage);
+        }
+
+        [Test]
+        public void Origin()
+        {
+            // Position is correct.
+            Assert.IsTrue(GridCell.Origin.Coordinate == PantMerchant.Point2D.Origin, PositionIncorrectMessage);
         }
     }
 }

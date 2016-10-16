@@ -26,18 +26,7 @@ namespace PantMerchant
                 return _instance;
             }
         }
-
-        private GridCell[,] _grid { get; }
-
-        public GridCell OriginGridCell { get; }
-
-        private GameController()
-        {
-            this.OriginGridCell = new GridCell();
-            this._grid = new GridCell[100, 100];    // TODO Remove hardcode
-            _grid[50, 50] = this.OriginGridCell;
-        }
-
+        
         /// <summary>
         /// Static constructor for the current controller
         /// </summary>
@@ -54,18 +43,6 @@ namespace PantMerchant
             }
             this.DoClickActions();
             View.Draw();
-        }
-
-        public GridCell GetGrid(Point2D p)
-        {
-            // TODO remove hard code
-            if (this._grid[50 + p.X, 50 + p.Y] == null)
-            {
-                this._grid[50 + p.X, 50 + p.Y] = new GridCell(p);
-                
-            }
-
-            return this._grid[50 + p.X, 50 + p.Y];
         }
     }
 }

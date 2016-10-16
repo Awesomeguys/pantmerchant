@@ -22,6 +22,8 @@ namespace PantMerchant
         {
             Position = position;
             Footprint = footprint;
+
+            StateController.CurrentController.IDrawableList.Add(this);
         }
 
         /// <summary>

@@ -43,6 +43,15 @@ namespace PantMerchant
         {
             get
             {
+                // We gotta do some funky shit to work out the location on the isometric grid
+                if (this.Pos == Point2D.Origin)
+                {
+                    return Point2D.ScreenMiddle;
+                }
+                else
+                {
+                    return GridCell.Origin.ScreenPos + ((GridCell.GridSize / 2) * this.Pos.X) + ((new Point2D(GridCell.GridSize.X, -GridCell.GridSize.Y) / 2) * this.Pos.Y);
+                }
                 return new Point2D(this.Pos.X * GridCell.GridSize.X, this.Pos.Y * GridCell.GridSize.Y) + Point2D.ScreenMiddle;
             }
         }

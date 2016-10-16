@@ -26,13 +26,16 @@ namespace PantMerchant
                 return _instance;
             }
         }
-        
+
+        private BaseEntity test;
+
         /// <summary>
         /// Static constructor for the current controller
         /// </summary>
         static GameController()
         {
             // Stuff goes here
+            Instance.test = new TestEntity("Test", Point2D.Origin);
         }
 
         public override void DoControllerStuff()
@@ -41,6 +44,24 @@ namespace PantMerchant
             {
                 StateController.PauseGame();
             }
+
+            if (KeyTyped(KeyCode.UpKey))
+            {
+                test.Position += new PantMerchant.Point2D(0, 1);
+            }
+            else if (KeyTyped(KeyCode.RightKey))
+            {
+                test.Position += new PantMerchant.Point2D(1, 0);
+            }
+            else if (KeyTyped(KeyCode.DownKey))
+            {
+                test.Position += new PantMerchant.Point2D(0, -1);
+            }
+            else if (KeyTyped(KeyCode.LeftKey))
+            {
+                test.Position += new PantMerchant.Point2D(-1, 0);
+            }
+
             this.DoClickActions();
             View.Draw();
         }

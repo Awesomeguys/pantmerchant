@@ -18,7 +18,7 @@ namespace PantMerchant
             get
             {
                 return
-                    this.Position + new Point2D(ScreenWidth() / 2, ScreenHeight() / 2);
+                    GridCell.GetGrid(this.Position).ScreenPos;
             }
         }
 
@@ -32,7 +32,7 @@ namespace PantMerchant
         /// position that the entity will take up.
         /// </summary>
         public List<Point2D> Footprint { get; set; }
-
+        
         public BaseEntity(Point2D position, List<Point2D> footprint)
         {
             Position = position;

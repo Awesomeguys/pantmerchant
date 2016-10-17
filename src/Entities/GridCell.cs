@@ -2,6 +2,7 @@
 using SwinGameSDK;
 using System.Collections.Generic;
 using static SwinGameSDK.SwinGame;
+using System.IO;
 
 namespace PantMerchant
 {
@@ -38,6 +39,11 @@ namespace PantMerchant
                 
             }
         }
+
+        /// <summary>
+        /// Image to draw to the screen
+        /// </summary>
+        public Bitmap Image { get; }
 
         /// <summary>
         /// On-screen position of the GridCell.
@@ -118,6 +124,7 @@ namespace PantMerchant
         }
 
         private static GridCell _origin;
+
         /// <summary>
         /// Grid cell at the position (0, 0)
         /// </summary>
@@ -135,15 +142,6 @@ namespace PantMerchant
 
         private static GridCell[,] _grid { get; }
 
-        /// <summary>
-        /// Initialises a new GridCell instance
-        /// with the position set to p
-        /// </summary>
-        /// <param name="p">The position of the Gridcell</param>
-        private GridCell(Point2D p)
-        {
-            this.Pos = p;
-        }
 
         /// <summary>
         /// Static constructor for GridCell type
@@ -151,7 +149,43 @@ namespace PantMerchant
         static GridCell()
         {
             _grid = new GridCell[100, 100];    // TODO Remove hardcode
-            _grid[50, 50] = GridCell.Origin;
+
+            for (int i = 0; i < 100; i++)
+            {
+                for (int j = 0; j < 100; j++)
+                {
+                    if (i == 0 && j ==0)
+                    {
+                        _grid[i, j] = GridCell.Origin;
+                    }
+                    Point2D p = new Point2D(i - 50, j - 50);
+                    _grid[i, j] = new GridCell(p, Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\Resources\\pantmerchant\\textures\\Wood_Floor_Tile.png");
+                }
+            }
+        }
+
+        /// <summary>
+        /// Initialises a new GridCell instance
+        /// with the position set to p
+        /// </summary>
+        /// <param name="p">The position of the Gridcell</param>
+        private GridCell(Point2D p)
+            : this(p, Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\Resources\\pantmerchant\\textures\\Wood_Floor_Tile.png") { }
+        
+
+        public GridCell(Point2D p, string resourcePath)
+        {
+            this.Pos = p;
+            StateController.Instance.CurrentController.IDrawableList.Add(this);
+
+            try
+            {
+                this.Image = LoadBitmap(resourcePath);
+            }
+            catch (TypeInitializationException e)
+            {
+                this.Image = null;
+            }
         }
 
         /// <summary>
@@ -164,11 +198,6 @@ namespace PantMerchant
             if (p == Point2D.Origin)
             {
                 return GridCell.Origin;
-            }
-            // TODO remove hard code
-            if (_grid[50 + p.X, 50 + p.Y] == null)
-            {
-                _grid[50 + p.X, 50 + p.Y] = new GridCell(p);
             }
 
             return _grid[50 + p.X, 50 + p.Y];

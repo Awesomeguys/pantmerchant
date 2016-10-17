@@ -33,7 +33,7 @@ namespace PantMerchant
         /// <summary>
         /// Test person
         /// </summary>
-        public Person Test;
+        public Person Test { get; set; }
 
         /// <summary>
         /// Static constructor for the current controller

@@ -19,7 +19,7 @@ namespace PantMerchant
             Person test;
 
             GridCell.Origin.Entity = null;
-            test = new Person("UnitTestEntity", Point2D.Origin);
+            test = new Customer("UnitTestEntity", Point2D.Origin);
             
             // Moving sets the grid to the correct neighbour
             test.Move(Direction.Up);
@@ -27,7 +27,7 @@ namespace PantMerchant
             Assert.IsTrue(GridCell.Origin.NeighbourTop.Entity == test, "Grid does not contain correct entity after move");
 
             GridCell.Origin.Entity = null;
-            test = new Person("UnitTestEntity", Point2D.Origin);
+            test = new Customer("UnitTestEntity", Point2D.Origin);
 
             // Moving sets the grid to the correct neighbour
             test.Move(Direction.Right);
@@ -35,7 +35,7 @@ namespace PantMerchant
             Assert.IsTrue(GridCell.Origin.NeighbourRight.Entity == test, "Grid does not contain correct entity after move");
 
             GridCell.Origin.Entity = null;
-            test = new Person("UnitTestEntity", Point2D.Origin);
+            test = new Customer("UnitTestEntity", Point2D.Origin);
 
             // Moving sets the grid to the correct neighbour
             test.Move(Direction.Down);
@@ -43,7 +43,7 @@ namespace PantMerchant
             Assert.IsTrue(GridCell.Origin.NeighbourBottom.Entity == test, "Grid does not contain correct entity after move");
 
             GridCell.Origin.Entity = null;
-            test = new Person("UnitTestEntity", Point2D.Origin);
+            test = new Customer("UnitTestEntity", Point2D.Origin);
 
             // Moving sets the grid to the correct neighbour
             test.Move(Direction.Left);

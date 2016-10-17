@@ -62,7 +62,7 @@ namespace PantMerchant
         /// given position, footprint, and resource path.
         /// </summary>
         /// <param name="position">The position of the entity on the grid</param>
-        /// <param name="footprint">The footprint of the </param>
+        /// <param name="footprint">The footprint of the entity</param>
         /// <param name="resourcePath">The path containing the entity resources</param>
         public BaseEntity(Point2D position, List<Point2D> footprint, string resourcePath)
         {

@@ -175,6 +175,7 @@ namespace PantMerchant
 
         public GridCell(Point2D p, string resourcePath)
         {
+            p.Round();
             this.Pos = p;
             StateController.Instance.CurrentController.IDrawableList.Add(this);
 
@@ -195,12 +196,14 @@ namespace PantMerchant
         /// <returns>A GridCell with the specified position</returns>
         public static GridCell GetGrid(Point2D p)
         {
+            p.Round();
+
             if (p == Point2D.Origin)
             {
                 return GridCell.Origin;
             }
 
-            return _grid[50 + p.X, 50 + p.Y];
+            return _grid[50 + (int)p.X, 50 + (int)p.Y];
         }
 
         /// <summary>

@@ -48,7 +48,7 @@ namespace PantMerchant
         {
             if (SwinGame.KeyTyped(KeyCode.EscapeKey))
             {
-                StateController.QuitToDesktop();
+                StateController.Instance.QuitToDesktop();
             }
             this.DoClickActions();
             View.Draw();
@@ -71,7 +71,7 @@ namespace PantMerchant
             MenuList.Add(
                 new MenuElement(
                     "New Game",
-                    new Action(() => { StateController.StartGame(); }),
+                    new Action(() => { StateController.Instance.StartGame(); }),
                     "New Game",
                     Menu
                 )
@@ -80,7 +80,7 @@ namespace PantMerchant
             MenuList.Add(
                 new MenuElement(
                     "Quit",
-                    new Action(() => { StateController.QuitToDesktop(); }),
+                    new Action(() => { StateController.Instance.QuitToDesktop(); }),
                     "Quit",
                     Menu
                 )

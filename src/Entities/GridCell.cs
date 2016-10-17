@@ -70,7 +70,7 @@ namespace PantMerchant
         {
             get
             {
-                return new Point2D(20, 10);
+                return new Point2D(50, 25);
             }
         }
 

@@ -24,6 +24,7 @@ namespace PantMerchant
         /// <summary>
         /// A Point2D which represents the middle of the game window (in pixels).
         /// </summary>
+        /// <remarks>This property is lazily evaluated, as it needs to be reflective of screen-size changes.</remarks>
         public static Point2D ScreenMiddle
         {
             get

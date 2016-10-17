@@ -28,7 +28,7 @@ namespace PantMerchant
             SwinGame.ClearScreen(Color.White);
             SwinGame.DrawFramerate(0, 0);
 
-            foreach (IDrawable d in StateController.IDrawableList)
+            foreach (IDrawable d in StateController.Instance.IDrawableList)
             {
                 d.Draw();
             }

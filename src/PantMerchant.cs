@@ -19,7 +19,7 @@ namespace PantMerchant
         static bool EndProgramRequested(){
             bool endGame = false;
             if  (   SwinGame.WindowCloseRequested()
-                ||  StateController.CurrentState == GameState.UserQuit
+                ||  StateController.Instance.CurrentState == GameState.UserQuit
                 ) {
                 endGame = true;
             }
@@ -35,7 +35,7 @@ namespace PantMerchant
 
             while (!EndProgramRequested())
             {
-                StateController.DoCurrentControllerStuff();
+                StateController.Instance.DoCurrentControllerStuff();
             }
         }
     }

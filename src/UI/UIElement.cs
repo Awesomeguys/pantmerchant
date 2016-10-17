@@ -59,13 +59,32 @@ namespace PantMerchant
         /// popup menus, etc.
         /// </summary>
         public UIContainer Container { get; internal set; }
+
         /// <summary>
-        /// Initialises a new instance of the UIElement class.
+        /// Image to draw to screen
+        /// </summary>
+        public Bitmap Image
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        /// <summary>
+        /// Initialises a new instance of the UIElement class with the given name, position and size.
         /// </summary>
         /// <param name="Name">Name given to the UI element</param>
         /// <param name="Pos">Position of the UI element</param>
         /// <param name="Size">Size of the UI element</param>
         public UIElement (String Name, Point2D Pos, Point2D Size) : this (Name, Pos, Size, UIContainer.GameWindow) {}
+        /// <summary>
+        /// Initialises a new instance of the UIElement class with the given name, position and size, within the given UIContainer.
+        /// </summary>
+        /// <param name="Name">Name given to the UI element</param>
+        /// <param name="Pos">Position of the UI element</param>
+        /// <param name="Size">Size of the UI element</param>
+        /// <param name="Container">UIContainer containing the new UIElement</param>
         public UIElement (String Name, Point2D Pos, Point2D Size, UIContainer Container)
         {
             this.Name = Name;
@@ -73,11 +92,11 @@ namespace PantMerchant
             this.Size = Size;
             this.Container = Container;
 
-            StateController.UIElementList.Add(this);
-            StateController.IDrawableList.Add(this);
+            StateController.Instance.UIElementList.Add(this);
+            StateController.Instance.IDrawableList.Add(this);
             if (this is IClickable)
             {
-                StateController.IClickableList.Add(this as IClickable);
+                StateController.Instance.IClickableList.Add(this as IClickable);
             }
         }
 

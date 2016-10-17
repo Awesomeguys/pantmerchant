@@ -18,11 +18,11 @@ namespace PantMerchant
         /// List of all UI elements instantiated. Added to whichever 
         /// controller is currently in charge
         /// </summary>
-        public static new List<UIElement> UIElementList
+        public new List<UIElement> UIElementList
         {
             get
             {
-                return StateController.CurrentController.UIElementList;
+                return this.CurrentController.UIElementList;
             }
         }
 
@@ -30,11 +30,11 @@ namespace PantMerchant
         /// List of all IClickables instantiated. Added to whichever 
         /// controller is currently in charge
         /// </summary>
-        public static new List<IClickable> IClickableList
+        public new List<IClickable> IClickableList
         {
             get
             {
-                return StateController.CurrentController.IClickableList;
+                return this.CurrentController.IClickableList;
             }
         }
 
@@ -42,11 +42,11 @@ namespace PantMerchant
         /// List of all IDrawables instantiated. Added to whichever 
         /// controller is currently in charge
         /// </summary>
-        public static new List<IDrawable> IDrawableList
+        public new List<IDrawable> IDrawableList
         {
             get
             {
-                return StateController.CurrentController.IDrawableList;
+                return this.CurrentController.IDrawableList;
             }
         }
 
@@ -70,16 +70,16 @@ namespace PantMerchant
         /// <summary>
         /// The state the game is currently in
         /// </summary>
-        public static GameState CurrentState { get; set; }
+        public GameState CurrentState { get; set; }
 
         /// <summary>
         /// The controller which is currently in charge.
         /// </summary>
-        public static Controller CurrentController
+        public Controller CurrentController
         {
             get
             {
-                switch (StateController.CurrentState)
+                switch (StateController.Instance.CurrentState)
                 {
                     case GameState.MainMenu:
                         return MainMenuController.Instance;
@@ -98,44 +98,44 @@ namespace PantMerchant
         static StateController()
         {
             // State at the main menu
-            StateController.CurrentState = GameState.MainMenu;
+            StateController.Instance.CurrentState = GameState.MainMenu;
         }
 
         /// <summary>
         /// Changes the game state to InGame, and putting the 
         /// GameController in charge
         /// </summary>
-        public static void StartGame()
+        public void StartGame()
         {
-            StateController.CurrentState = GameState.InGame;
+            this.CurrentState = GameState.InGame;
         }
 
         /// <summary>
         /// Pauses the game if in game.
         /// </summary>
-        public static void PauseGame()
+        public void PauseGame()
         {
-            if (StateController.CurrentState == GameState.InGame)
+            if (this.CurrentState == GameState.InGame)
             {
                 // we only want to pause if we actually have a game to pause
-                StateController.CurrentState = GameState.GamePause;
+                this.CurrentState = GameState.GamePause;
             }
         }
 
         /// <summary>
         /// Changes the game state to MainMenu, switching out to the main menu.
         /// </summary>
-        public static void QuitToMainMenu()
+        public void QuitToMainMenu()
         {
-            StateController.CurrentState = GameState.MainMenu;
+            this.CurrentState = GameState.MainMenu;
         }
 
         /// <summary>
         /// Changes the game state to UserQuit, quitting the program.
         /// </summary>
-        public static void QuitToDesktop()
+        public void QuitToDesktop()
         {
-            StateController.CurrentState = GameState.UserQuit;
+            this.CurrentState = GameState.UserQuit;
         }
         
         /// <summary>
@@ -149,10 +149,10 @@ namespace PantMerchant
         /// <summary>
         /// Calls the DoControllerStuff method on the current controller
         /// </summary>
-        public static void DoCurrentControllerStuff()
+        public void DoCurrentControllerStuff()
         {
             ProcessEvents();
-            StateController.CurrentController.DoControllerStuff();
+            this.CurrentController.DoControllerStuff();
         }
     }
 

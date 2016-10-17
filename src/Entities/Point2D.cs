@@ -14,16 +14,17 @@ namespace PantMerchant
         /// <summary>
         /// Vector components
         /// </summary>
-		public int X, Y;
+		public float X, Y;
 
         /// <summary>
-        /// A Point2D with coordinates (0, 0)
+        /// A Point2D with components (0, 0)
         /// </summary>
         public static Point2D Origin { get; }
 
         /// <summary>
         /// A Point2D which represents the middle of the game window (in pixels).
         /// </summary>
+        /// <remarks>This property is lazily evaluated, as it needs to be reflective of screen-size changes.</remarks>
         public static Point2D ScreenMiddle
         {
             get
@@ -50,7 +51,7 @@ namespace PantMerchant
         /// </summary>
         /// <param name="X">Value to set X component to</param>
         /// <param name="Y">Value to set Y component to</param>
-		public Point2D(int X, int Y) {
+		public Point2D(float X, float Y) {
 			this.X = X;
 			this.Y = Y;
 		}
@@ -149,8 +150,8 @@ namespace PantMerchant
         /// <param name="p">The vector to multiply</param>
         /// <param name="d">The scalar to multiply the p by</param>
         /// <returns>The product of p and d</returns>
-		public static Point2D operator *(Point2D p, double d) {
-			return new Point2D(Point2D.Round(p.X * d), Point2D.Round(p.Y * d));
+		public static Point2D operator *(Point2D p, float d) {
+			return new Point2D(p.X * d, p.Y * d);
 		}
 
         /// <summary>
@@ -161,7 +162,7 @@ namespace PantMerchant
         /// <param name="p">The vector to perform the division on</param>
         /// <param name="d">The scalar to divide p by</param>
         /// <returns>The quotient of p by d</returns>
-		public static Point2D operator /(Point2D p, double d) {
+		public static Point2D operator /(Point2D p, float d) {
             return p * (1 / d);
 		}
         
@@ -190,13 +191,19 @@ namespace PantMerchant
         /// </summary>
         /// <param name="d"></param>
         /// <returns></returns>
-        private static int Round(double d)
+        public static int Round(double d)
         {
             if (d < 0)
             {
                 return (int)(d - 0.5);
             }
             return (int)(d + 0.5);
+        }
+
+        public void Round()
+        {
+            this.X = Point2D.Round(this.X);
+            this.Y = Point2D.Round(this.Y);
         }
 	}
 }

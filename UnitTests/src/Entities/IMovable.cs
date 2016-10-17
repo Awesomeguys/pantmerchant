@@ -16,38 +16,38 @@ namespace PantMerchant
         public void Move()
         {
             StateController.StartGame();
-            TestEntity test;
+            Person test;
 
             GridCell.Origin.Entity = null;
-            test = new TestEntity("UnitTestEntity", Point2D.Origin);
+            test = new Person("UnitTestEntity", Point2D.Origin);
             
             // Moving sets the grid to the correct neighbour
             test.Move(Direction.Up);
-            Assert.IsTrue(GridCell.GetGrid(test.Position) == GridCell.Origin.NeighbourTop, "Entity does not move to the correct grid");
+            Assert.IsTrue(test.Grid == GridCell.Origin.NeighbourTop, "Entity does not move to the correct grid");
             Assert.IsTrue(GridCell.Origin.NeighbourTop.Entity == test, "Grid does not contain correct entity after move");
 
             GridCell.Origin.Entity = null;
-            test = new TestEntity("UnitTestEntity", Point2D.Origin);
+            test = new Person("UnitTestEntity", Point2D.Origin);
 
             // Moving sets the grid to the correct neighbour
             test.Move(Direction.Right);
-            Assert.IsTrue(GridCell.GetGrid(test.Position) == GridCell.Origin.NeighbourRight, "Entity does not move to the correct grid");
+            Assert.IsTrue(test.Grid == GridCell.Origin.NeighbourRight, "Entity does not move to the correct grid");
             Assert.IsTrue(GridCell.Origin.NeighbourRight.Entity == test, "Grid does not contain correct entity after move");
 
             GridCell.Origin.Entity = null;
-            test = new TestEntity("UnitTestEntity", Point2D.Origin);
+            test = new Person("UnitTestEntity", Point2D.Origin);
 
             // Moving sets the grid to the correct neighbour
             test.Move(Direction.Down);
-            Assert.IsTrue(GridCell.GetGrid(test.Position) == GridCell.Origin.NeighbourBottom, "Entity does not move to the correct grid");
+            Assert.IsTrue(test.Grid == GridCell.Origin.NeighbourBottom, "Entity does not move to the correct grid");
             Assert.IsTrue(GridCell.Origin.NeighbourBottom.Entity == test, "Grid does not contain correct entity after move");
 
             GridCell.Origin.Entity = null;
-            test = new TestEntity("UnitTestEntity", Point2D.Origin);
+            test = new Person("UnitTestEntity", Point2D.Origin);
 
             // Moving sets the grid to the correct neighbour
             test.Move(Direction.Left);
-            Assert.IsTrue(GridCell.GetGrid(test.Position) == GridCell.Origin.NeighbourLeft, "Entity does not move to the correct grid");
+            Assert.IsTrue(test.Grid == GridCell.Origin.NeighbourLeft, "Entity does not move to the correct grid");
             Assert.IsTrue(GridCell.Origin.NeighbourLeft.Entity == test, "Grid does not contain correct entity after move");
         }
     }

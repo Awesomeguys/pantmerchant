@@ -17,7 +17,7 @@ namespace PantMerchant
 		public int X, Y;
 
         /// <summary>
-        /// A Point2D with coordinates (0, 0)
+        /// A Point2D with components (0, 0)
         /// </summary>
         public static Point2D Origin { get; }
 

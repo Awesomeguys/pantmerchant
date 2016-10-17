@@ -60,12 +60,19 @@ namespace PantMerchant
         /// </summary>
         public UIContainer Container { get; internal set; }
         /// <summary>
-        /// Initialises a new instance of the UIElement class.
+        /// Initialises a new instance of the UIElement class with the given name, position and size.
         /// </summary>
         /// <param name="Name">Name given to the UI element</param>
         /// <param name="Pos">Position of the UI element</param>
         /// <param name="Size">Size of the UI element</param>
         public UIElement (String Name, Point2D Pos, Point2D Size) : this (Name, Pos, Size, UIContainer.GameWindow) {}
+        /// <summary>
+        /// Initialises a new instance of the UIElement class with the given name, position and size, within the given UIContainer.
+        /// </summary>
+        /// <param name="Name">Name given to the UI element</param>
+        /// <param name="Pos">Position of the UI element</param>
+        /// <param name="Size">Size of the UI element</param>
+        /// <param name="Container">UIContainer containing the new UIElement</param>
         public UIElement (String Name, Point2D Pos, Point2D Size, UIContainer Container)
         {
             this.Name = Name;

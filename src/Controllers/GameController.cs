@@ -8,6 +8,9 @@ using PantMerchant;
 
 namespace PantMerchant
 {
+    /// <summary>
+    /// Controller handling actions when in-game.
+    /// </summary>
     public class GameController : Controller
     {
         private static GameController _instance;
@@ -38,6 +41,11 @@ namespace PantMerchant
             //Instance.test = new TestEntity("Test", Point2D.Origin);
         }
 
+        /// <summary>
+        /// Handles click actions for all IClickables being 
+        /// managed by the current controller, as well as 
+        /// drawing all IDrawables to the screen.
+        /// </summary>
         public override void DoControllerStuff()
         {
             // Code to test entities moving around

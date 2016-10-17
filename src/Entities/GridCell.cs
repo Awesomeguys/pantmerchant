@@ -39,6 +39,9 @@ namespace PantMerchant
             }
         }
 
+        /// <summary>
+        /// On-screen position of the GridCell.
+        /// </summary>
         public Point2D ScreenPos
         {
             get
@@ -52,7 +55,6 @@ namespace PantMerchant
                 {
                     return GridCell.Origin.ScreenPos + ((GridCell.GridSize / 2) * this.Pos.X) + ((new Point2D(GridCell.GridSize.X, -GridCell.GridSize.Y) / 2) * this.Pos.Y);
                 }
-                return new Point2D(this.Pos.X * GridCell.GridSize.X, this.Pos.Y * GridCell.GridSize.Y) + Point2D.ScreenMiddle;
             }
         }
 
@@ -61,6 +63,9 @@ namespace PantMerchant
         /// </summary>
         public Point2D Pos { get; }
 
+        /// <summary>
+        /// Size of the grids on the screen (in pixels)
+        /// </summary>
         public static Point2D GridSize
         {
             get
@@ -113,6 +118,9 @@ namespace PantMerchant
         }
 
         private static GridCell _origin;
+        /// <summary>
+        /// Grid cell at the position (0, 0)
+        /// </summary>
         public static GridCell Origin
         {
             get
@@ -183,9 +191,19 @@ namespace PantMerchant
         }
     }
 
+    /// <summary>
+    /// Thrown when an entity tries to occupy a GridCell which already contains another entity.
+    /// </summary>
     public class GridOccupiedExcepion : Exception
     {
+        /// <summary>
+        /// Initialises a new instance of GridOccupiedException.
+        /// </summary>
         public GridOccupiedExcepion() : this("There is already an entity occuping this grid.") { }
+        /// <summary>
+        /// Initialises a new instance of GridOccupiedException with the given message.
+        /// </summary>
+        /// <param name="message">Message explaining the exception.</param>
         public GridOccupiedExcepion(String message) : base(message) { }
     }
 }

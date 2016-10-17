@@ -33,6 +33,12 @@ namespace PantMerchant
         /// </summary>
         public List<Point2D> Footprint { get; set; }
         
+        /// <summary>
+        /// Initialises a new instance of BaseEntity with the 
+        /// given position and footprint.
+        /// </summary>
+        /// <param name="position"></param>
+        /// <param name="footprint"></param>
         public BaseEntity(Point2D position, List<Point2D> footprint)
         {
             Position = position;

@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 namespace PantMerchant
 {
+    /// <summary>
+    /// Base controller class. 
+    /// </summary>
     public abstract class Controller
     {
         /// <summary>

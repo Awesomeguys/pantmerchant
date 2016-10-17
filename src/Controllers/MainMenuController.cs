@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 namespace PantMerchant
 {
+    /// <summary>
+    /// Controller handling actions when the main-menu is open.
+    /// </summary>
     public class MainMenuController : Controller
     {
         private static MainMenuController _instance;
@@ -31,8 +34,16 @@ namespace PantMerchant
             MainMenuController.BuildMainMenu();
         }
 
+        /// <summary>
+        /// The main menu to draw.
+        /// </summary>
         public UIContainer MainMenu { get; private set; }
 
+        /// <summary>
+        /// Handles click actions for all IClickables being 
+        /// managed by the current controller, as well as 
+        /// drawing all IDrawables to the screen.
+        /// </summary>
         public override void DoControllerStuff()
         {
             if (SwinGame.KeyTyped(KeyCode.EscapeKey))
@@ -43,6 +54,9 @@ namespace PantMerchant
             View.Draw();
         }
 
+        /// <summary>
+        /// Initialises the main menu.
+        /// </summary>
         private static void BuildMainMenu()
         {
             // Create some UIs

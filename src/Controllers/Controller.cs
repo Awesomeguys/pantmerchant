@@ -3,9 +3,9 @@ using SwinGameSDK;
 using static SwinGameSDK.SwinGame;
 using System.Collections.Generic;
 
-namespace PantMerchant.Controllers
+namespace PantMerchant
 {
-    abstract class Controller
+    public abstract class Controller
     {
         /// <summary>
         /// List of all UI elements instantiated. Added to whichever 

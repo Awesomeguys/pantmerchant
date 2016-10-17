@@ -4,8 +4,9 @@ using static SwinGameSDK.SwinGame;
 
 namespace PantMerchant
 {
-    interface IDrawable
+    public interface IDrawable
     {
+        Point2D ScreenPos { get; }
         void Draw();
     }
 }

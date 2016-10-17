@@ -25,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -67,6 +68,10 @@
       <HintPath>..\packages\NUnit3TestAdapter.3.4.1\lib\NUnit3.TestAdapter.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="SwinGame, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Debug\SwinGame.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -82,8 +87,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="src\UnitTests.cs" />
+    <Compile Include="src\Controllers\GameController.cs" />
+    <Compile Include="src\Entities\BaseEntity.cs" />
+    <Compile Include="src\Entities\GridCell.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\Entities\IMovable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

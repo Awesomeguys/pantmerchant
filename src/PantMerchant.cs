@@ -4,11 +4,11 @@ using static SwinGameSDK.SwinGame;
 
 using System.Collections.Generic;
 
-// Pantmerchant Libraries
-using PantMerchant.Controllers;
-
 namespace PantMerchant
 {
+    /// <summary>
+    /// Main class
+    /// </summary>
     public class PantMerchantMain
     {
         ///<summary>
@@ -26,6 +26,9 @@ namespace PantMerchant
             return endGame;
         }
 
+        /// <summary>
+        /// Program entry point
+        /// </summary>
         public static void Main()
         {
             View.Initialise();

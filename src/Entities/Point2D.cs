@@ -17,9 +17,33 @@ namespace PantMerchant
 		public int X, Y;
 
         /// <summary>
+        /// A Point2D with coordinates (0, 0)
+        /// </summary>
+        public static Point2D Origin { get; }
+
+        /// <summary>
+        /// A Point2D which represents the middle of the game window (in pixels).
+        /// </summary>
+        public static Point2D ScreenMiddle
+        {
+            get
+            {
+                try
+                {
+                    return new Point2D(Round(ScreenWidth() / 2), Round(ScreenHeight() / 2));
+                }
+                catch (TypeInitializationException e)
+                {
+                    return new Point2D(400, 300);
+                }
+            }
+        }
+
+
+        /// <summary>
         /// Initialises a new Point2D instance with X and Y set to zero.
         /// </summary>
-		public Point2D() : this(0, 0) {}
+        private Point2D() : this(0, 0) {}
 
         /// <summary>
         /// Initialises a new Poin2D instance with X and Y set.
@@ -30,6 +54,11 @@ namespace PantMerchant
 			this.X = X;
 			this.Y = Y;
 		}
+
+        static Point2D()
+        {
+            Point2D.Origin = new Point2D();            
+        }
 
         /// <summary>
         /// Enables printing the class.
@@ -121,7 +150,7 @@ namespace PantMerchant
         /// <param name="d">The scalar to multiply the p by</param>
         /// <returns>The product of p and d</returns>
 		public static Point2D operator *(Point2D p, double d) {
-			return new Point2D(Point2D.Round(p.X *d), Point2D.Round(p.Y*d));
+			return new Point2D(Point2D.Round(p.X * d), Point2D.Round(p.Y * d));
 		}
 
         /// <summary>

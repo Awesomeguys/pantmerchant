@@ -59,7 +59,7 @@ namespace PantMerchant
                 }
                 else
                 {
-                    return GridCell.Origin.ScreenPos + ((GridCell.GridSize / 2) * this.Pos.X) + ((new Point2D(GridCell.GridSize.X, -GridCell.GridSize.Y) / 2) * this.Pos.Y);
+                    return Point2D.ScreenMiddle + ((GridCell.GridSize / 2) * this.Pos.X) + ((new Point2D(GridCell.GridSize.X, -GridCell.GridSize.Y) / 2) * this.Pos.Y);
                 }
             }
         }
@@ -140,6 +140,7 @@ namespace PantMerchant
             }
         }
 
+        private static int _gridMax { get { return 10; } }
         private static GridCell[,] _grid { get; }
 
 
@@ -148,18 +149,18 @@ namespace PantMerchant
         /// </summary>
         static GridCell()
         {
-            _grid = new GridCell[100, 100];    // TODO Remove hardcode
+            _grid = new GridCell[_gridMax, _gridMax];    // TODO Remove hardcode
 
-            for (int i = 0; i < 100; i++)
+            for (int i = _gridMax - 1; i >= 0; i--)
             {
-                for (int j = 0; j < 100; j++)
+                for (int j = _gridMax - 1; j >= 0; j--)
                 {
                     if (i == 0 && j ==0)
                     {
                         _grid[i, j] = GridCell.Origin;
                     }
-                    Point2D p = new Point2D(i - 50, j - 50);
-                    _grid[i, j] = new GridCell(p, Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\Resources\\pantmerchant\\textures\\Wood_Floor_Tile.png");
+                    Point2D p = new Point2D(i - _gridMax/2, j - _gridMax/2);
+                    _grid[i, j] = new GridCell(p);
                 }
             }
         }
@@ -171,8 +172,14 @@ namespace PantMerchant
         /// <param name="p">The position of the Gridcell</param>
         private GridCell(Point2D p)
             : this(p, Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\Resources\\pantmerchant\\textures\\Wood_Floor_Tile.png") { }
-        
 
+        /// <summary>
+        /// Initialises a new GridCell instance with the 
+        /// position set to p, and whose resources are 
+        /// at the specified location
+        /// </summary>
+        /// <param name="p">The position of the Gridcell</param>
+        /// <param name="resourcePath">Path containing the resources for the entity</param>
         public GridCell(Point2D p, string resourcePath)
         {
             p.Round();
@@ -203,23 +210,24 @@ namespace PantMerchant
                 return GridCell.Origin;
             }
 
-            return _grid[50 + (int)p.X, 50 + (int)p.Y];
+            return _grid[_gridMax/2 + (int)p.X, _gridMax/2 + (int)p.Y];
         }
 
         /// <summary>
-        /// Highlights the GridCell by drawing a black line around the edges.
+        /// Draws the GridCell to the screen.
         /// </summary>
         public void Draw()
         {
-            // TODO Remove Hardcode
-            Point2D topCoord = new Point2D(this.ScreenPos.X, this.ScreenPos.Y-(GridCell.GridSize.Y/2));
-            Point2D rightCoord = new Point2D(this.ScreenPos.X+(GridCell.GridSize.X/2), this.ScreenPos.Y);
-            Point2D bottomCoord = new Point2D(this.ScreenPos.X, this.ScreenPos.Y+(GridCell.GridSize.Y/2));
-            Point2D leftCoord = new Point2D(this.ScreenPos.X-(GridCell.GridSize.X/2), this.ScreenPos.Y);
-            SwinGame.DrawLine(Color.Black, topCoord, rightCoord);
-            SwinGame.DrawLine(Color.Black, rightCoord, bottomCoord);
-            SwinGame.DrawLine(Color.Black, bottomCoord, leftCoord);
-            SwinGame.DrawLine(Color.Black, leftCoord, topCoord);
+            DrawBitmap(this.Image, this.ScreenPos.X-25, this.ScreenPos.Y - (float)12.2);
+            // TODO reimplement this down the track using a debug flag or something
+            //Point2D topCoord = new Point2D(this.ScreenPos.X, this.ScreenPos.Y - (GridCell.GridSize.Y / 2));
+            //Point2D rightCoord = new Point2D(this.ScreenPos.X + (GridCell.GridSize.X / 2), this.ScreenPos.Y);
+            //Point2D bottomCoord = new Point2D(this.ScreenPos.X, this.ScreenPos.Y + (GridCell.GridSize.Y / 2));
+            //Point2D leftCoord = new Point2D(this.ScreenPos.X - (GridCell.GridSize.X / 2), this.ScreenPos.Y);
+            //SwinGame.DrawLine(Color.Black, topCoord, rightCoord);
+            //SwinGame.DrawLine(Color.Black, rightCoord, bottomCoord);
+            //SwinGame.DrawLine(Color.Black, bottomCoord, leftCoord);
+            //SwinGame.DrawLine(Color.Black, leftCoord, topCoord);
         }
     }
 

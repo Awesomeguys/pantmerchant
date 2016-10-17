@@ -34,26 +34,28 @@ namespace PantMerchant
         /// <param name="d">The direction to move the Person</param>
         public void Move(Direction d)
         {
-            this.Facing = d;
-            switch (d)
+            if (d != Direction.None)
             {
-                case Direction.Up:
-                    this.Grid.Entity = null;
-                    this.Grid.NeighbourTop.Entity = this;
-
-                    break;
-                case Direction.Right:
-                    this.Grid.Entity = null;
-                    this.Grid.NeighbourRight.Entity = this;
-                    break;
-                case Direction.Down:
-                    this.Grid.Entity = null;
-                    this.Grid.NeighbourBottom.Entity = this;
-                    break;
-                case Direction.Left:
-                    this.Grid.Entity = null;
-                    this.Grid.NeighbourLeft.Entity = this;
-                    break;
+                this.Facing = d;
+                switch (d)
+                {
+                    case Direction.Up:
+                        this.Grid.Entity = null;
+                        this.Grid.NeighbourTop.Entity = this;
+                        break;
+                    case Direction.Right:
+                        this.Grid.Entity = null;
+                        this.Grid.NeighbourRight.Entity = this;
+                        break;
+                    case Direction.Down:
+                        this.Grid.Entity = null;
+                        this.Grid.NeighbourBottom.Entity = this;
+                        break;
+                    case Direction.Left:
+                        this.Grid.Entity = null;
+                        this.Grid.NeighbourLeft.Entity = this;
+                        break;
+                }
             }
         }
     }

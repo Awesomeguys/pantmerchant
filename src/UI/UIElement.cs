@@ -80,11 +80,11 @@ namespace PantMerchant
             this.Size = Size;
             this.Container = Container;
 
-            StateController.UIElementList.Add(this);
-            StateController.IDrawableList.Add(this);
+            StateController.Instance.UIElementList.Add(this);
+            StateController.Instance.IDrawableList.Add(this);
             if (this is IClickable)
             {
-                StateController.IClickableList.Add(this as IClickable);
+                StateController.Instance.IClickableList.Add(this as IClickable);
             }
         }
 

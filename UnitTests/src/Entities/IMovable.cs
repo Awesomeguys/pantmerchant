@@ -15,7 +15,8 @@ namespace PantMerchant
         [Test]
         public void Move()
         {
-            StateController.StartGame();
+            StateController.Instance.StartGame();
+            GameController.Instance.Test = null;
             Person test;
 
             GridCell.Origin.Entity = null;

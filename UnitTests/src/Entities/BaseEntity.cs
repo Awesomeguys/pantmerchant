@@ -15,7 +15,9 @@ namespace PantMerchant
         [Test]
         public void GridStart()
         {
-            StateController.StartGame();
+            StateController.Instance.StartGame();
+            GameController.Instance.Test = null;
+            GridCell.Origin.Entity = null;
             Person test = new Customer("UnitTestEntity", Point2D.Origin);
 
             // Entity starts on the correct grid

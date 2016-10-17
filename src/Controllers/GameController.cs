@@ -30,15 +30,17 @@ namespace PantMerchant
             }
         }
 
-        //private BaseEntity test;
+        /// <summary>
+        /// Test person
+        /// </summary>
+        public Person Test;
 
         /// <summary>
         /// Static constructor for the current controller
         /// </summary>
         static GameController()
         {
-            // Stuff goes here
-            //Instance.test = new TestEntity("Test", Point2D.Origin);
+            Instance.Test = new Customer("Test", Point2D.Origin);
         }
 
         /// <summary>
@@ -48,29 +50,30 @@ namespace PantMerchant
         /// </summary>
         public override void DoControllerStuff()
         {
+            if (SwinGame.KeyTyped(KeyCode.EscapeKey))
+            {
+                StateController.Instance.PauseGame();
+            }
+
             // Code to test entities moving around
-            //if (SwinGame.KeyTyped(KeyCode.EscapeKey))
-            //{
-            //    StateController.PauseGame();
-            //}
-            //Direction moveDir = Direction.None;
-            //if (KeyTyped(KeyCode.UpKey))
-            //{
-            //    moveDir = Direction.Up;
-            //}
-            //else if (KeyTyped(KeyCode.RightKey))
-            //{
-            //    moveDir = Direction.Right;
-            //}
-            //else if (KeyTyped(KeyCode.DownKey))
-            //{
-            //    moveDir = Direction.Down;
-            //}
-            //else if (KeyTyped(KeyCode.LeftKey))
-            //{
-            //    moveDir = Direction.Left;
-            //}
-            ////test.Move(moveDir);
+            Direction moveDir = Direction.None;
+            if (KeyTyped(KeyCode.UpKey))
+            {
+                moveDir = Direction.Up;
+            }
+            else if (KeyTyped(KeyCode.RightKey))
+            {
+                moveDir = Direction.Right;
+            }
+            else if (KeyTyped(KeyCode.DownKey))
+            {
+                moveDir = Direction.Down;
+            }
+            else if (KeyTyped(KeyCode.LeftKey))
+            {
+                moveDir = Direction.Left;
+            }
+            Test.Move(moveDir);
 
             this.DoClickActions();
             View.Draw();

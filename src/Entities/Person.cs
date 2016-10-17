@@ -32,34 +32,27 @@ namespace PantMerchant
         /// <param name="d">The direction to move the Person</param>
         public void Move(Direction d)
         {
+            this.Facing = d;
             switch (d)
             {
                 case Direction.Up:
-                    GridCell.GetGrid(this.Position).Entity = null;
-                    GridCell.GetGrid(this.Position).NeighbourTop.Entity = this;
+                    this.Grid.Entity = null;
+                    this.Grid.NeighbourTop.Entity = this;
+
                     break;
                 case Direction.Right:
-                    GridCell.GetGrid(this.Position).Entity = null;
-                    GridCell.GetGrid(this.Position).NeighbourRight.Entity = this;
+                    this.Grid.Entity = null;
+                    this.Grid.NeighbourRight.Entity = this;
                     break;
                 case Direction.Down:
-                    GridCell.GetGrid(this.Position).Entity = null;
-                    GridCell.GetGrid(this.Position).NeighbourBottom.Entity = this;
+                    this.Grid.Entity = null;
+                    this.Grid.NeighbourBottom.Entity = this;
                     break;
                 case Direction.Left:
-                    GridCell.GetGrid(this.Position).Entity = null;
-                    GridCell.GetGrid(this.Position).NeighbourLeft.Entity = this;
+                    this.Grid.Entity = null;
+                    this.Grid.NeighbourLeft.Entity = this;
                     break;
             }
-        }
-
-        /// <summary>
-        /// Used by the View class to draw IDrawable objects to the screen.
-        /// </summary>
-        public override void Draw()
-        {
-            DrawRectangle(Color.Black, new Rectangle() {X = this.ScreenPos.X-3, Y = this.ScreenPos.Y-5, Width = 6, Height = 10 });
-            GridCell.GetGrid(this.Position).Draw();
         }
     }
 }

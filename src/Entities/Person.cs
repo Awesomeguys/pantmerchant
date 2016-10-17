@@ -19,11 +19,13 @@ namespace PantMerchant
         /// Initialises a new instance of Person with 
         /// the given name at the given position.
         /// </summary>
-        /// <param name="Name">Name of the person. eg "John Smith"</param>
+        /// <param name="name">Name of the person. eg "John Smith"</param>
         /// <param name="position">Grid position the person currently occupies</param>
-        public Person(string Name, Point2D position) : base(position, new List<Point2D>() { Point2D.Origin })
+        /// <param name="resourcePath">The path containing the entity resources</param>
+        public Person(string name, Point2D position, string resourcePath) 
+            : base(position, new List<Point2D>() { Point2D.Origin }, resourcePath)
         {
-            this.Name = Name;
+            this.Name = name;
         }
 
         /// <summary>

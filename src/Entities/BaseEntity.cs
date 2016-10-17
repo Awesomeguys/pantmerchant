@@ -10,6 +10,9 @@ namespace PantMerchant
     /// </summary>
     public abstract class BaseEntity : IDrawable
     {
+        private string resourcePath;
+
+        protected string _resourcePath { get; }
         /// <summary>
         /// Returns a reference to the grid containing this entity.
         /// </summary>
@@ -49,16 +52,27 @@ namespace PantMerchant
         /// Initialises a new instance of BaseEntity with the 
         /// given position and footprint.
         /// </summary>
-        /// <param name="position"></param>
-        /// <param name="footprint"></param>
+        /// <param name="position">The position of the entity on the grid</param>
+        /// <param name="footprint">The footprint of the </param>
         public BaseEntity(Point2D position, List<Point2D> footprint)
+            : this(position, footprint, null) { }
+
+        /// <summary>
+        /// Initialises a new instance of BaseEntity with the 
+        /// given position, footprint, and resource path.
+        /// </summary>
+        /// <param name="position">The position of the entity on the grid</param>
+        /// <param name="footprint">The footprint of the </param>
+        /// <param name="resourcePath">The path containing the entity resources</param>
+        public BaseEntity(Point2D position, List<Point2D> footprint, string resourcePath)
         {
             Position = position;
             Footprint = footprint;
 
-            GridCell.GetGrid(position).Entity = this;
+            this.Grid.Entity = this;
 
             StateController.CurrentController.IDrawableList.Add(this);
+            this._resourcePath = resourcePath;
         }
 
         /// <summary>

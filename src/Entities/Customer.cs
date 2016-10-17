@@ -17,8 +17,10 @@ namespace PantMerchant
         /// </summary>
         /// <param name="Name">Name of the person. eg "John Smith"</param>
         /// <param name="position">Grid position the person currently occupies</param>
-        public Customer(string Name, Point2D position) : base(Name, position)
+        public Customer(string Name, Point2D position) 
+            : base(Name, position, "Resources/pantmerchant/sprites/customer/")
         {
+            
         }
         
         /// <summary>

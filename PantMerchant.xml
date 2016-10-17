@@ -60,6 +60,11 @@
             The singleton instance of the current controller.
             </summary>
         </member>
+        <member name="F:PantMerchant.GameController.Test">
+            <summary>
+            Test person
+            </summary>
+        </member>
         <member name="M:PantMerchant.GameController.#cctor">
             <summary>
             Static constructor for the current controller
@@ -212,6 +217,16 @@
             Abstract base class to be used by all grid entities.
             </summary>
         </member>
+        <member name="P:PantMerchant.BaseEntity.ResourcePath">
+            <summary>
+            The path containing the entity resources
+            </summary>
+        </member>
+        <member name="P:PantMerchant.BaseEntity.Image">
+            <summary>
+            Returns the appropriate image based on the direction the entity is facing.
+            </summary>
+        </member>
         <member name="P:PantMerchant.BaseEntity.Grid">
             <summary>
             Returns a reference to the grid containing this entity.
@@ -252,7 +267,7 @@
             given position, footprint, and resource path.
             </summary>
             <param name="position">The position of the entity on the grid</param>
-            <param name="footprint">The footprint of the </param>
+            <param name="footprint">The footprint of the entity</param>
             <param name="resourcePath">The path containing the entity resources</param>
         </member>
         <member name="M:PantMerchant.BaseEntity.Draw">
@@ -383,6 +398,11 @@
             Move() method of IMovable
             </summary>
         </member>
+        <member name="F:PantMerchant.Direction.None">
+            <summary>
+            No direction. Used as the default value when a direction is instantiated.
+            </summary>
+        </member>
         <member name="F:PantMerchant.Direction.Up">
             <summary>
             Up direction. Corresponds to top-right on the grid.
@@ -401,11 +421,6 @@
         <member name="F:PantMerchant.Direction.Left">
             <summary>
             Left direction. Corresponds to top-left on the grid.
-            </summary>
-        </member>
-        <member name="F:PantMerchant.Direction.None">
-            <summary>
-            No direction. Used as the default value when a direction is instantiated.
             </summary>
         </member>
         <member name="T:PantMerchant.Person">

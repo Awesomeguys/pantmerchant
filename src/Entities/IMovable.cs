@@ -22,25 +22,26 @@ namespace PantMerchant
     /// </summary>
     public enum Direction
     {
-        /// <summary>
-        /// Up direction. Corresponds to top-right on the grid.
-        /// </summary>
-        Up,
-        /// <summary>
-        /// Right direcetion. Corresponds to bottom-right on the grid.
-        /// </summary>
-        Right,
-        /// <summary>
-        /// Down direction. Corresponds to bottom-left on the grid.
-        /// </summary>
-        Down,
-        /// <summary>
-        /// Left direction. Corresponds to top-left on the grid.
-        /// </summary>
-        Left,
+
         /// <summary>
         /// No direction. Used as the default value when a direction is instantiated.
         /// </summary>
-        None = 0
+        None = 0,
+        /// <summary>
+        /// Up direction. Corresponds to top-right on the grid.
+        /// </summary>
+        Up = 1,
+        /// <summary>
+        /// Right direcetion. Corresponds to bottom-right on the grid.
+        /// </summary>
+        Right = 2,
+        /// <summary>
+        /// Down direction. Corresponds to bottom-left on the grid.
+        /// </summary>
+        Down = 3,
+        /// <summary>
+        /// Left direction. Corresponds to top-left on the grid.
+        /// </summary>
+        Left = 4
     }
 }

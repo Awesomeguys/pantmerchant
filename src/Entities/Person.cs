@@ -68,7 +68,7 @@ namespace PantMerchant
             //float scaleFactor = GridCell.GridSize.X / ( (float)2 * ( this.Image.Width ) ) ;
 
             this.Image.Draw(this.ScreenPos.X - this.Image.Width / 2, this.ScreenPos.Y - this.Image.Height + GridCell.GridSize.Y/2);
-            GridCell.GetGrid(this.Position).Draw();
+            DrawText(this.Position.ToString(), Color.Black, 0, 20);
         }
     }
 }

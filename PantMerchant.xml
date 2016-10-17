@@ -243,8 +243,17 @@
             Initialises a new instance of BaseEntity with the 
             given position and footprint.
             </summary>
-            <param name="position"></param>
-            <param name="footprint"></param>
+            <param name="position">The position of the entity on the grid</param>
+            <param name="footprint">The footprint of the </param>
+        </member>
+        <member name="M:PantMerchant.BaseEntity.#ctor(PantMerchant.Point2D,System.Collections.Generic.List{PantMerchant.Point2D},System.String)">
+            <summary>
+            Initialises a new instance of BaseEntity with the 
+            given position, footprint, and resource path.
+            </summary>
+            <param name="position">The position of the entity on the grid</param>
+            <param name="footprint">The footprint of the </param>
+            <param name="resourcePath">The path containing the entity resources</param>
         </member>
         <member name="M:PantMerchant.BaseEntity.Draw">
             <summary>
@@ -409,13 +418,14 @@
             Name of the person. "John Smith", etc.
             </summary>
         </member>
-        <member name="M:PantMerchant.Person.#ctor(System.String,PantMerchant.Point2D)">
+        <member name="M:PantMerchant.Person.#ctor(System.String,PantMerchant.Point2D,System.String)">
             <summary>
             Initialises a new instance of Person with 
             the given name at the given position.
             </summary>
-            <param name="Name">Name of the person. eg "John Smith"</param>
+            <param name="name">Name of the person. eg "John Smith"</param>
             <param name="position">Grid position the person currently occupies</param>
+            <param name="resourcePath">The path containing the entity resources</param>
         </member>
         <member name="M:PantMerchant.Person.Move(PantMerchant.Direction)">
             <summary>

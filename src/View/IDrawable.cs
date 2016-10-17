@@ -15,6 +15,11 @@ namespace PantMerchant
         Point2D ScreenPos { get; }
 
         /// <summary>
+        /// Image to draw to the screen.
+        /// </summary>
+        Bitmap Image { get;  }
+
+        /// <summary>
         /// Draws the entity to the screen.
         /// </summary>
         void Draw();

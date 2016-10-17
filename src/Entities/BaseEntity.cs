@@ -23,7 +23,7 @@ namespace PantMerchant
         /// <summary>
         /// Returns the appropriate image based on the direction the entity is facing.
         /// </summary>
-        protected Bitmap Image
+        public Bitmap Image
         {
             get
             {
@@ -60,8 +60,7 @@ namespace PantMerchant
         {
             get
             {
-                return
-                    GridCell.GetGrid(this.Position).ScreenPos;
+                return GridCell.GetGrid(this.Position).ScreenPos;
             }
         }
         /// <summary>

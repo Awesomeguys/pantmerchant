@@ -59,6 +59,18 @@ namespace PantMerchant
         /// popup menus, etc.
         /// </summary>
         public UIContainer Container { get; internal set; }
+
+        /// <summary>
+        /// Image to draw to screen
+        /// </summary>
+        public Bitmap Image
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         /// <summary>
         /// Initialises a new instance of the UIElement class with the given name, position and size.
         /// </summary>

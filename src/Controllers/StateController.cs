@@ -3,7 +3,7 @@ using SwinGameSDK;
 using static SwinGameSDK.SwinGame;
 using System.Collections.Generic;
 
-namespace PantMerchant.Controllers
+namespace PantMerchant
 {
     /// <summary>
     /// This class can be thought of as the Controller controller.
@@ -12,7 +12,7 @@ namespace PantMerchant.Controllers
     /// track of whether you are on the main menu, in the middle of 
     /// the game, or about to quit.
     /// </summary>
-    class StateController : Controller
+    public class StateController : Controller
     {
         /// <summary>
         /// List of all UI elements instantiated. Added to whichever 

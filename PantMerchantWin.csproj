@@ -31,6 +31,7 @@
     <DebugType>full</DebugType>
     <OutputType>WinExe</OutputType>
     <DocumentationFile>PantMerchant.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
@@ -40,7 +41,22 @@
     <Content Include=".gitignore" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="src\**\*.cs" />
+    <Compile Include="src\Controllers\Controller.cs" />
+    <Compile Include="src\Controllers\GameController.cs" />
+    <Compile Include="src\Controllers\MainMenuController.cs" />
+    <Compile Include="src\Controllers\StateController.cs" />
+    <Compile Include="src\Entities\BaseEntity.cs" />
+    <Compile Include="src\Entities\IMovable.cs" />
+    <Compile Include="src\Entities\TestEntity.cs" />
+    <Compile Include="src\PantMerchant.cs" />
+    <Compile Include="src\Entities\Point2D.cs" />
+    <Compile Include="src\UI\IClickable.cs" />
+    <Compile Include="src\UI\MenuElement.cs" />
+    <Compile Include="src\UI\UIContainer.cs" />
+    <Compile Include="src\UI\UIElement.cs" />
+    <Compile Include="src\View\IDrawable.cs" />
+    <Compile Include="src\View\View.cs" />
+    <Compile Include="src\Entities\GridCell.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">

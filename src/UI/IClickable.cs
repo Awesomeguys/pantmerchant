@@ -7,7 +7,7 @@ namespace PantMerchant
     /// <summary>
     /// Interface used by clickable objects.
     /// </summary>
-    interface IClickable
+    public interface IClickable
     {
         /// <summary>
         /// Action performed when the implementing object has been "clicked" on.

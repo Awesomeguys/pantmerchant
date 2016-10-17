@@ -266,3 +266,6 @@ __pycache__/
 
 # Swingame Library builds
 /lib/sgsdk_source
+
+# XML Docs
+PantMerchant.xml

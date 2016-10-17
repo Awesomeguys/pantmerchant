@@ -5,7 +5,7 @@ using static SwinGameSDK.SwinGame;
 
 namespace PantMerchant 
 {
-    class UIContainer : UIElement
+    public class UIContainer : UIElement
     {
         public MenuType Type;
         /// <summary>
@@ -26,7 +26,7 @@ namespace PantMerchant
             UIContainer.GameWindow = new UIContainer( 
                 new List<UIElement>(), 
                 "GameWindow", 
-                new Point2D (), 
+                Point2D.Origin, 
                 new Point2D ( ScreenWidth(), ScreenHeight()),
                 MenuType.Manual
             );

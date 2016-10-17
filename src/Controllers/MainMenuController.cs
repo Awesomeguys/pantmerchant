@@ -3,9 +3,9 @@ using SwinGameSDK;
 using static SwinGameSDK.SwinGame;
 using System.Collections.Generic;
 
-namespace PantMerchant.Controllers
+namespace PantMerchant
 {
-    class MainMenuController : Controller
+    public class MainMenuController : Controller
     {
         private static MainMenuController _instance;
 
@@ -48,10 +48,7 @@ namespace PantMerchant.Controllers
             // Create some UIs
             UIContainer Menu = new UIContainer(
                     "Main Menu",
-                    new Point2D(
-                        ScreenWidth() / 2 - 100,    // TODO Remove Hardcode
-                        ScreenHeight() / 2 - 100    // TODO Remove Hardcode
-                    ),
+                    Point2D.ScreenMiddle - new Point2D(100, 100),
                     new Point2D(200, 200),
                     MenuType.Auto
             );

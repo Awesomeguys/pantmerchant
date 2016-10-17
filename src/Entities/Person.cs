@@ -6,20 +6,30 @@ using static SwinGameSDK.SwinGame;
 namespace PantMerchant
 {
     /// <summary>
-    /// Abstract base class to be used by all grid entities.
+    /// Abstract base class used by all human entities
     /// </summary>
-    public class TestEntity : BaseEntity, IMovable
+    public abstract class Person : BaseEntity, IMovable
     {
+        /// <summary>
+        /// Name of the person. "John Smith", etc.
+        /// </summary>
         string Name { get; }
-        public TestEntity(string Name, Point2D position) : base(position, new List<Point2D>() { Point2D.Origin })
-        {
-            this.Name = Name;
-        }
-        public TestEntity(string Name, Point2D position, List<Point2D> footprint) : base(position, footprint)
+
+        /// <summary>
+        /// Initialises a new instance of Person with 
+        /// the given name at the given position.
+        /// </summary>
+        /// <param name="Name">Name of the person. eg "John Smith"</param>
+        /// <param name="position">Grid position the person currently occupies</param>
+        public Person(string Name, Point2D position) : base(position, new List<Point2D>() { Point2D.Origin })
         {
             this.Name = Name;
         }
 
+        /// <summary>
+        /// Used to move the Person one grid in the given direction
+        /// </summary>
+        /// <param name="d">The direction to move the Person</param>
         public void Move(Direction d)
         {
             switch (d)

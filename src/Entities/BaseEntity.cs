@@ -11,6 +11,16 @@ namespace PantMerchant
     public abstract class BaseEntity : IDrawable
     {
         /// <summary>
+        /// Returns a reference to the grid containing this entity.
+        /// </summary>
+        public GridCell Grid
+        {
+            get
+            {
+                return GridCell.GetGrid(this.Position);
+            }
+        }
+        /// <summary>
         /// The on-screen coordinates of the entity
         /// </summary>
         public Point2D ScreenPos

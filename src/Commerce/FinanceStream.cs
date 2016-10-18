@@ -31,5 +31,14 @@
             Name = name;
             Amount = amount;
         }
+
+        /// <summary>
+        /// Enables printing the class.
+        /// </summary>
+        /// <returns>Name: Amount</returns>
+        public override string ToString()
+        {
+            return Name + ": " + (Amount > 0 ? "+" + Amount.ToString() : Amount.ToString());
+        }
     }
 }

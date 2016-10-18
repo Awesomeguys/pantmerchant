@@ -25,10 +25,7 @@
         {
             if (amount <= 0) return -1;
 
-            // TODO: Update once Market system is complete.
-            int storePrice = 20;
-
-            int cost = amount * storePrice;
+            int cost = amount * Market.StorePrice;
             if (Stock.Reduce(amount))
             {
                 Finance.Money += cost;

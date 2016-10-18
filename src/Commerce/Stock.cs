@@ -34,9 +34,7 @@
             set
             {
                 _AmountPerDay = value;
-                // TODO: Update once Market system is complete.
-                int stockPrice = 10;
-                _FinanceStream.Amount = AmountPerDay * stockPrice;
+                _FinanceStream.Amount = -(AmountPerDay * Market.StockPrice);
             }
         }
         

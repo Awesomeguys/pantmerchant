@@ -31,6 +31,18 @@ namespace PantMerchant
         }
 
         /// <summary>
+        /// Keeps track of the daily timed events.
+        /// </summary>
+        public static Timer DayTimer;
+
+        /// <summary>
+        /// Keeps track of the market timed events.
+        /// </summary>
+        public static Timer MarketTimer;
+
+        public static CommerceView CommerceView;
+
+        /// <summary>
         /// Test person
         /// </summary>
         public Person Test { get; set; }
@@ -41,6 +53,21 @@ namespace PantMerchant
         static GameController()
         {
             Instance.Test = new Customer("Test", Point2D.Origin);
+
+            Finance.Money = 1000;
+            Stock.Set(50);
+            Stock.AmountPerDay = 1;
+            //Finance.Streams.Add(new FinanceStream("Bears", 9));
+            //Finance.Streams.Add(new FinanceStream("Chickens", -18));
+            //Finance.Streams.Add(new FinanceStream("Uranium", 47));
+
+            DayTimer = CreateTimer();
+            MarketTimer = CreateTimer();
+            DayTimer.Start();
+            MarketTimer.Start();
+
+            CommerceView = new CommerceView();
+            StateController.Instance.CurrentController.IDrawableList.Add(CommerceView);
         }
 
         /// <summary>
@@ -50,8 +77,26 @@ namespace PantMerchant
         /// </summary>
         public override void DoControllerStuff()
         {
+            DayTimer.Resume();
+            MarketTimer.Resume();
+
+            if (DayTimer.Ticks >= 2000)
+            {
+                DayTimer.Reset();
+                // Console.WriteLine("TIMER!");
+                Finance.UpdateMoneyFromNet();
+                Stock.Update();
+            }
+
+            if (MarketTimer.Ticks >= Market.CustomerFrequency)
+            {
+                MarketTimer.Reset();
+                POS.SellItem();
+            }
+
             if (SwinGame.KeyTyped(KeyCode.EscapeKey))
             {
+                DayTimer.Pause();
                 StateController.Instance.PauseGame();
             }
 

@@ -156,22 +156,24 @@ namespace PantMerchant
         public abstract void Draw();
     }
 
+    /// <summary>
+    /// Thrown if Facing is set as Direction.None
+    /// </summary>
     [Serializable]
     internal class DirectionNotAllowedException : Exception
     {
+        /// <summary>
+        /// Initialises a new instance of the DirectionNotAllowedException class.
+        /// </summary>
         public DirectionNotAllowedException() : this("The specified direction is not allowed for this object")
         {
         }
 
+        /// <summary>
+        /// Initialises a new instance of the DirectionNotAllowedException class with the given message.
+        /// </summary>
+        /// <param name="message">Message describing the exception</param>
         public DirectionNotAllowedException(string message) : base(message)
-        {
-        }
-
-        public DirectionNotAllowedException(string message, Exception innerException) : base(message, innerException)
-        {
-        }
-
-        protected DirectionNotAllowedException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
         }
     }

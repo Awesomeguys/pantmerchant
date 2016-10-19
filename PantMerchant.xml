@@ -275,6 +275,22 @@
             Used by the View class to draw IDrawable objects to the screen.
             </summary>
         </member>
+        <member name="T:PantMerchant.DirectionNotAllowedException">
+            <summary>
+            Thrown if Facing is set as Direction.None
+            </summary>
+        </member>
+        <member name="M:PantMerchant.DirectionNotAllowedException.#ctor">
+            <summary>
+            Initialises a new instance of the DirectionNotAllowedException class.
+            </summary>
+        </member>
+        <member name="M:PantMerchant.DirectionNotAllowedException.#ctor(System.String)">
+            <summary>
+            Initialises a new instance of the DirectionNotAllowedException class with the given message.
+            </summary>
+            <param name="message">Message describing the exception</param>
+        </member>
         <member name="T:PantMerchant.Customer">
             <summary>
             Concrete customer class

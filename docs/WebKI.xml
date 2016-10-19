@@ -17,19 +17,19 @@
   <HelpKINode Title="BaseEntity.Grid property" Url="html/db2bba10-89c4-525a-b7c1-5a53f474c551.htm" />
   <HelpKINode Title="BaseEntity.Image property" Url="html/833d2c80-bf29-74f8-12a0-b24b3bd69444.htm" />
   <HelpKINode Title="BaseEntity.Position property" Url="html/ac6252f4-64fa-19b3-53cf-3bb5e99300a3.htm" />
-  <HelpKINode Title="BaseEntity.ResourcePath property" Url="html/7d87dfb9-6b43-1d59-58e3-73f00bfd6fbb.htm" />
   <HelpKINode Title="BaseEntity.ScreenPos property" Url="html/11f92b02-0d7e-e247-34c1-a3a6c2e59536.htm" />
   <HelpKINode Title="ChildElements property" Url="html/3aa6b9e0-9e2f-e943-a4f1-a492e58fc493.htm" />
-  <HelpKINode Title="ClickAction property" Url="html/6e6e4eed-26e1-7c6c-eeee-1b281d837fe6.htm" />
+  <HelpKINode Title="ClickAction property">
+    <HelpKINode Title="IClickable.ClickAction Property " Url="html/6e6e4eed-26e1-7c6c-eeee-1b281d837fe6.htm" />
+    <HelpKINode Title="MenuElement.ClickAction Property " Url="html/f707cc0d-3b59-62cc-223b-d810e04c0d37.htm" />
+  </HelpKINode>
   <HelpKINode Title="Container property" Url="html/502d8c34-dda4-baf2-9c4a-db5ac2cc19f2.htm" />
   <HelpKINode Title="Controller class">
     <HelpKINode Title="Controller Class" Url="html/e7a18747-1f2b-f7a5-b272-8f1999816917.htm" />
     <HelpKINode Title="about Controller class" Url="html/e7a18747-1f2b-f7a5-b272-8f1999816917.htm" />
-    <HelpKINode Title="constructor" Url="html/9d9375a8-d97e-f3ea-c112-20767ce7f4c1.htm" />
     <HelpKINode Title="methods" Url="html/4efb432c-a22c-60cb-0446-f561dfe6689c.htm" />
     <HelpKINode Title="properties" Url="html/7535ec25-1d55-f82c-248c-aec42da8fd22.htm" />
   </HelpKINode>
-  <HelpKINode Title="Controller.Controller constructor" Url="html/9d9375a8-d97e-f3ea-c112-20767ce7f4c1.htm" />
   <HelpKINode Title="Controller.DoClickActions method" Url="html/7c647d38-45f4-65ea-c8e7-1a2cb9a85cd5.htm" />
   <HelpKINode Title="Controller.DoControllerStuff method" Url="html/8823f27a-8a0b-d19b-363b-e8e607809655.htm" />
   <HelpKINode Title="Controller.IClickableList property" Url="html/997edfbc-a2dc-009c-95c4-710d55fe52b8.htm" />
@@ -47,6 +47,15 @@
   </HelpKINode>
   <HelpKINode Title="Customer.Customer constructor" Url="html/d1a11057-bb56-d3f9-f9eb-f94cc234b565.htm" />
   <HelpKINode Title="Direction enumeration" Url="html/2f22488d-36d0-1446-7d16-8f92b0f97d32.htm" />
+  <HelpKINode Title="DirectionNotAllowedException class">
+    <HelpKINode Title="DirectionNotAllowedException Class" Url="html/516c407f-6ed2-38db-8f52-6005a57e3e9e.htm" />
+    <HelpKINode Title="about DirectionNotAllowedException class" Url="html/516c407f-6ed2-38db-8f52-6005a57e3e9e.htm" />
+    <HelpKINode Title="constructor" Url="html/4a8cb667-4c5b-49e5-be25-bb3be3c39791.htm" />
+    <HelpKINode Title="fields" Url="html/9d6b3380-c778-6ba4-a206-4bf6fb258552.htm" />
+    <HelpKINode Title="methods" Url="html/7079c012-6cd4-cf3b-dece-3f338ae54643.htm" />
+    <HelpKINode Title="properties" Url="html/80cfcab8-b862-ef8c-e8f8-ab3501d7c661.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DirectionNotAllowedException.DirectionNotAllowedException constructor" Url="html/4a8cb667-4c5b-49e5-be25-bb3be3c39791.htm" />
   <HelpKINode Title="Division operator" Url="html/c2ca2251-29f7-73a2-aa84-459f6ae8f918.htm" />
   <HelpKINode Title="DoClickActions method" Url="html/7c647d38-45f4-65ea-c8e7-1a2cb9a85cd5.htm" />
   <HelpKINode Title="DoControllerStuff method">
@@ -61,14 +70,17 @@
     <HelpKINode Title="BaseEntity.Draw Method " Url="html/683f8789-00a4-9fed-b3e7-178a8f3c612b.htm" />
     <HelpKINode Title="GridCell.Draw Method " Url="html/d70c7c61-c238-6798-e2f9-bafa388d3371.htm" />
     <HelpKINode Title="IDrawable.Draw Method " Url="html/17ff9893-1013-1cbf-542e-b84e43cedf65.htm" />
+    <HelpKINode Title="MenuElement.Draw Method " Url="html/de38c59c-a68e-eb22-8c15-941771868703.htm" />
     <HelpKINode Title="Person.Draw Method " Url="html/aa76c29b-a2b4-0683-3fc6-13157a5467c2.htm" />
     <HelpKINode Title="UIContainer.Draw Method " Url="html/60270204-1696-7dc9-5554-2fcb86a60bf9.htm" />
     <HelpKINode Title="UIElement.Draw Method " Url="html/fc7b668f-377f-8cb6-b6ff-aa7b05719874.htm" />
+    <HelpKINode Title="View.Draw Method " Url="html/3a5bca29-1d1e-c4e3-6bbe-b960c8f9ed0e.htm" />
   </HelpKINode>
   <HelpKINode Title="Entity property" Url="html/bc6ba861-24c6-f945-0f35-d676f43cdee7.htm" />
   <HelpKINode Title="Equality operator" Url="html/319e5373-3c89-3e5b-4a87-0168d405c628.htm" />
   <HelpKINode Title="Equals method" Url="html/7082e52f-993d-b053-7989-85129840cbdd.htm" />
   <HelpKINode Title="Facing property" Url="html/59d67153-864c-7ee7-2dfc-62a762dacb3e.htm" />
+  <HelpKINode Title="Font property" Url="html/9c826362-c9f2-dbf6-414d-5fe800ae00e0.htm" />
   <HelpKINode Title="Footprint property" Url="html/6d68de65-a561-d5c1-44b8-c5a7617f258c.htm" />
   <HelpKINode Title="GameController class">
     <HelpKINode Title="GameController Class" Url="html/bfe43b71-22d2-a2fa-51f8-366ba54919b8.htm" />
@@ -112,7 +124,7 @@
     <HelpKINode Title="GridOccupiedExcepion Class" Url="html/e2f86c35-3c90-b62f-6468-cf8a5e53fce5.htm" />
     <HelpKINode Title="about GridOccupiedExcepion class" Url="html/e2f86c35-3c90-b62f-6468-cf8a5e53fce5.htm" />
     <HelpKINode Title="constructor" Url="html/f62a26e6-73e5-8ec3-7c49-4a64193b03d9.htm" />
-    <HelpKINode Title="events" Url="html/87572c4b-5061-8d34-cdee-cba9e90c6c72.htm" />
+    <HelpKINode Title="fields" Url="html/86efe173-967d-f4f4-6089-a9c78fc54bbd.htm" />
     <HelpKINode Title="methods" Url="html/c0f689a0-a32d-c2de-ad01-39a46cd800dc.htm" />
     <HelpKINode Title="properties" Url="html/b3c8e983-1a78-f47b-79a1-ff25fc4bc153.htm" />
   </HelpKINode>
@@ -149,15 +161,34 @@
     <HelpKINode Title="IDrawable.Image Property " Url="html/a4528eea-06a8-e339-069c-3113696b9908.htm" />
     <HelpKINode Title="UIElement.Image Property " Url="html/1982a3ca-a595-02e2-8c6d-c63194062662.htm" />
   </HelpKINode>
+  <HelpKINode Title="IMovable interface">
+    <HelpKINode Title="IMovable Interface" Url="html/2ef2d39f-3fe2-8511-e016-ebece0df0e61.htm" />
+    <HelpKINode Title="about IMovable interface" Url="html/2ef2d39f-3fe2-8511-e016-ebece0df0e61.htm" />
+    <HelpKINode Title="methods" Url="html/c90960b9-acf8-6c30-3e0d-431ba304eaed.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IMovable.Move method" Url="html/4cea3702-b89c-459b-6704-93b075c3e181.htm" />
   <HelpKINode Title="Inequality operator" Url="html/bf02b157-c5a3-a7b7-8fa0-7eb10d11c18c.htm" />
   <HelpKINode Title="InGame enumeration member" Url="html/3044a031-975c-5419-ad15-fa9fca031b36.htm" />
+  <HelpKINode Title="Initialise method" Url="html/8aebea94-171c-89e5-8fc8-a26540e462cd.htm" />
   <HelpKINode Title="Instance property">
     <HelpKINode Title="Controller.Instance Property " Url="html/f4fb7bef-ce81-da36-d22b-e8d48fcad194.htm" />
     <HelpKINode Title="GameController.Instance Property " Url="html/dc942746-dd64-f566-e67e-78309feaf849.htm" />
     <HelpKINode Title="MainMenuController.Instance Property " Url="html/7ad5de8f-a723-eb33-d96a-9ad208e52156.htm" />
     <HelpKINode Title="StateController.Instance Property " Url="html/fd328565-5d70-1408-8535-d9b19d242c09.htm" />
   </HelpKINode>
-  <HelpKINode Title="IsClicked method" Url="html/4bc0c3a8-a301-73b6-8584-ef35477ef2d8.htm" />
+  <HelpKINode Title="InvalidMenuTypeException class">
+    <HelpKINode Title="InvalidMenuTypeException Class" Url="html/ff754065-2912-108a-9347-0772027b9417.htm" />
+    <HelpKINode Title="about InvalidMenuTypeException class" Url="html/ff754065-2912-108a-9347-0772027b9417.htm" />
+    <HelpKINode Title="constructor" Url="html/f9861cf6-2f14-471c-097a-b333b7d08133.htm" />
+    <HelpKINode Title="fields" Url="html/3469a227-ebdc-e56d-43e2-612c2ce31ecd.htm" />
+    <HelpKINode Title="methods" Url="html/d5ab30be-abf8-e8a3-5217-321c81aeb026.htm" />
+    <HelpKINode Title="properties" Url="html/254d1cb8-af27-43ef-c0f3-1c4e9bda259f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InvalidMenuTypeException.InvalidMenuTypeException constructor" Url="html/f9861cf6-2f14-471c-097a-b333b7d08133.htm" />
+  <HelpKINode Title="IsClicked method">
+    <HelpKINode Title="IClickable.IsClicked Method " Url="html/4bc0c3a8-a301-73b6-8584-ef35477ef2d8.htm" />
+    <HelpKINode Title="MenuElement.IsClicked Method " Url="html/adc7ca00-3b3e-f46d-81ae-3e06299aad28.htm" />
+  </HelpKINode>
   <HelpKINode Title="Left enumeration member" Url="html/2f22488d-36d0-1446-7d16-8f92b0f97d32.htm" />
   <HelpKINode Title="Main method" Url="html/9f208e62-f69b-fe8c-e078-0f09b33d6934.htm" />
   <HelpKINode Title="MainMenu enumeration member" Url="html/3044a031-975c-5419-ad15-fa9fca031b36.htm" />
@@ -174,8 +205,23 @@
   <HelpKINode Title="MainMenuController.MainMenu property" Url="html/5908d8c9-4dfd-0588-fa4c-f556eb300857.htm" />
   <HelpKINode Title="MainMenuController.MainMenuController constructor" Url="html/7cbc0cc3-5082-ccb4-3b5a-684e87bc0aba.htm" />
   <HelpKINode Title="Manual enumeration member" Url="html/a67d5d20-78a3-7e3a-c825-d0deb2f8ebce.htm" />
+  <HelpKINode Title="MenuElement class">
+    <HelpKINode Title="MenuElement Class" Url="html/86646a55-522e-46a3-26be-bcedca2fff6b.htm" />
+    <HelpKINode Title="about MenuElement class" Url="html/86646a55-522e-46a3-26be-bcedca2fff6b.htm" />
+    <HelpKINode Title="constructor" Url="html/4d860531-1121-f5b4-f864-23a31286b8a7.htm" />
+    <HelpKINode Title="methods" Url="html/36c993a7-f539-223d-3509-fdfb98b60845.htm" />
+    <HelpKINode Title="properties" Url="html/7f99e7bb-42b6-62d7-987e-f5e9382a9d01.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MenuElement.ClickAction property" Url="html/f707cc0d-3b59-62cc-223b-d810e04c0d37.htm" />
+  <HelpKINode Title="MenuElement.Draw method" Url="html/de38c59c-a68e-eb22-8c15-941771868703.htm" />
+  <HelpKINode Title="MenuElement.IsClicked method" Url="html/adc7ca00-3b3e-f46d-81ae-3e06299aad28.htm" />
+  <HelpKINode Title="MenuElement.MenuElement constructor" Url="html/4d860531-1121-f5b4-f864-23a31286b8a7.htm" />
+  <HelpKINode Title="MenuElement.Text property" Url="html/d921150f-114a-c1b9-98aa-02f89011c9c4.htm" />
   <HelpKINode Title="MenuType enumeration" Url="html/a67d5d20-78a3-7e3a-c825-d0deb2f8ebce.htm" />
-  <HelpKINode Title="Move method" Url="html/43fba8d2-e4c0-b0d9-c379-0ccf0142483a.htm" />
+  <HelpKINode Title="Move method">
+    <HelpKINode Title="IMovable.Move Method " Url="html/4cea3702-b89c-459b-6704-93b075c3e181.htm" />
+    <HelpKINode Title="Person.Move Method " Url="html/43fba8d2-e4c0-b0d9-c379-0ccf0142483a.htm" />
+  </HelpKINode>
   <HelpKINode Title="Multiply operator" Url="html/b932e91c-ad30-bc51-49f8-1f0a06527730.htm" />
   <HelpKINode Title="Name property" Url="html/8cc006a9-e88b-96ad-be38-0d5e590dfa52.htm" />
   <HelpKINode Title="NeighbourBottom property" Url="html/5ff4e48d-7d2c-a006-663b-93e76f97e0e1.htm" />
@@ -192,13 +238,17 @@
   <HelpKINode Title="PantMerchant.Controller class" Url="html/e7a18747-1f2b-f7a5-b272-8f1999816917.htm" />
   <HelpKINode Title="PantMerchant.Customer class" Url="html/54760fca-aa41-f0bf-7bbc-ea5cc199063f.htm" />
   <HelpKINode Title="PantMerchant.Direction enumeration" Url="html/2f22488d-36d0-1446-7d16-8f92b0f97d32.htm" />
+  <HelpKINode Title="PantMerchant.DirectionNotAllowedException class" Url="html/516c407f-6ed2-38db-8f52-6005a57e3e9e.htm" />
   <HelpKINode Title="PantMerchant.GameController class" Url="html/bfe43b71-22d2-a2fa-51f8-366ba54919b8.htm" />
   <HelpKINode Title="PantMerchant.GameState enumeration" Url="html/3044a031-975c-5419-ad15-fa9fca031b36.htm" />
   <HelpKINode Title="PantMerchant.GridCell class" Url="html/9981cf96-90b6-a289-6372-1dddbae67fed.htm" />
   <HelpKINode Title="PantMerchant.GridOccupiedExcepion class" Url="html/e2f86c35-3c90-b62f-6468-cf8a5e53fce5.htm" />
   <HelpKINode Title="PantMerchant.IClickable interface" Url="html/cba700d2-1471-7770-58b4-0da9e072b587.htm" />
   <HelpKINode Title="PantMerchant.IDrawable interface" Url="html/c297246c-bf0e-2fd4-e49a-a5f1e221b937.htm" />
+  <HelpKINode Title="PantMerchant.IMovable interface" Url="html/2ef2d39f-3fe2-8511-e016-ebece0df0e61.htm" />
+  <HelpKINode Title="PantMerchant.InvalidMenuTypeException class" Url="html/ff754065-2912-108a-9347-0772027b9417.htm" />
   <HelpKINode Title="PantMerchant.MainMenuController class" Url="html/72a1b940-6aad-70b9-eaf1-817d61a00141.htm" />
+  <HelpKINode Title="PantMerchant.MenuElement class" Url="html/86646a55-522e-46a3-26be-bcedca2fff6b.htm" />
   <HelpKINode Title="PantMerchant.MenuType enumeration" Url="html/a67d5d20-78a3-7e3a-c825-d0deb2f8ebce.htm" />
   <HelpKINode Title="PantMerchant.PantMerchantMain class" Url="html/81384596-fcf6-3d53-5db6-19c3791eda19.htm" />
   <HelpKINode Title="PantMerchant.Person class" Url="html/74af3bd3-f7cc-5f7c-5ef0-7d19bd32ddcd.htm" />
@@ -206,6 +256,7 @@
   <HelpKINode Title="PantMerchant.StateController class" Url="html/5d461349-889a-2fe8-e7a8-07db95d04ae3.htm" />
   <HelpKINode Title="PantMerchant.UIContainer class" Url="html/da68ffe5-5019-79eb-01f5-b2a6d47e6af0.htm" />
   <HelpKINode Title="PantMerchant.UIElement class" Url="html/91e934b6-f47a-5605-d808-3d8994394d0a.htm" />
+  <HelpKINode Title="PantMerchant.View class" Url="html/d0ff3a0f-080e-9bd3-6262-eb0dc8103f07.htm" />
   <HelpKINode Title="PantMerchantMain class">
     <HelpKINode Title="PantMerchantMain Class" Url="html/81384596-fcf6-3d53-5db6-19c3791eda19.htm" />
     <HelpKINode Title="about PantMerchantMain class" Url="html/81384596-fcf6-3d53-5db6-19c3791eda19.htm" />
@@ -258,7 +309,6 @@
   <HelpKINode Title="Position property" Url="html/ac6252f4-64fa-19b3-53cf-3bb5e99300a3.htm" />
   <HelpKINode Title="QuitToDesktop method" Url="html/5b21e452-f8ad-fb60-76f7-ff8015e8180c.htm" />
   <HelpKINode Title="QuitToMainMenu method" Url="html/5030d8b5-0121-23f1-1832-103d65bda9bf.htm" />
-  <HelpKINode Title="ResourcePath property" Url="html/7d87dfb9-6b43-1d59-58e3-73f00bfd6fbb.htm" />
   <HelpKINode Title="Right enumeration member" Url="html/2f22488d-36d0-1446-7d16-8f92b0f97d32.htm" />
   <HelpKINode Title="Round method" Url="html/1a9d2130-5ae3-64ee-3c06-ff80473a68bb.htm" />
   <HelpKINode Title="ScreenMiddle property" Url="html/8089136a-db7e-90c7-1fc1-5a1cae40af58.htm" />
@@ -293,6 +343,7 @@
   <HelpKINode Title="StateController.UIElementList property" Url="html/2c3dc78d-0404-9078-3f98-61c6c25237f9.htm" />
   <HelpKINode Title="Subtraction operator" Url="html/0394f8a4-4ef1-a128-645d-6f601bd9b2db.htm" />
   <HelpKINode Title="Test property" Url="html/832107e3-5d60-d10c-0ea9-bcc59fdecc2f.htm" />
+  <HelpKINode Title="Text property" Url="html/d921150f-114a-c1b9-98aa-02f89011c9c4.htm" />
   <HelpKINode Title="ToString method" Url="html/a155268f-eba5-e667-9796-e8a826f36cda.htm" />
   <HelpKINode Title="Type field" Url="html/77f467e1-4219-552d-7f36-1b2e2c891f8b.htm" />
   <HelpKINode Title="UIContainer class">
@@ -330,6 +381,15 @@
   </HelpKINode>
   <HelpKINode Title="Up enumeration member" Url="html/2f22488d-36d0-1446-7d16-8f92b0f97d32.htm" />
   <HelpKINode Title="UserQuit enumeration member" Url="html/3044a031-975c-5419-ad15-fa9fca031b36.htm" />
+  <HelpKINode Title="View class">
+    <HelpKINode Title="View Class" Url="html/d0ff3a0f-080e-9bd3-6262-eb0dc8103f07.htm" />
+    <HelpKINode Title="about View class" Url="html/d0ff3a0f-080e-9bd3-6262-eb0dc8103f07.htm" />
+    <HelpKINode Title="methods" Url="html/b48cbbc3-1784-2b3e-2892-a3c8bed80a30.htm" />
+    <HelpKINode Title="properties" Url="html/a7378f58-b388-1afd-5aaf-c1f2e963dc88.htm" />
+  </HelpKINode>
+  <HelpKINode Title="View.Draw method" Url="html/3a5bca29-1d1e-c4e3-6bbe-b960c8f9ed0e.htm" />
+  <HelpKINode Title="View.Font property" Url="html/9c826362-c9f2-dbf6-414d-5fe800ae00e0.htm" />
+  <HelpKINode Title="View.Initialise method" Url="html/8aebea94-171c-89e5-8fc8-a26540e462cd.htm" />
   <HelpKINode Title="X field" Url="html/8244dcf6-bc4a-c27a-a873-4b5ebc9418fd.htm" />
   <HelpKINode Title="Y field" Url="html/01a66f60-a4ee-96b4-6745-49f388f7597a.htm" />
 </HelpKI>

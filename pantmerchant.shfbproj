@@ -13,13 +13,15 @@
     <RootNamespace>Documentation</RootNamespace>
     <Name>Documentation</Name>
     <!-- SHFB properties -->
-    <FrameworkVersion>.NET Framework 4.5</FrameworkVersion>
+    <!--<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>-->
+    <!--<FrameworkVersion>.NET Framework 4.6</FrameworkVersion>-->
     <OutputPath>docs\</OutputPath>
     <HtmlHelpName>Documentation</HtmlHelpName>
     <Language>en-US</Language>
     <DocumentationSources>
       <DocumentationSource sourceFile="PantMerchant.xml" />
-<DocumentationSource sourceFile="bin\Debug\PantMerchant.exe" /></DocumentationSources>
+      <DocumentationSource sourceFile="bin\Debug\PantMerchant.exe" />
+      </DocumentationSources>
     <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
     <HelpFileFormat>Website</HelpFileFormat>
@@ -29,6 +31,10 @@
     <CleanIntermediates>True</CleanIntermediates>
     <WarnOnMissingSourceContext>False</WarnOnMissingSourceContext>
     <VisibleItems>Attributes, ExplicitInterfaceImplementations, InheritedMembers, InheritedFrameworkMembers, InheritedFrameworkInternalMembers, Internals, ProtectedInternalAsProtected</VisibleItems>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SHFBROOT Condition=" '$(SHFBROOT)' == '' ">$(MSBuildThisFileDirectory)packages\EWSoftware.SHFB.2016.9.17.0\tools</SHFBROOT>
+    <ComponentPath>$(MSBuildThisFileDirectory)packages\EWSoftware.SHFB.NETFramework.4.6.2</ComponentPath>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->

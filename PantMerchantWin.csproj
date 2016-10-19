@@ -37,6 +37,9 @@
   <PropertyGroup>
     <PrepareForRunDependsOn>$(PrepareForRunDependsOn);CopyLibsToOut</PrepareForRunDependsOn>
   </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>%25SystemRoot%25\Microsoft.NET\Framework\v4.0.30319\msbuild.exe "$(ProjectDir)pantmerchant.shfbproj"</PostBuildEvent>
+  </PropertyGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
   </ItemGroup>

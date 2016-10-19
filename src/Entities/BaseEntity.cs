@@ -153,7 +153,13 @@ namespace PantMerchant
         /// <summary>
         /// Used by the View class to draw IDrawable objects to the screen.
         /// </summary>
-        public abstract void Draw();
+        public virtual void Draw()
+        {
+            // TODO Find a way to scale the image dynamically
+            //float scaleFactor = GridCell.GridSize.X / ( (float)2 * ( this.Image.Width ) ) ;
+
+            this.Image.Draw(this.ScreenPos.X - this.Image.Width / 2, this.ScreenPos.Y - this.Image.Height + GridCell.GridSize.Y / 2);
+        }
     }
 
     /// <summary>

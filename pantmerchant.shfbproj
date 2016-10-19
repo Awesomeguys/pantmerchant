@@ -18,8 +18,8 @@
     <HtmlHelpName>Documentation</HtmlHelpName>
     <Language>en-US</Language>
     <DocumentationSources>
-      <DocumentationSource sourceFile="PantMerchantWin.csproj" />
-    </DocumentationSources>
+      <DocumentationSource sourceFile="PantMerchant.xml" />
+<DocumentationSource sourceFile="bin\Debug\PantMerchant.exe" /></DocumentationSources>
     <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
     <HelpFileFormat>Website</HelpFileFormat>
@@ -59,9 +59,4 @@
     </PostBuildEvent>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="PantMerchant">
-      <HintPath>bin\Debug\PantMerchant.exe</HintPath>
-    </Reference>
-  </ItemGroup>
 </Project>

@@ -618,6 +618,50 @@
             <param name="d"></param>
             <returns></returns>
         </member>
+        <member name="T:PantMerchant.GameResources">
+            <summary>
+            Handles the loading, accessing, and freeing of
+            game resources.
+            </summary>
+        </member>
+        <member name="M:PantMerchant.GameResources.GameFont(System.String)">
+            <summary>
+            Gets a Font Loaded in the Resources
+            </summary>
+            <param name="font">Name of Font</param>
+            <returns>The Font Loaded with this Name</returns>
+        </member>
+        <member name="M:PantMerchant.GameResources.GameImage(System.String)">
+            <summary>
+            Gets an Image loaded in the Resources
+            </summary>
+            <param name="image">Name of image</param>
+            <returns>The image loaded with this name</returns>
+        </member>
+        <member name="M:PantMerchant.GameResources.GameSound(System.String)">
+            <summary>
+            Gets an sound loaded in the Resources
+            </summary>
+            <param name="sound">Name of sound</param>
+            <returns>The sound with this name</returns>
+        </member>
+        <member name="M:PantMerchant.GameResources.GameMusic(System.String)">
+            <summary>
+            Gets the music loaded in the Resources
+            </summary>
+            <param name="music">Name of music</param>
+            <returns>The music with this name</returns>
+        </member>
+        <member name="M:PantMerchant.GameResources.LoadResources">
+            <summary>
+            LOAD ALL THE RESOURCES!!!
+            </summary>
+        </member>
+        <member name="M:PantMerchant.GameResources.FreeResources">
+            <summary>
+            Pharaoh, let my resources go.
+            </summary>
+        </member>
         <member name="T:PantMerchant.PantMerchantMain">
             <summary>
             Main class

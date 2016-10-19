@@ -14,7 +14,8 @@ namespace PantMerchant
         public static Font Font { get; set; }
         static View()
         {
-            View.Font = new Font("Arial", 11);
+            // View.Font = new Font("Arial", 11);
+            View.Font = GameResources.GameFont("Arial");
             //Open the game window
             SwinGame.OpenGraphicsWindow("PantMerchant", 800, 600);
             //SwinGame.ShowSwinGameSplashScreen();

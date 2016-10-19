@@ -291,18 +291,34 @@
             </summary>
             <param name="message">Message describing the exception</param>
         </member>
-        <member name="T:PantMerchant.Customer">
+        <member name="P:PantMerchant.Fixture.Type">
             <summary>
-            Concrete customer class
+            Type of fixture this is
             </summary>
         </member>
-        <member name="M:PantMerchant.Customer.#ctor(System.String,PantMerchant.Point2D)">
+        <member name="M:PantMerchant.Fixture.#ctor(PantMerchant.FixtureType,PantMerchant.Point2D,System.Collections.Generic.List{PantMerchant.Point2D},System.String)">
             <summary>
-            Initialises a new instance of Person with 
-            the given name at the given position.
+            Initialises a new instance of the fixture class with the specified type, position, footprint, and resource path.
             </summary>
-            <param name="Name">Name of the person. eg "John Smith"</param>
-            <param name="position">Grid position the person currently occupies</param>
+            <param name="Type">Type of the new fixture</param>
+            <param name="position">Position it occupies</param>
+            <param name="footprint">Which neighbouring cells it occupies</param>
+            <param name="resourcePath">Path to the resources</param>
+        </member>
+        <member name="T:PantMerchant.FixtureType">
+            <summary>
+            Enumeration defining different types of fixtures available
+            </summary>
+        </member>
+        <member name="F:PantMerchant.FixtureType.Wall">
+            <summary>
+            Wall fixture
+            </summary>
+        </member>
+        <member name="F:PantMerchant.FixtureType.Counter">
+            <summary>
+            Counter fixture
+            </summary>
         </member>
         <member name="T:PantMerchant.GridCell">
             <summary>
@@ -447,6 +463,19 @@
             <summary>
             Left direction. Corresponds to top-left on the grid.
             </summary>
+        </member>
+        <member name="T:PantMerchant.Customer">
+            <summary>
+            Concrete customer class
+            </summary>
+        </member>
+        <member name="M:PantMerchant.Customer.#ctor(System.String,PantMerchant.Point2D)">
+            <summary>
+            Initialises a new instance of Person with 
+            the given name at the given position.
+            </summary>
+            <param name="Name">Name of the person. eg "John Smith"</param>
+            <param name="position">Grid position the person currently occupies</param>
         </member>
         <member name="T:PantMerchant.Person">
             <summary>

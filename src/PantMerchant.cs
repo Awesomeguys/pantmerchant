@@ -32,9 +32,9 @@ namespace PantMerchant
         public static void Main()
         {
             GameResources.LoadResources();
-            SetMusicVolume(0.5f);
+            SetMusicVolume(0.3f);
 
-            PlayMusic(GameResources.GameMusic("Intro"));
+            PlayMusic(GameResources.GameMusic("Intro"), 1);
 
             View.Initialise();
 

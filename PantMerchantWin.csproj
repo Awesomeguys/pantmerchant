@@ -38,7 +38,7 @@
     <PrepareForRunDependsOn>$(PrepareForRunDependsOn);CopyLibsToOut</PrepareForRunDependsOn>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent Condition=" '$(OS)' !='Windows'">%25SystemRoot%25\Microsoft.NET\Framework\v4.0.30319\msbuild.exe "$(ProjectDir)pantmerchant.shfbproj"</PostBuildEvent>
+    <PostBuildEvent Condition=" '$(OS)' == 'Windows'">%25SystemRoot%25\Microsoft.NET\Framework\v4.0.30319\msbuild.exe "$(ProjectDir)pantmerchant.shfbproj"</PostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
     <Content Include=".gitignore" />

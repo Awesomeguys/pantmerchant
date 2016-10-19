@@ -41,6 +41,10 @@ namespace PantMerchant
 
         public override void Draw()
         {
+            if (this.Container.IsHidden)
+            {
+                return;
+            }
             switch (this.Container.Type)
             {
                 case MenuType.Manual:
@@ -71,6 +75,7 @@ namespace PantMerchant
         public bool IsClicked()
         {
             return ( 
+                !this.Container.IsHidden &&
                 MouseClicked(MouseButton.LeftButton) && 
                 MouseX() > this.ScreenPos.X &&
                 MouseX() < this.ScreenPos.X + this.ScreenSize.X &&

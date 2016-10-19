@@ -31,6 +31,11 @@ namespace PantMerchant
         public static UIContainer GameWindow { get; private set; }
 
         /// <summary>
+        /// Whether the UI Container is hidden or shown
+        /// </summary>
+        public bool IsHidden { get; private set; }
+
+        /// <summary>
         /// Initialises the static members of UIContainer.
         /// </summary>
         static UIContainer()
@@ -96,7 +101,26 @@ namespace PantMerchant
         /// </summary>
         public override void Draw()
         {
-            DrawRectangle(Color.Black, new Rectangle() { X = this.ScreenPos.X, Y = this.ScreenPos.Y, Width = this.Size.X, Height = this.Size.Y });
+            if (!this.IsHidden)
+            {
+                DrawRectangle(Color.Black, new Rectangle() { X = this.ScreenPos.X, Y = this.ScreenPos.Y, Width = this.Size.X, Height = this.Size.Y });
+            }
+        }
+
+        /// <summary>
+        /// Displays the UI Container
+        /// </summary>
+        public void Show()
+        {
+            this.IsHidden = false;
+        }
+
+        /// <summary>
+        /// Hides the UI Container
+        /// </summary>
+        public void Hide()
+        {
+            this.IsHidden = true;
         }
     }
 

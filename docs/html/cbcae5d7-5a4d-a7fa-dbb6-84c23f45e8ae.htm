@@ -43,7 +43,21 @@
 	<span class="identifier">string</span> <span class="parameter">Name</span>,
 	<span class="identifier">Point2D</span> <span class="parameter">Pos</span>,
 	<span class="identifier">Point2D</span> <span class="parameter">Size</span>
+)
+
+<span class="keyword">public</span> <span class="identifier">UIContainer</span>(
+	<span class="identifier">List</span>&lt;<span class="identifier">UIElement</span>&gt; <span class="parameter">ChildElements</span>,
+	<span class="identifier">string</span> <span class="parameter">Name</span>,
+	<span class="identifier">Point2D</span> <span class="parameter">Pos</span>,
+	<span class="identifier">Point2D</span> <span class="parameter">Size</span>
 )</pre></div><div id="ID0EDCA_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Sub</span> <span class="identifier">New</span> ( 
+	<span class="parameter">ChildElements</span> <span class="keyword">As</span> <span class="identifier">List</span>(<span class="keyword">Of</span> <span class="identifier">UIElement</span>),
+	<span class="parameter">Name</span> <span class="keyword">As</span> <span class="identifier">String</span>,
+	<span class="parameter">Pos</span> <span class="keyword">As</span> <span class="identifier">Point2D</span>,
+	<span class="parameter">Size</span> <span class="keyword">As</span> <span class="identifier">Point2D</span>
+)
+
+<span class="keyword">Public</span> <span class="keyword">Sub</span> <span class="identifier">New</span> ( 
 	<span class="parameter">ChildElements</span> <span class="keyword">As</span> <span class="identifier">List</span>(<span class="keyword">Of</span> <span class="identifier">UIElement</span>),
 	<span class="parameter">Name</span> <span class="keyword">As</span> <span class="identifier">String</span>,
 	<span class="parameter">Pos</span> <span class="keyword">As</span> <span class="identifier">Point2D</span>,
@@ -54,7 +68,21 @@
 	<span class="identifier">String</span>^ <span class="parameter">Name</span>, 
 	<span class="identifier">Point2D</span>^ <span class="parameter">Pos</span>, 
 	<span class="identifier">Point2D</span>^ <span class="parameter">Size</span>
+)
+
+<span class="keyword">public</span>:
+<span class="identifier">UIContainer</span>(
+	<span class="identifier">List</span>&lt;<span class="identifier">UIElement</span>^&gt;^ <span class="parameter">ChildElements</span>, 
+	<span class="identifier">String</span>^ <span class="parameter">Name</span>, 
+	<span class="identifier">Point2D</span>^ <span class="parameter">Pos</span>, 
+	<span class="identifier">Point2D</span>^ <span class="parameter">Size</span>
 )</pre></div><div id="ID0EDCA_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">new</span> : 
+        <span class="parameter">ChildElements</span> : <span class="identifier">List</span>&lt;<span class="identifier">UIElement</span>&gt; * 
+        <span class="parameter">Name</span> : <span class="identifier">string</span> * 
+        <span class="parameter">Pos</span> : <span class="identifier">Point2D</span> * 
+        <span class="parameter">Size</span> : <span class="identifier">Point2D</span> <span class="keyword">-&gt;</span> <span class="identifier">UIContainer</span>
+
+<span class="keyword">new</span> : 
         <span class="parameter">ChildElements</span> : <span class="identifier">List</span>&lt;<span class="identifier">UIElement</span>&gt; * 
         <span class="parameter">Name</span> : <span class="identifier">string</span> * 
         <span class="parameter">Pos</span> : <span class="identifier">Point2D</span> * 

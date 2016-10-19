@@ -31,12 +31,20 @@ namespace PantMerchant
         /// </summary>
         public static void Main()
         {
+            GameResources.LoadResources();
+            SetMusicVolume(0.3f);
+
+            PlayMusic(GameResources.GameMusic("Intro"), 1);
+
             View.Initialise();
 
             while (!EndProgramRequested())
             {
                 StateController.Instance.DoCurrentControllerStuff();
             }
+
+            StopMusic();
+            GameResources.FreeResources();
         }
     }
 }

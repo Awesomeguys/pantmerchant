@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Color = System.Drawing.Color;
 using SwinGameSDK;
 
 namespace PantMerchant

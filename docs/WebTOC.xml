@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpTOC>
 
-  <HelpTOCNode Id="bd8e832d-8932-4cd7-9f74-5a92e62745c3" Title="PantMerchant" Url="html/23c2d94e-03c8-2b73-e141-9e91cbb43546.htm">
-    <HelpTOCNode Id="b9c9d3d4-cce3-4fa0-933d-41a089f7c382" Title="BaseEntity Class" Url="html/a3524031-386a-342c-9c98-6baf24153c10.htm">
-      <HelpTOCNode Id="d0397573-0994-4f78-a8b7-a6d8b45f62da" Title="BaseEntity Constructor " Url="html/65e0f2a5-9ef1-b658-a920-989a0bf27c8f.htm">
+  <HelpTOCNode Id="a42d4fb0-fdbf-4e8e-82bd-7092e6034285" Title="PantMerchant" Url="html/23c2d94e-03c8-2b73-e141-9e91cbb43546.htm">
+    <HelpTOCNode Id="0b1a50cd-cd92-4bd6-80a0-d12ea26ad356" Title="BaseEntity Class" Url="html/a3524031-386a-342c-9c98-6baf24153c10.htm">
+      <HelpTOCNode Id="1a4b361a-f50e-4b97-9a65-1f4a489f7533" Title="BaseEntity Constructor " Url="html/65e0f2a5-9ef1-b658-a920-989a0bf27c8f.htm">
         <HelpTOCNode Title="BaseEntity Constructor (Point2D, List(Point2D))" Url="html/a9c14b6d-915c-4c51-1605-7446db94c6df.htm" />
         <HelpTOCNode Title="BaseEntity Constructor (Point2D, List(Point2D), String)" Url="html/01f0a468-367a-9c09-0f0b-312cf7ddb0d0.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="8f0584ac-bb27-436f-8a6a-2d302591ef1c" Title="BaseEntity Properties" Url="html/9bb8f890-5878-94c6-0b07-01af8f9a825d.htm">
+      <HelpTOCNode Id="601410e9-ab9e-4fad-89b9-6d1663b74455" Title="BaseEntity Properties" Url="html/9bb8f890-5878-94c6-0b07-01af8f9a825d.htm">
         <HelpTOCNode Title="Facing Property " Url="html/59d67153-864c-7ee7-2dfc-62a762dacb3e.htm" />
         <HelpTOCNode Title="Footprint Property " Url="html/6d68de65-a561-d5c1-44b8-c5a7617f258c.htm" />
         <HelpTOCNode Title="Grid Property " Url="html/db2bba10-89c4-525a-b7c1-5a53f474c551.htm" />
@@ -15,30 +15,30 @@
         <HelpTOCNode Title="Position Property " Url="html/ac6252f4-64fa-19b3-53cf-3bb5e99300a3.htm" />
         <HelpTOCNode Title="ScreenPos Property " Url="html/11f92b02-0d7e-e247-34c1-a3a6c2e59536.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="37dbf36d-124e-46b9-8fbf-6503f9dc52ba" Title="BaseEntity Methods" Url="html/685a1a25-e512-9368-8fb2-9fd35c6b1ba7.htm">
+      <HelpTOCNode Id="1890d03c-3eed-4efb-a085-0fa26c0870eb" Title="BaseEntity Methods" Url="html/685a1a25-e512-9368-8fb2-9fd35c6b1ba7.htm">
         <HelpTOCNode Title="Draw Method " Url="html/683f8789-00a4-9fed-b3e7-178a8f3c612b.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="5ef71562-d7aa-4e5f-a742-0d0dcbabec4e" Title="Controller Class" Url="html/e7a18747-1f2b-f7a5-b272-8f1999816917.htm">
-      <HelpTOCNode Id="c51ffed9-3aa2-4fd1-93d7-d4829cb34679" Title="Controller Properties" Url="html/7535ec25-1d55-f82c-248c-aec42da8fd22.htm">
+    <HelpTOCNode Id="d36d2863-4b4a-47fe-86a7-10816d98d356" Title="Controller Class" Url="html/e7a18747-1f2b-f7a5-b272-8f1999816917.htm">
+      <HelpTOCNode Id="44d21bea-5f2e-4143-b87c-5e3d0315d91e" Title="Controller Properties" Url="html/7535ec25-1d55-f82c-248c-aec42da8fd22.htm">
         <HelpTOCNode Title="IClickableList Property " Url="html/997edfbc-a2dc-009c-95c4-710d55fe52b8.htm" />
         <HelpTOCNode Title="IDrawableList Property " Url="html/d2e85789-425d-40a2-3e40-c5f044de780a.htm" />
         <HelpTOCNode Title="Instance Property " Url="html/f4fb7bef-ce81-da36-d22b-e8d48fcad194.htm" />
         <HelpTOCNode Title="UIElementList Property " Url="html/b88a5b94-0e23-a190-01e6-c9a217578794.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="5cb1b607-4a1c-41aa-9fff-91acdf8070ae" Title="Controller Methods" Url="html/4efb432c-a22c-60cb-0446-f561dfe6689c.htm">
+      <HelpTOCNode Id="2118254a-c86a-43be-b6a2-8125b427b47c" Title="Controller Methods" Url="html/4efb432c-a22c-60cb-0446-f561dfe6689c.htm">
         <HelpTOCNode Title="DoClickActions Method " Url="html/7c647d38-45f4-65ea-c8e7-1a2cb9a85cd5.htm" />
         <HelpTOCNode Title="DoControllerStuff Method " Url="html/8823f27a-8a0b-d19b-363b-e8e607809655.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="a2b018a6-fddd-4e3a-b49c-07ad369c9b22" Title="Customer Class" Url="html/54760fca-aa41-f0bf-7bbc-ea5cc199063f.htm">
+    <HelpTOCNode Id="7c0127b7-5c61-486e-8081-2deaaee2b50b" Title="Customer Class" Url="html/54760fca-aa41-f0bf-7bbc-ea5cc199063f.htm">
       <HelpTOCNode Title="Customer Constructor " Url="html/d1a11057-bb56-d3f9-f9eb-f94cc234b565.htm" />
       <HelpTOCNode Title="Customer Properties" Url="html/5b5e2a81-b983-c600-b886-b7056f80e4ce.htm" />
       <HelpTOCNode Title="Customer Methods" Url="html/89407862-5907-6889-dcb2-c80501d050dd.htm" />
     </HelpTOCNode>
     <HelpTOCNode Title="Direction Enumeration" Url="html/2f22488d-36d0-1446-7d16-8f92b0f97d32.htm" />
-    <HelpTOCNode Id="32221cad-c456-402c-bc00-5ac422f4dd3e" Title="DirectionNotAllowedException Class" Url="html/516c407f-6ed2-38db-8f52-6005a57e3e9e.htm">
-      <HelpTOCNode Id="ca613dd3-31de-4dd5-9977-970c5be588cc" Title="DirectionNotAllowedException Constructor " Url="html/4a8cb667-4c5b-49e5-be25-bb3be3c39791.htm">
+    <HelpTOCNode Id="93d684d2-9bef-4c1b-9f49-bd7b8811f1aa" Title="DirectionNotAllowedException Class" Url="html/516c407f-6ed2-38db-8f52-6005a57e3e9e.htm">
+      <HelpTOCNode Id="a08bcd57-c0bd-4a2a-a6a7-fa12ecef193a" Title="DirectionNotAllowedException Constructor " Url="html/4a8cb667-4c5b-49e5-be25-bb3be3c39791.htm">
         <HelpTOCNode Title="DirectionNotAllowedException Constructor " Url="html/3be4cbdc-d4fa-cfc5-9ba9-7e9a3895444a.htm" />
         <HelpTOCNode Title="DirectionNotAllowedException Constructor (String)" Url="html/4b8ceb96-d10d-c743-01da-7019ff538bce.htm" />
         <HelpTOCNode Title="DirectionNotAllowedException Constructor (String, Exception)" Url="html/da640e25-40a2-d3dd-ddef-c456c232c8f0.htm" />
@@ -47,20 +47,20 @@
       <HelpTOCNode Title="DirectionNotAllowedException Methods" Url="html/7079c012-6cd4-cf3b-dece-3f338ae54643.htm" />
       <HelpTOCNode Title="DirectionNotAllowedException Fields" Url="html/9d6b3380-c778-6ba4-a206-4bf6fb258552.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="30f94aa1-7c85-474f-a3fe-cec0b210d2cf" Title="GameController Class" Url="html/bfe43b71-22d2-a2fa-51f8-366ba54919b8.htm">
+    <HelpTOCNode Id="85e6d0dc-4e6f-4fe5-aaa8-71aeabaff024" Title="GameController Class" Url="html/bfe43b71-22d2-a2fa-51f8-366ba54919b8.htm">
       <HelpTOCNode Title="GameController Constructor " Url="html/46a32b1e-cf37-eb9a-4730-e7f594f104f7.htm" />
-      <HelpTOCNode Id="03140dbd-01d1-42a1-9d92-4425ea12f6c3" Title="GameController Properties" Url="html/b080eeac-d599-5aaa-d2ae-c6aff2ce71ed.htm">
+      <HelpTOCNode Id="6a751d18-7610-4a1d-b62c-1fd8d4604218" Title="GameController Properties" Url="html/b080eeac-d599-5aaa-d2ae-c6aff2ce71ed.htm">
         <HelpTOCNode Title="Instance Property " Url="html/dc942746-dd64-f566-e67e-78309feaf849.htm" />
         <HelpTOCNode Title="Test Property " Url="html/832107e3-5d60-d10c-0ea9-bcc59fdecc2f.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="63fdc0fa-e9bc-42b2-923e-e73182c6261f" Title="GameController Methods" Url="html/7f85a6b0-0b40-bdc6-728c-3b1b5eae374a.htm">
+      <HelpTOCNode Id="a56c82a7-0a9b-415e-8fbe-269baec44435" Title="GameController Methods" Url="html/7f85a6b0-0b40-bdc6-728c-3b1b5eae374a.htm">
         <HelpTOCNode Title="DoControllerStuff Method " Url="html/8dae21fd-e223-048c-3bdf-4ad09409bef0.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="GameState Enumeration" Url="html/3044a031-975c-5419-ad15-fa9fca031b36.htm" />
-    <HelpTOCNode Id="a29cd5f0-32a3-482b-a119-44aedd46ea84" Title="GridCell Class" Url="html/9981cf96-90b6-a289-6372-1dddbae67fed.htm">
+    <HelpTOCNode Id="2fd217d9-de1f-469a-98b4-ffedfaf0ca62" Title="GridCell Class" Url="html/9981cf96-90b6-a289-6372-1dddbae67fed.htm">
       <HelpTOCNode Title="GridCell Constructor " Url="html/932935bc-dd8a-bbc3-7a69-d195949066a2.htm" />
-      <HelpTOCNode Id="e461a360-0ba5-4db7-a60a-17c1d563b0ae" Title="GridCell Properties" Url="html/0a006f3e-58ef-de89-507a-0afa127a45fb.htm">
+      <HelpTOCNode Id="8cc2d3d5-4175-4d4e-a55f-1aeb49db9ba4" Title="GridCell Properties" Url="html/0a006f3e-58ef-de89-507a-0afa127a45fb.htm">
         <HelpTOCNode Title="Entity Property " Url="html/bc6ba861-24c6-f945-0f35-d676f43cdee7.htm" />
         <HelpTOCNode Title="GridSize Property " Url="html/4e875c25-70b7-7189-37e5-116f04afe6fe.htm" />
         <HelpTOCNode Title="Image Property " Url="html/8a6815df-ee5f-e955-015a-3d9b856176a6.htm" />
@@ -72,13 +72,13 @@
         <HelpTOCNode Title="Pos Property " Url="html/5d1884d9-7494-ce4c-0847-f24653a646ef.htm" />
         <HelpTOCNode Title="ScreenPos Property " Url="html/6f8fb53c-3cc2-28b9-537c-e274e0b6573e.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="8bdb945e-8d51-4df7-aa45-60edf8c54400" Title="GridCell Methods" Url="html/18241263-cc3a-fd39-8d30-e87aa5cd1102.htm">
+      <HelpTOCNode Id="e0c74002-03ef-471d-96b5-455f46e25fd2" Title="GridCell Methods" Url="html/18241263-cc3a-fd39-8d30-e87aa5cd1102.htm">
         <HelpTOCNode Title="Draw Method " Url="html/d70c7c61-c238-6798-e2f9-bafa388d3371.htm" />
         <HelpTOCNode Title="GetGrid Method " Url="html/462d5ee5-535b-63d0-0c11-391eab5b0e53.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="502ff83a-9b3c-4561-aae9-65828056789a" Title="GridOccupiedExcepion Class" Url="html/e2f86c35-3c90-b62f-6468-cf8a5e53fce5.htm">
-      <HelpTOCNode Id="66b8d410-b998-44a8-ae44-68d6fa759217" Title="GridOccupiedExcepion Constructor " Url="html/f62a26e6-73e5-8ec3-7c49-4a64193b03d9.htm">
+    <HelpTOCNode Id="be3b8026-4fd9-4073-9fc8-24d1b89f1b71" Title="GridOccupiedExcepion Class" Url="html/e2f86c35-3c90-b62f-6468-cf8a5e53fce5.htm">
+      <HelpTOCNode Id="e19e754f-39a5-4ae4-816b-299d43bdf663" Title="GridOccupiedExcepion Constructor " Url="html/f62a26e6-73e5-8ec3-7c49-4a64193b03d9.htm">
         <HelpTOCNode Title="GridOccupiedExcepion Constructor " Url="html/a902e5a9-90ed-5fef-4599-13045e5cf9c7.htm" />
         <HelpTOCNode Title="GridOccupiedExcepion Constructor (String)" Url="html/28e68c65-ec07-34e9-8845-cf96065667e2.htm" />
       </HelpTOCNode>
@@ -86,95 +86,95 @@
       <HelpTOCNode Title="GridOccupiedExcepion Methods" Url="html/c0f689a0-a32d-c2de-ad01-39a46cd800dc.htm" />
       <HelpTOCNode Title="GridOccupiedExcepion Fields" Url="html/86efe173-967d-f4f4-6089-a9c78fc54bbd.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="1fed018f-51a0-4905-994c-25c2ba1e6c29" Title="IClickable Interface" Url="html/cba700d2-1471-7770-58b4-0da9e072b587.htm">
-      <HelpTOCNode Id="bad347ad-3077-49cd-a914-c9d85f9b33b7" Title="IClickable Properties" Url="html/f61a27fe-9d72-6968-76db-1435d0487047.htm">
+    <HelpTOCNode Id="bcac47d2-4844-446b-b2ee-0f2f37146588" Title="IClickable Interface" Url="html/cba700d2-1471-7770-58b4-0da9e072b587.htm">
+      <HelpTOCNode Id="31c8d652-ee16-44fb-8642-e870143dcca2" Title="IClickable Properties" Url="html/f61a27fe-9d72-6968-76db-1435d0487047.htm">
         <HelpTOCNode Title="ClickAction Property " Url="html/6e6e4eed-26e1-7c6c-eeee-1b281d837fe6.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="ed33bfa1-bd56-4305-ba04-84cbf62fd158" Title="IClickable Methods" Url="html/b6ad080c-242e-b6a2-4548-cdd3c0b89c35.htm">
+      <HelpTOCNode Id="b540651a-9099-429a-9a09-0c8d7395d7f2" Title="IClickable Methods" Url="html/b6ad080c-242e-b6a2-4548-cdd3c0b89c35.htm">
         <HelpTOCNode Title="IsClicked Method " Url="html/4bc0c3a8-a301-73b6-8584-ef35477ef2d8.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="4cf14981-70b1-42b6-b38e-1fffb499f1ca" Title="IDrawable Interface" Url="html/c297246c-bf0e-2fd4-e49a-a5f1e221b937.htm">
-      <HelpTOCNode Id="9c95f823-ae5c-4b7c-88c4-1222b9148b67" Title="IDrawable Properties" Url="html/ae631423-5279-b950-7805-54acddb1c801.htm">
+    <HelpTOCNode Id="3addbba9-74ec-44d5-b295-5caffabc86a2" Title="IDrawable Interface" Url="html/c297246c-bf0e-2fd4-e49a-a5f1e221b937.htm">
+      <HelpTOCNode Id="7970dca9-2073-4576-84a1-7139ea41cdcc" Title="IDrawable Properties" Url="html/ae631423-5279-b950-7805-54acddb1c801.htm">
         <HelpTOCNode Title="Image Property " Url="html/a4528eea-06a8-e339-069c-3113696b9908.htm" />
         <HelpTOCNode Title="ScreenPos Property " Url="html/8a6ae082-e8cd-b62d-f0e3-36ffbe9d3b47.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="5a686ca5-7ca1-42bf-ab08-beeddf19487c" Title="IDrawable Methods" Url="html/f1f4f13c-8d3a-7bfe-d27e-04cac227e56c.htm">
+      <HelpTOCNode Id="5ceeb679-c480-4a20-a597-33ba605a54ef" Title="IDrawable Methods" Url="html/f1f4f13c-8d3a-7bfe-d27e-04cac227e56c.htm">
         <HelpTOCNode Title="Draw Method " Url="html/17ff9893-1013-1cbf-542e-b84e43cedf65.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="2f247c1d-301b-4799-a5e4-b199d0af31a0" Title="IMovable Interface" Url="html/2ef2d39f-3fe2-8511-e016-ebece0df0e61.htm">
-      <HelpTOCNode Id="95abff1b-cb14-43d7-bd2c-15d19f7a7ee1" Title="IMovable Methods" Url="html/c90960b9-acf8-6c30-3e0d-431ba304eaed.htm">
+    <HelpTOCNode Id="daf831e2-a448-4553-9b95-c752af8e7e6b" Title="IMovable Interface" Url="html/2ef2d39f-3fe2-8511-e016-ebece0df0e61.htm">
+      <HelpTOCNode Id="2cd38e6d-c59d-432b-933c-bd0fd6d91db8" Title="IMovable Methods" Url="html/c90960b9-acf8-6c30-3e0d-431ba304eaed.htm">
         <HelpTOCNode Title="Move Method " Url="html/4cea3702-b89c-459b-6704-93b075c3e181.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="821cc7b3-a4e4-4995-bb58-0fd6536fabef" Title="InvalidMenuTypeException Class" Url="html/ff754065-2912-108a-9347-0772027b9417.htm">
+    <HelpTOCNode Id="3346b8c6-27d4-410b-a40d-e8e50a31d80e" Title="InvalidMenuTypeException Class" Url="html/ff754065-2912-108a-9347-0772027b9417.htm">
       <HelpTOCNode Title="InvalidMenuTypeException Constructor " Url="html/f9861cf6-2f14-471c-097a-b333b7d08133.htm" />
       <HelpTOCNode Title="InvalidMenuTypeException Properties" Url="html/254d1cb8-af27-43ef-c0f3-1c4e9bda259f.htm" />
       <HelpTOCNode Title="InvalidMenuTypeException Methods" Url="html/d5ab30be-abf8-e8a3-5217-321c81aeb026.htm" />
       <HelpTOCNode Title="InvalidMenuTypeException Fields" Url="html/3469a227-ebdc-e56d-43e2-612c2ce31ecd.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="8d778c20-5f8f-421b-9527-b93822b661d4" Title="MainMenuController Class" Url="html/72a1b940-6aad-70b9-eaf1-817d61a00141.htm">
+    <HelpTOCNode Id="84cfddc1-c3b1-4962-b68e-1556f9ac5e2a" Title="MainMenuController Class" Url="html/72a1b940-6aad-70b9-eaf1-817d61a00141.htm">
       <HelpTOCNode Title="MainMenuController Constructor " Url="html/7cbc0cc3-5082-ccb4-3b5a-684e87bc0aba.htm" />
-      <HelpTOCNode Id="5192025d-e452-4bfa-bd2f-db82b3989342" Title="MainMenuController Properties" Url="html/b2eccf75-8ae3-ed22-3f30-30f008879069.htm">
+      <HelpTOCNode Id="5f6d67f6-e877-446f-87e7-acabbee971bf" Title="MainMenuController Properties" Url="html/b2eccf75-8ae3-ed22-3f30-30f008879069.htm">
         <HelpTOCNode Title="Instance Property " Url="html/7ad5de8f-a723-eb33-d96a-9ad208e52156.htm" />
         <HelpTOCNode Title="MainMenu Property " Url="html/5908d8c9-4dfd-0588-fa4c-f556eb300857.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="89148a21-510c-452f-8f5d-4ebccbacbecf" Title="MainMenuController Methods" Url="html/87d293a5-8562-01ec-d48c-69dbf79ea2a8.htm">
+      <HelpTOCNode Id="ca938259-2051-4ab3-af14-d61b9bc5cb32" Title="MainMenuController Methods" Url="html/87d293a5-8562-01ec-d48c-69dbf79ea2a8.htm">
         <HelpTOCNode Title="DoControllerStuff Method " Url="html/a48a1698-0208-da9e-a429-22d99a0cc177.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="2cbd08f9-b5d3-4a31-b817-1117cd1507f4" Title="MenuElement Class" Url="html/86646a55-522e-46a3-26be-bcedca2fff6b.htm">
-      <HelpTOCNode Id="f24413e0-99d9-47cb-84de-578e76b9b3db" Title="MenuElement Constructor " Url="html/4d860531-1121-f5b4-f864-23a31286b8a7.htm">
+    <HelpTOCNode Id="29e52a0f-24fb-4e2e-831c-552004036734" Title="MenuElement Class" Url="html/86646a55-522e-46a3-26be-bcedca2fff6b.htm">
+      <HelpTOCNode Id="7ad83ff8-693f-48fa-9765-e21a260b9821" Title="MenuElement Constructor " Url="html/4d860531-1121-f5b4-f864-23a31286b8a7.htm">
         <HelpTOCNode Title="MenuElement Constructor (String, Action, String, UIContainer)" Url="html/294d2ae1-2f7d-de59-c264-e02408808e61.htm" />
         <HelpTOCNode Title="MenuElement Constructor (String, Action, String, Point2D, Point2D)" Url="html/1deef143-6394-34b2-c1dc-3b3bbe411e80.htm" />
         <HelpTOCNode Title="MenuElement Constructor (String, Action, String, Point2D, Point2D, UIContainer)" Url="html/82e6e808-137d-3f72-8332-eb7f47592a28.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="0180c471-f7bc-4f92-afae-3ac391132197" Title="MenuElement Properties" Url="html/7f99e7bb-42b6-62d7-987e-f5e9382a9d01.htm">
+      <HelpTOCNode Id="c8ae25c8-3a54-45c3-aa5c-59638c13f2b4" Title="MenuElement Properties" Url="html/7f99e7bb-42b6-62d7-987e-f5e9382a9d01.htm">
         <HelpTOCNode Title="ClickAction Property " Url="html/f707cc0d-3b59-62cc-223b-d810e04c0d37.htm" />
         <HelpTOCNode Title="Text Property " Url="html/d921150f-114a-c1b9-98aa-02f89011c9c4.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="3155eabf-0f54-457e-8341-ff128f2e2f66" Title="MenuElement Methods" Url="html/36c993a7-f539-223d-3509-fdfb98b60845.htm">
+      <HelpTOCNode Id="467e7f98-05b1-4622-af5d-16a0aeb52c0e" Title="MenuElement Methods" Url="html/36c993a7-f539-223d-3509-fdfb98b60845.htm">
         <HelpTOCNode Title="Draw Method " Url="html/de38c59c-a68e-eb22-8c15-941771868703.htm" />
         <HelpTOCNode Title="IsClicked Method " Url="html/adc7ca00-3b3e-f46d-81ae-3e06299aad28.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="MenuType Enumeration" Url="html/a67d5d20-78a3-7e3a-c825-d0deb2f8ebce.htm" />
-    <HelpTOCNode Id="760b3c42-aeff-4afc-ae0c-bfb3d076072f" Title="PantMerchantMain Class" Url="html/81384596-fcf6-3d53-5db6-19c3791eda19.htm">
+    <HelpTOCNode Id="8ebd6dec-cc41-4c50-a53a-3fc506aed064" Title="PantMerchantMain Class" Url="html/81384596-fcf6-3d53-5db6-19c3791eda19.htm">
       <HelpTOCNode Title="PantMerchantMain Constructor " Url="html/fbe380bd-a8ec-545f-b69c-03242e2cd5a6.htm" />
-      <HelpTOCNode Id="90e7a43a-39c6-46e0-a54b-aff4b43a045a" Title="PantMerchantMain Methods" Url="html/de436d1d-2082-b2f7-0aaa-39c33e85548f.htm">
+      <HelpTOCNode Id="d26b0553-636d-4d08-8e95-4c8ac9dfb413" Title="PantMerchantMain Methods" Url="html/de436d1d-2082-b2f7-0aaa-39c33e85548f.htm">
         <HelpTOCNode Title="Main Method " Url="html/9f208e62-f69b-fe8c-e078-0f09b33d6934.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="41a303de-0405-4d2f-83d0-b3de8e8efd05" Title="Person Class" Url="html/74af3bd3-f7cc-5f7c-5ef0-7d19bd32ddcd.htm">
+    <HelpTOCNode Id="fc5a64e1-5fd6-441f-a6f8-3b28b4955e80" Title="Person Class" Url="html/74af3bd3-f7cc-5f7c-5ef0-7d19bd32ddcd.htm">
       <HelpTOCNode Title="Person Constructor " Url="html/61179ed3-33ed-7422-a4d8-b85fd31e3f79.htm" />
       <HelpTOCNode Title="Person Properties" Url="html/42c856af-d600-3c38-797a-180723d20652.htm" />
-      <HelpTOCNode Id="c08570cc-4ac6-4fe5-acb1-32a76474c2fa" Title="Person Methods" Url="html/8006f534-659c-2d79-7d26-3d607c7969b3.htm">
+      <HelpTOCNode Id="c4afeab3-2570-42b2-9dc1-bdb097d2df15" Title="Person Methods" Url="html/8006f534-659c-2d79-7d26-3d607c7969b3.htm">
         <HelpTOCNode Title="Draw Method " Url="html/aa76c29b-a2b4-0683-3fc6-13157a5467c2.htm" />
         <HelpTOCNode Title="Move Method " Url="html/43fba8d2-e4c0-b0d9-c379-0ccf0142483a.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="102e5647-a226-48bd-8021-b39871772f63" Title="Point2D Class" Url="html/2da3994a-dfb9-e613-f7b9-30c7f0e4edfe.htm">
+    <HelpTOCNode Id="cb4ced26-7c68-4917-bfae-d2ae9a811c28" Title="Point2D Class" Url="html/2da3994a-dfb9-e613-f7b9-30c7f0e4edfe.htm">
       <HelpTOCNode Title="Point2D Constructor " Url="html/5141bc0a-fe98-4058-b3f6-a05a8057c23e.htm" />
-      <HelpTOCNode Id="4179065f-bad9-4bee-a559-45157d8d00e6" Title="Point2D Properties" Url="html/d056194f-51f8-d0cd-d145-40b573eb6c59.htm">
+      <HelpTOCNode Id="92eb87bc-86d5-4ea1-96a8-5457a526f26a" Title="Point2D Properties" Url="html/d056194f-51f8-d0cd-d145-40b573eb6c59.htm">
         <HelpTOCNode Title="Origin Property " Url="html/5a980a85-7d25-4560-b18c-c4df3fae595f.htm" />
         <HelpTOCNode Title="ScreenMiddle Property " Url="html/8089136a-db7e-90c7-1fc1-5a1cae40af58.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="d87e4f3a-658d-49c0-88f4-0b75df4aff7d" Title="Point2D Methods" Url="html/9a67d0a3-6861-da24-00b8-72b049c7fa1f.htm">
+      <HelpTOCNode Id="ce5bf376-f985-448c-94da-1b2740689884" Title="Point2D Methods" Url="html/9a67d0a3-6861-da24-00b8-72b049c7fa1f.htm">
         <HelpTOCNode Title="Equals Method " Url="html/7082e52f-993d-b053-7989-85129840cbdd.htm" />
         <HelpTOCNode Title="GetHashCode Method " Url="html/255be479-7d7e-9a54-2b82-6ce730820ea6.htm" />
         <HelpTOCNode Title="GetRelativePosition Method " Url="html/49dc957a-9d1c-9e85-10e0-a91f4215671a.htm" />
-        <HelpTOCNode Id="ff3c0bd5-1a2c-4b10-8443-c2a27aa33fc2" Title="Round Method " Url="html/1a9d2130-5ae3-64ee-3c06-ff80473a68bb.htm">
+        <HelpTOCNode Id="af50de23-238a-4cfd-91e6-0ec41f13aabe" Title="Round Method " Url="html/1a9d2130-5ae3-64ee-3c06-ff80473a68bb.htm">
           <HelpTOCNode Title="Round Method " Url="html/0a8098b8-f41d-14c6-21a5-1a49118a6235.htm" />
           <HelpTOCNode Title="Round Method (Double)" Url="html/08aa447a-9a95-dbb8-c86d-a47d3ef57f73.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="ToString Method " Url="html/a155268f-eba5-e667-9796-e8a826f36cda.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="e10d95d9-a4a8-4f7c-8b45-451b4da311cc" Title="Point2D Operators and Type Conversions" Url="html/9770eadc-185b-2cea-6d0e-138cfa7456de.htm">
+      <HelpTOCNode Id="5e4739f1-ccbd-4714-9b5e-54305b00c110" Title="Point2D Operators and Type Conversions" Url="html/9770eadc-185b-2cea-6d0e-138cfa7456de.htm">
         <HelpTOCNode Title="Addition Operator " Url="html/da973c16-fb51-41fd-846b-6e825663b326.htm" />
         <HelpTOCNode Title="Division Operator " Url="html/c2ca2251-29f7-73a2-aa84-459f6ae8f918.htm" />
         <HelpTOCNode Title="Equality Operator " Url="html/319e5373-3c89-3e5b-4a87-0168d405c628.htm" />
-        <HelpTOCNode Id="de5bd6ac-198b-4809-98c6-796b934858e5" Title="Implicit Conversion Operators" Url="html/69c7c98c-1bc8-cac6-a4ca-53297069a8cc.htm">
+        <HelpTOCNode Id="109a1c9e-3c9b-4b11-93db-86985d37102a" Title="Implicit Conversion Operators" Url="html/69c7c98c-1bc8-cac6-a4ca-53297069a8cc.htm">
           <HelpTOCNode Title="Implicit Conversion (Point2D to Point2D)" Url="html/10342420-8697-6467-844c-6fbaed3bf706.htm" />
           <HelpTOCNode Title="Implicit Conversion (Point2D to Point2D)" Url="html/f6e08f28-caf2-588b-e675-60829e442789.htm" />
         </HelpTOCNode>
@@ -182,14 +182,14 @@
         <HelpTOCNode Title="Multiply Operator " Url="html/b932e91c-ad30-bc51-49f8-1f0a06527730.htm" />
         <HelpTOCNode Title="Subtraction Operator " Url="html/0394f8a4-4ef1-a128-645d-6f601bd9b2db.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="b42f0cbc-1282-4c04-afe5-93eb849ae38b" Title="Point2D Fields" Url="html/23f17742-7289-91b7-2bb9-f0d631c6003c.htm">
+      <HelpTOCNode Id="9176b80e-c1b6-4a6b-aee2-ab4c2312d47d" Title="Point2D Fields" Url="html/23f17742-7289-91b7-2bb9-f0d631c6003c.htm">
         <HelpTOCNode Title="X Field" Url="html/8244dcf6-bc4a-c27a-a873-4b5ebc9418fd.htm" />
         <HelpTOCNode Title="Y Field" Url="html/01a66f60-a4ee-96b4-6745-49f388f7597a.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="ba094cb4-8645-45c6-99b5-a24c63d5443c" Title="StateController Class" Url="html/5d461349-889a-2fe8-e7a8-07db95d04ae3.htm">
+    <HelpTOCNode Id="f4f88119-cc54-46b9-819f-93b248f6f66b" Title="StateController Class" Url="html/5d461349-889a-2fe8-e7a8-07db95d04ae3.htm">
       <HelpTOCNode Title="StateController Constructor " Url="html/415c8183-0d45-541e-9aab-942aaec6f7ac.htm" />
-      <HelpTOCNode Id="c5985097-9b11-44fa-840b-4f485945be61" Title="StateController Properties" Url="html/a532b117-1cd4-1373-c188-10b719308576.htm">
+      <HelpTOCNode Id="63c9fd30-1412-47b1-957f-0a30d8a6cae1" Title="StateController Properties" Url="html/a532b117-1cd4-1373-c188-10b719308576.htm">
         <HelpTOCNode Title="CurrentController Property " Url="html/9399dcd0-38e5-9658-fbb3-6a93526f8320.htm" />
         <HelpTOCNode Title="CurrentState Property " Url="html/6cea4cc3-ea22-4dfe-4e56-bba0f99d3387.htm" />
         <HelpTOCNode Title="IClickableList Property " Url="html/76d63dcd-928a-4f91-7108-e4208798dc1d.htm" />
@@ -197,7 +197,7 @@
         <HelpTOCNode Title="Instance Property " Url="html/fd328565-5d70-1408-8535-d9b19d242c09.htm" />
         <HelpTOCNode Title="UIElementList Property " Url="html/2c3dc78d-0404-9078-3f98-61c6c25237f9.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="65923c73-c622-4394-8cdd-faa179b21246" Title="StateController Methods" Url="html/d1d1c13b-556c-269b-641e-d30558fce7be.htm">
+      <HelpTOCNode Id="e1cca0c2-f340-426a-95dc-6323d0d20915" Title="StateController Methods" Url="html/d1d1c13b-556c-269b-641e-d30558fce7be.htm">
         <HelpTOCNode Title="DoControllerStuff Method " Url="html/70117aa2-88ff-eb4e-7802-5c68e8a69071.htm" />
         <HelpTOCNode Title="DoCurrentControllerStuff Method " Url="html/2c32aa45-1cd4-d784-30ad-6f9e6d83d73b.htm" />
         <HelpTOCNode Title="PauseGame Method " Url="html/f23fc9e5-ce3f-7d1c-df28-f2565ee36f22.htm" />
@@ -206,30 +206,30 @@
         <HelpTOCNode Title="StartGame Method " Url="html/6e11b878-a61c-17a5-32a1-a7297ee58361.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="179d661f-37b8-4928-9579-c86e90bfdf2d" Title="UIContainer Class" Url="html/da68ffe5-5019-79eb-01f5-b2a6d47e6af0.htm">
-      <HelpTOCNode Id="eb91ef49-dd4f-41d4-a302-99d866ee02b6" Title="UIContainer Constructor " Url="html/763b07e0-bb36-cccb-3886-08c165cffb1c.htm">
+    <HelpTOCNode Id="d88a51f5-2bdc-48c6-87d1-da92dc6414e6" Title="UIContainer Class" Url="html/da68ffe5-5019-79eb-01f5-b2a6d47e6af0.htm">
+      <HelpTOCNode Id="f1a59c3d-81ab-448e-bf1e-456939184a2a" Title="UIContainer Constructor " Url="html/763b07e0-bb36-cccb-3886-08c165cffb1c.htm">
         <HelpTOCNode Title="UIContainer Constructor (String, Point2D, Point2D)" Url="html/a03c94b2-eea2-c64a-278e-99c0f14bd0eb.htm" />
         <HelpTOCNode Title="UIContainer Constructor (String, Point2D, Point2D, MenuType)" Url="html/92f167b1-a86b-74c2-3564-6339e062e577.htm" />
         <HelpTOCNode Title="UIContainer Constructor (List(UIElement), String, Point2D, Point2D)" Url="html/cbcae5d7-5a4d-a7fa-dbb6-84c23f45e8ae.htm" />
         <HelpTOCNode Title="UIContainer Constructor (List(UIElement), String, Point2D, Point2D, MenuType)" Url="html/96278afc-e081-e423-1ac9-0ea396be66f2.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="d50e70cb-03c0-4fa2-98f0-6367b6aa08af" Title="UIContainer Properties" Url="html/f419d70f-cb9f-3fd5-1934-6ba8cfa8b440.htm">
+      <HelpTOCNode Id="7d23f12e-a1ef-46e2-9ebc-30567de82296" Title="UIContainer Properties" Url="html/f419d70f-cb9f-3fd5-1934-6ba8cfa8b440.htm">
         <HelpTOCNode Title="ChildElements Property " Url="html/3aa6b9e0-9e2f-e943-a4f1-a492e58fc493.htm" />
         <HelpTOCNode Title="GameWindow Property " Url="html/166c491d-6e50-03c6-92dd-e9f4dcb8f46d.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="c77cf904-d65c-475c-bab3-e361a3e6f02f" Title="UIContainer Methods" Url="html/c982f3cd-41d7-d812-72c7-6901451d73d7.htm">
+      <HelpTOCNode Id="6a03cdfd-16cd-483a-886d-96476a747c2c" Title="UIContainer Methods" Url="html/c982f3cd-41d7-d812-72c7-6901451d73d7.htm">
         <HelpTOCNode Title="Draw Method " Url="html/60270204-1696-7dc9-5554-2fcb86a60bf9.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="c4feb1b3-3794-4658-b252-455b70d33b7d" Title="UIContainer Fields" Url="html/db6e48d9-b558-be2d-69a4-2019626bd99b.htm">
+      <HelpTOCNode Id="d088dee5-67aa-4488-9b8a-c862b511212b" Title="UIContainer Fields" Url="html/db6e48d9-b558-be2d-69a4-2019626bd99b.htm">
         <HelpTOCNode Title="Type Field" Url="html/77f467e1-4219-552d-7f36-1b2e2c891f8b.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="8b224bd1-45b8-4078-a270-f79a12f9fe2b" Title="UIElement Class" Url="html/91e934b6-f47a-5605-d808-3d8994394d0a.htm">
-      <HelpTOCNode Id="9009550b-313c-4401-91d3-ad779478a36e" Title="UIElement Constructor " Url="html/488f1115-5d43-fc2b-a125-fe9c8bae69be.htm">
+    <HelpTOCNode Id="04f6a0c0-f596-403a-864b-8ff03da60b5f" Title="UIElement Class" Url="html/91e934b6-f47a-5605-d808-3d8994394d0a.htm">
+      <HelpTOCNode Id="228f2bcb-b9a9-45c2-bf3c-0c94923cf960" Title="UIElement Constructor " Url="html/488f1115-5d43-fc2b-a125-fe9c8bae69be.htm">
         <HelpTOCNode Title="UIElement Constructor (String, Point2D, Point2D)" Url="html/3b6832b5-59b5-fba4-5930-c64ed4d46fa1.htm" />
         <HelpTOCNode Title="UIElement Constructor (String, Point2D, Point2D, UIContainer)" Url="html/b2fffdbf-8777-c5c9-35cf-1feb95d012ca.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="08cfed1d-bc72-45bb-ad27-adfe591d417f" Title="UIElement Properties" Url="html/48241718-dc07-d26a-321d-aa368669e0d0.htm">
+      <HelpTOCNode Id="bed2a283-e841-46e1-84a9-d788b78c1e8c" Title="UIElement Properties" Url="html/48241718-dc07-d26a-321d-aa368669e0d0.htm">
         <HelpTOCNode Title="Container Property " Url="html/502d8c34-dda4-baf2-9c4a-db5ac2cc19f2.htm" />
         <HelpTOCNode Title="Image Property " Url="html/1982a3ca-a595-02e2-8c6d-c63194062662.htm" />
         <HelpTOCNode Title="Name Property " Url="html/8cc006a9-e88b-96ad-be38-0d5e590dfa52.htm" />
@@ -238,15 +238,15 @@
         <HelpTOCNode Title="ScreenSize Property " Url="html/9a8a543d-8b28-b05d-1f42-6c9078eedac3.htm" />
         <HelpTOCNode Title="Size Property " Url="html/52bf1d1f-f620-222a-bc43-8efba7da915b.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="b84b9322-dd46-4e45-8223-6912835b20f3" Title="UIElement Methods" Url="html/5de593f3-6163-e956-117a-b5aa7d854262.htm">
+      <HelpTOCNode Id="624e4cee-eeb4-49fc-b395-60acf3130670" Title="UIElement Methods" Url="html/5de593f3-6163-e956-117a-b5aa7d854262.htm">
         <HelpTOCNode Title="Draw Method " Url="html/fc7b668f-377f-8cb6-b6ff-aa7b05719874.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="a06fffc3-5545-40b1-ac4c-efe235135aca" Title="View Class" Url="html/d0ff3a0f-080e-9bd3-6262-eb0dc8103f07.htm">
-      <HelpTOCNode Id="f58526c2-6668-4ab8-a251-4abeac867ad8" Title="View Properties" Url="html/a7378f58-b388-1afd-5aaf-c1f2e963dc88.htm">
+    <HelpTOCNode Id="e3ecf6f4-790e-4534-b06b-4add2a468449" Title="View Class" Url="html/d0ff3a0f-080e-9bd3-6262-eb0dc8103f07.htm">
+      <HelpTOCNode Id="9d4ece7a-aab6-47e8-964c-6aa084a1740e" Title="View Properties" Url="html/a7378f58-b388-1afd-5aaf-c1f2e963dc88.htm">
         <HelpTOCNode Title="Font Property " Url="html/9c826362-c9f2-dbf6-414d-5fe800ae00e0.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="d0622879-7f32-4723-aae7-53eb7cdde9fa" Title="View Methods" Url="html/b48cbbc3-1784-2b3e-2892-a3c8bed80a30.htm">
+      <HelpTOCNode Id="6bb79555-f399-4890-bec8-4574a4897031" Title="View Methods" Url="html/b48cbbc3-1784-2b3e-2892-a3c8bed80a30.htm">
         <HelpTOCNode Title="Draw Method " Url="html/3a5bca29-1d1e-c4e3-6bbe-b960c8f9ed0e.htm" />
         <HelpTOCNode Title="Initialise Method " Url="html/8aebea94-171c-89e5-8fc8-a26540e462cd.htm" />
       </HelpTOCNode>

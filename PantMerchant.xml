@@ -50,6 +50,11 @@
             control.
             </summary>
         </member>
+        <member name="T:PantMerchant.ControllerAlreadyInitialisedException">
+            <summary>
+            Thrown if the controller is already instantiated
+            </summary>
+        </member>
         <member name="T:PantMerchant.GameController">
             <summary>
             Controller handling actions when in-game.
@@ -87,14 +92,29 @@
             The singleton instance of the current controller.
             </summary>
         </member>
+        <member name="F:PantMerchant.MainMenuController._Music">
+            <summary>
+            The music to play on the main menu
+            </summary>
+        </member>
         <member name="M:PantMerchant.MainMenuController.#cctor">
             <summary>
             Static constructor for the current controller
             </summary>
         </member>
+        <member name="M:PantMerchant.MainMenuController.#ctor">
+            <summary>
+            Initialises a new instance of the MainMenuController class
+            </summary>
+        </member>
         <member name="P:PantMerchant.MainMenuController.MainMenu">
             <summary>
-            The main menu to draw.
+            The main menu
+            </summary>
+        </member>
+        <member name="P:PantMerchant.MainMenuController.Settings">
+            <summary>
+            The settings menu
             </summary>
         </member>
         <member name="M:PantMerchant.MainMenuController.DoControllerStuff">
@@ -107,6 +127,11 @@
         <member name="M:PantMerchant.MainMenuController.BuildMainMenu">
             <summary>
             Initialises the main menu.
+            </summary>
+        </member>
+        <member name="M:PantMerchant.MainMenuController.BuildSettingsMenu">
+            <summary>
+            Initialises the settings menu.
             </summary>
         </member>
         <member name="T:PantMerchant.StateController">
@@ -731,6 +756,11 @@
             the game window.
             </summary>
         </member>
+        <member name="P:PantMerchant.UIContainer.IsHidden">
+            <summary>
+            Whether the UI Container is hidden or shown
+            </summary>
+        </member>
         <member name="M:PantMerchant.UIContainer.#cctor">
             <summary>
             Initialises the static members of UIContainer.
@@ -775,6 +805,16 @@
         <member name="M:PantMerchant.UIContainer.Draw">
             <summary>
             Draws the UIContainer to the screen.
+            </summary>
+        </member>
+        <member name="M:PantMerchant.UIContainer.Show">
+            <summary>
+            Displays the UI Container
+            </summary>
+        </member>
+        <member name="M:PantMerchant.UIContainer.Hide">
+            <summary>
+            Hides the UI Container
             </summary>
         </member>
         <member name="T:PantMerchant.MenuType">

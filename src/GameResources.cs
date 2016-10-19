@@ -4,6 +4,10 @@ using SwinGameSDK;
 
 namespace PantMerchant
 {
+    /// <summary>
+    /// Handles the loading, accessing, and freeing of
+    /// game resources.
+    /// </summary>
     public static class GameResources
     {
 
@@ -81,6 +85,9 @@ namespace PantMerchant
         private static Dictionary<string, SoundEffect> _Sounds = new Dictionary<string, SoundEffect>();
         private static Dictionary<string, Music> _Music = new Dictionary<string, Music>();
 
+        /// <summary>
+        /// LOAD ALL THE RESOURCES!!!
+        /// </summary>
         public static void LoadResources()
         {
             LoadFonts();
@@ -142,6 +149,9 @@ namespace PantMerchant
             }
         }
 
+        /// <summary>
+        /// Pharaoh, let my resources go.
+        /// </summary>
         public static void FreeResources()
         {
             FreeFonts();

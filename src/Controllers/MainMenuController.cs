@@ -25,6 +25,8 @@ namespace PantMerchant
                 return _instance;
             }
         }
+        
+        private static Music _Music;
 
         /// <summary>
         /// Static constructor for the current controller
@@ -32,6 +34,7 @@ namespace PantMerchant
         static MainMenuController()
         {
             MainMenuController.BuildMainMenu();
+            _Music = GameResources.GameMusic("MainMenu");
         }
 
         /// <summary>
@@ -50,6 +53,12 @@ namespace PantMerchant
             {
                 StateController.Instance.QuitToDesktop();
             }
+
+            if (!MusicPlaying())
+            {
+                PlayMusic(_Music);
+            }
+
             this.DoClickActions();
             View.Draw();
         }
